@@ -72,6 +72,14 @@
             <plugin>
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>${maven-surefire-plugin.version}</version>
+                <configuration>
+                    <properties>
+                        <configurationParameters>
+                            junit.platform.reporting.open.xml.enabled = true
+                            junit.platform.reporting.output.dir = target/surefire-reports
+                        </configurationParameters>
+                    </properties>
+                </configuration>
             </plugin>
 
             <plugin>
