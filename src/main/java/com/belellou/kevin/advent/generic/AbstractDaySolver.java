@@ -11,9 +11,18 @@ public abstract class AbstractDaySolver implements DaySolver {
     private static final String INPUT_FOLDER = "src/main/resources/";
     private static final String INPUT_FILE_NAME = "/input.txt";
 
+    private static final String FIRST_SOLUTION = " - First solution: ";
+    private static final String SECOND_SOLUTION = " - Second solution: ";
+
+    private final Year year;
+    private final Day day;
+
     private final String input;
 
     protected AbstractDaySolver(Year year, Day day) {
+        this.year = year;
+        this.day = day;
+
         input = INPUT_FOLDER + year.toString() + SEPARATOR + day.toString() + INPUT_FILE_NAME;
     }
 
@@ -29,7 +38,11 @@ public abstract class AbstractDaySolver implements DaySolver {
     @Override
     public int solveFirstStar() {
         try (BufferedReader reader = getReader()) {
-            return doSolveFirstStar(reader);
+            int firstSolution = doSolveFirstStar(reader);
+
+            System.out.println(this + FIRST_SOLUTION + firstSolution);
+
+            return firstSolution;
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
@@ -38,7 +51,11 @@ public abstract class AbstractDaySolver implements DaySolver {
     @Override
     public int solveSecondStar() {
         try (BufferedReader reader = getReader()) {
-            return doSolveSecondStar(reader);
+            int secondSolution = doSolveSecondStar(reader);
+
+            System.out.println(this + SECOND_SOLUTION + secondSolution);
+
+            return secondSolution;
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
@@ -47,4 +64,9 @@ public abstract class AbstractDaySolver implements DaySolver {
     protected abstract int doSolveFirstStar(BufferedReader reader) throws IOException;
 
     protected abstract int doSolveSecondStar(BufferedReader reader) throws IOException;
+
+    @Override
+    public String toString() {
+        return "Day " + day + " of " + year;
+    }
 }

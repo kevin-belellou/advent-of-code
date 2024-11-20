@@ -24,10 +24,7 @@ public class Day1 extends AbstractDaySolver {
         int up = StringUtils.countMatches(line, "(");
         int down = StringUtils.countMatches(line, ")");
 
-        int final_floor = STARTING_FLOOR + up - down;
-        System.out.println("Final floor is: " + final_floor);
-
-        return final_floor;
+        return STARTING_FLOOR + up - down;
     }
 
     @Override
@@ -47,9 +44,7 @@ public class Day1 extends AbstractDaySolver {
             }
 
             if (currentFloor == -1) {
-                int basementPosition = i + 1;
-                System.out.println("Basement entered a position " + basementPosition);
-                return basementPosition;
+                return i + 1;
             }
         }
     }
