@@ -9,6 +9,7 @@ import com.belellou.kevin.advent.generic.DaySolver;
 import com.belellou.kevin.advent.year2015.Day1;
 import com.belellou.kevin.advent.year2015.Day2;
 import com.belellou.kevin.advent.year2015.Day3;
+import com.belellou.kevin.advent.year2015.Day4;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -16,7 +17,8 @@ public class DaySolverTest {
 
     private static final List<TestCase> TEST_CASES = List.of(new TestCase(new Day1(), 74, 1_795),
                                                              new TestCase(new Day2(), 1_588_178, 3_783_758),
-                                                             new TestCase(new Day3(), 2_081, 2_341));
+                                                             new TestCase(new Day3(), 2_081, 2_341),
+                                                             new TestCase(new Day4(), 346_386, 9_958_218));
 
     private static final String FIRST_SOLUTION = " - First solution";
     private static final String SECOND_SOLUTION = " - Second solution";
