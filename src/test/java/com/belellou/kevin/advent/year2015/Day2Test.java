@@ -6,17 +6,17 @@ import com.belellou.kevin.advent.generic.DaySolver;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-public class Day1Test {
+public class Day2Test {
 
-    private static final DaySolver DAY_1 = new Day1();
+    private static final DaySolver DAY_2 = new Day2();
 
     @Test
     public void testSolveFirstStar() {
-        assertThat(DAY_1.solveFirstStar()).isEqualTo(74);
+        assertThat(DAY_2.solveFirstStar()).isEqualTo(1_588_178);
     }
 
     @Test
     public void testSolveSecondStar() {
-        assertThat(DAY_1.solveSecondStar()).isEqualTo(1795);
+        assertThat(DAY_2.solveSecondStar()).isEqualTo(3_783_758);
     }
 }
