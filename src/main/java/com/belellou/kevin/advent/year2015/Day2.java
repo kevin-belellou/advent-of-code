@@ -11,17 +11,13 @@ import com.belellou.kevin.advent.generic.AbstractDaySolver;
 import com.belellou.kevin.advent.generic.Day;
 import com.belellou.kevin.advent.generic.Year;
 
+@SuppressWarnings("unused")
 public class Day2 extends AbstractDaySolver {
 
     private static final Pattern PATTERN = Pattern.compile("^(\\d+)x(\\d+)x(\\d+)$");
 
     public Day2() {
         super(Year.YEAR_2015, Day.DAY_2);
-    }
-
-    @Override
-    protected int doSolveFirstStar(BufferedReader reader) {
-        return reader.lines().map(Day2::findAreaNeeded).reduce(Integer::sum).orElseThrow();
     }
 
     private static int findAreaNeeded(String line) {
@@ -32,11 +28,6 @@ public class Day2 extends AbstractDaySolver {
         int side3Area = dimensions.height * dimensions.length;
 
         return 2 * side1Area + 2 * side2Area + 2 * side3Area + NumberUtils.min(side1Area, side2Area, side3Area);
-    }
-
-    @Override
-    protected int doSolveSecondStar(BufferedReader reader) {
-        return reader.lines().map(Day2::findLengthNeeded).reduce(Integer::sum).orElseThrow();
     }
 
     private static int findLengthNeeded(String line) {
@@ -58,6 +49,26 @@ public class Day2 extends AbstractDaySolver {
         int height = Integer.parseInt(matcher.group(3));
 
         return new Dimensions(length, width, height);
+    }
+
+    @Override
+    protected int doSolveFirstStar(BufferedReader reader) {
+        return reader.lines().map(Day2::findAreaNeeded).reduce(Integer::sum).orElseThrow();
+    }
+
+    @Override
+    public int getFirstStarSolution() {
+        return 1_588_178;
+    }
+
+    @Override
+    protected int doSolveSecondStar(BufferedReader reader) {
+        return reader.lines().map(Day2::findLengthNeeded).reduce(Integer::sum).orElseThrow();
+    }
+
+    @Override
+    public int getSecondStarSolution() {
+        return 3_783_758;
     }
 
     private record Dimensions(int length, int width, int height) {

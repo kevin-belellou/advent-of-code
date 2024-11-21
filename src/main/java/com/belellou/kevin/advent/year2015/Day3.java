@@ -9,6 +9,7 @@ import com.belellou.kevin.advent.generic.AbstractDaySolver;
 import com.belellou.kevin.advent.generic.Day;
 import com.belellou.kevin.advent.generic.Year;
 
+@SuppressWarnings("unused")
 public class Day3 extends AbstractDaySolver {
 
     public Day3() {
@@ -45,6 +46,11 @@ public class Day3 extends AbstractDaySolver {
         }
 
         return houses.size() + 1;
+    }
+
+    @Override
+    public int getFirstStarSolution() {
+        return 2_081;
     }
 
     @Override
@@ -96,6 +102,11 @@ public class Day3 extends AbstractDaySolver {
         }
 
         return houses.size();
+    }
+
+    @Override
+    public int getSecondStarSolution() {
+        return 2_341;
     }
 
     private record Position(int x, int y) {}

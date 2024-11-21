@@ -9,6 +9,7 @@ import com.belellou.kevin.advent.generic.AbstractDaySolver;
 import com.belellou.kevin.advent.generic.Day;
 import com.belellou.kevin.advent.generic.Year;
 
+@SuppressWarnings("unused")
 public class Day1 extends AbstractDaySolver {
 
     private static final int STARTING_FLOOR = 0;
@@ -25,6 +26,11 @@ public class Day1 extends AbstractDaySolver {
         int down = StringUtils.countMatches(line, ")");
 
         return STARTING_FLOOR + up - down;
+    }
+
+    @Override
+    public int getFirstStarSolution() {
+        return 74;
     }
 
     @Override
@@ -47,5 +53,10 @@ public class Day1 extends AbstractDaySolver {
                 return i + 1;
             }
         }
+    }
+
+    @Override
+    public int getSecondStarSolution() {
+        return 1_795;
     }
 }
