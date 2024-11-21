@@ -27,6 +27,7 @@
         <!-- Dependency versions -->
         <commons-codec.version>1.17.1</commons-codec.version>
         <commons-lang3.version>3.17.0</commons-lang3.version>
+        <jgrapht-core.version>1.5.2</jgrapht-core.version>
         <spring-context.version>6.2.0</spring-context.version>
         <assertj.version>3.26.3</assertj.version>
         <junit.version>5.11.3</junit.version>
@@ -58,6 +59,11 @@
             <groupId>org.apache.commons</groupId>
             <artifactId>commons-lang3</artifactId>
             <version>${commons-lang3.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.jgrapht</groupId>
+            <artifactId>jgrapht-core</artifactId>
+            <version>${jgrapht-core.version}</version>
         </dependency>
         <dependency>
             <groupId>org.springframework</groupId>
