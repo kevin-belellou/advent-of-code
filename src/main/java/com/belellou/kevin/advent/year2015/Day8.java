@@ -1,7 +1,11 @@
 package com.belellou.kevin.advent.year2015;
 
 import java.io.BufferedReader;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
+import java.util.Objects;
+import java.util.regex.Pattern;
 
 import com.belellou.kevin.advent.generic.AbstractDaySolver;
 import com.belellou.kevin.advent.generic.Day;
@@ -11,8 +15,25 @@ import com.belellou.kevin.advent.generic.Year;
 @SuppressWarnings("unused")
 public class Day8 extends AbstractDaySolver {
 
+    private static final Pattern PATTERN_HEXA = Pattern.compile("\\\\x[a-f0-9]{2}");
+    private static final Pattern PATTERN_QUOTE = Pattern.compile("\\\\\"");
+    private static final Pattern PATTERN_SLASH = Pattern.compile("\\\\\\\\");
+
+    private static final Map<String, Integer> mem = new HashMap<>();
+    private static final Map<String, Integer> memAgain = new HashMap<>();
+
     public Day8() {
         super(Year.YEAR_2015, Day.DAY_8);
+    }
+
+    private static int countMemoryLengthAgain(String line) {
+        String newLine = PATTERN_HEXA.matcher(line).replaceAll("-");
+        newLine = PATTERN_QUOTE.matcher(newLine).replaceAll("-");
+        newLine = PATTERN_SLASH.matcher(newLine).replaceAll("-");
+
+        memAgain.put(line, newLine.length() - 2);
+
+        return newLine.length() - 2;
     }
 
     private static int countMemoryLength(String line) {
@@ -36,10 +57,13 @@ public class Day8 extends AbstractDaySolver {
                 continue;
             }
 
-            if (hexadecimalCharCount == 3) {
-                hexadecimalCharCount = 0;
-            } else if (hexadecimalCharCount > 0) {
+            if (hexadecimalCharCount > 0) {
                 hexadecimalCharCount++;
+
+                if (hexadecimalCharCount == 3) {
+                    hexadecimalCharCount = 0;
+                }
+
                 continue;
             }
 
@@ -60,6 +84,8 @@ public class Day8 extends AbstractDaySolver {
             throw new IllegalStateException("wot");
         }
 
+        mem.put(line, memoryLength);
+
         return memoryLength;
     }
 
@@ -69,16 +95,30 @@ public class Day8 extends AbstractDaySolver {
 
         int totalCodeLength = lines.stream().map(String::length).reduce(Integer::sum).orElseThrow();
         int totalMemoryLength = lines.stream().map(Day8::countMemoryLength).reduce(Integer::sum).orElseThrow();
+        int totalMemoryLengthAgain = lines.stream()
+                                          .map(Day8::countMemoryLengthAgain)
+                                          .reduce(Integer::sum)
+                                          .orElseThrow();
 
 //        System.out.println("total code length is " + totalCodeLength);
 //        System.out.println("total memory length is " + totalMemoryLength);
+//        System.out.println("total memory length again is " + totalMemoryLengthAgain);
 
-        return totalCodeLength - totalMemoryLength;
+        for (String line : lines) {
+            Integer i1 = mem.get(line);
+            Integer i2 = memAgain.get(line);
+
+            if (!Objects.equals(i1, i2)) {
+                System.out.println("Difference about " + line + " (mem: " + i1 + ", memAgain: " + i2 + ")");
+            }
+        }
+
+        return totalCodeLength - totalMemoryLengthAgain;
     }
 
     @Override
     public int getFirstStarSolution() {
-        return 0;
+        return 1350;
     }
 
     @Override
