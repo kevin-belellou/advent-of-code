@@ -9,7 +9,6 @@ import com.belellou.kevin.advent.generic.DisableTest;
 import com.belellou.kevin.advent.generic.Year;
 
 @SuppressWarnings("unused")
-@DisableTest
 public class Day8 extends AbstractDaySolver {
 
     public Day8() {
@@ -87,6 +86,7 @@ public class Day8 extends AbstractDaySolver {
         return 0;
     }
 
+    @DisableTest
     @Override
     public int getSecondStarSolution() {
         return 0;

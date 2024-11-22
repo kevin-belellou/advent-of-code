@@ -3,7 +3,6 @@ package com.belellou.kevin.advent.generic;
 import java.io.BufferedReader;
 
 @SuppressWarnings("unused")
-@DisableTest
 public class Day0 extends AbstractDaySolver {
 
     public Day0() {
@@ -15,6 +14,7 @@ public class Day0 extends AbstractDaySolver {
         return 0;
     }
 
+    @DisableTest
     @Override
     public int getFirstStarSolution() {
         return 0;
@@ -25,6 +25,7 @@ public class Day0 extends AbstractDaySolver {
         return 0;
     }
 
+    @DisableTest
     @Override
     public int getSecondStarSolution() {
         return 0;

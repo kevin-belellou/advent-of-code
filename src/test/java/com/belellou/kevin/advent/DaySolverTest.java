@@ -20,6 +20,9 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 public class DaySolverTest {
 
+    private static final String METHOD_GET_FIRST_STAR_SOLUTION = "getFirstStarSolution";
+    private static final String METHOD_GET_SECOND_STAR_SOLUTION = "getSecondStarSolution";
+
     private static final String FIRST_SOLUTION = " - First solution";
     private static final String SECOND_SOLUTION = " - Second solution";
 
@@ -29,29 +32,32 @@ public class DaySolverTest {
         try {
             Class<?> clazz = Class.forName(component.getBeanClassName());
             DaySolver daySolver = (DaySolver) clazz.getDeclaredConstructor().newInstance();
-            DisableTest disableTestAnnotation = clazz.getAnnotation(DisableTest.class);
+            boolean firstTestEnabled = !clazz.getMethod(METHOD_GET_FIRST_STAR_SOLUTION)
+                                             .isAnnotationPresent(DisableTest.class);
+            boolean secondTestEnabled = !clazz.getMethod(METHOD_GET_SECOND_STAR_SOLUTION)
+                                              .isAnnotationPresent(DisableTest.class);
 
-            consumer.accept(dynamicTestOf(daySolver, true, disableTestAnnotation != null));
-            consumer.accept(dynamicTestOf(daySolver, false, disableTestAnnotation != null));
+            consumer.accept(dynamicTestOf(daySolver, true, firstTestEnabled));
+            consumer.accept(dynamicTestOf(daySolver, false, secondTestEnabled));
         } catch (ClassNotFoundException | InvocationTargetException | InstantiationException |
                  IllegalAccessException | NoSuchMethodException e) {
             throw new RuntimeException(e);
         }
     }
 
-    private static DynamicTest dynamicTestOf(DaySolver daySolver, boolean firstSolution, boolean disabled) {
+    private static DynamicTest dynamicTestOf(DaySolver daySolver, boolean firstSolution, boolean enabled) {
         return DynamicTest.dynamicTest(daySolver + (firstSolution ? FIRST_SOLUTION : SECOND_SOLUTION),
                                        firstSolution
-                                       ? () -> doTest(disabled, daySolver::solveFirstStar,
+                                       ? () -> doTest(enabled, daySolver::solveFirstStar,
                                                       daySolver::getFirstStarSolution)
-                                       : () -> doTest(disabled, daySolver::solveSecondStar,
+                                       : () -> doTest(enabled, daySolver::solveSecondStar,
                                                       daySolver::getSecondStarSolution)
 
         );
     }
 
-    private static void doTest(boolean disabled, IntSupplier method, IntSupplier result) {
-        Assumptions.assumeFalse(disabled, MESSAGE_TEST_DISABLED);
+    private static void doTest(boolean enabled, IntSupplier method, IntSupplier result) {
+        Assumptions.assumeTrue(enabled, MESSAGE_TEST_DISABLED);
         assertThat(method.getAsInt()).isEqualTo(result.getAsInt());
     }
 
