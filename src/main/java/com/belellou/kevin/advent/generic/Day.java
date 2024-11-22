@@ -2,6 +2,7 @@ package com.belellou.kevin.advent.generic;
 
 public enum Day {
 
+    DAY_0("0"), // For template purpose
     DAY_1("1"),
     DAY_2("2"),
     DAY_3("3"),

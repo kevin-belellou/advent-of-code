@@ -4,7 +4,9 @@ import java.lang.reflect.InvocationTargetException;
 import java.util.List;
 import java.util.Set;
 import java.util.function.Consumer;
+import java.util.function.IntSupplier;
 
+import org.junit.jupiter.api.Assumptions;
 import org.junit.jupiter.api.DynamicTest;
 import org.junit.jupiter.api.TestFactory;
 import org.springframework.beans.factory.config.BeanDefinition;
@@ -12,6 +14,7 @@ import org.springframework.context.annotation.ClassPathScanningCandidateComponen
 import org.springframework.core.type.filter.AssignableTypeFilter;
 
 import com.belellou.kevin.advent.generic.DaySolver;
+import com.belellou.kevin.advent.generic.DisableTest;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -20,27 +23,36 @@ public class DaySolverTest {
     private static final String FIRST_SOLUTION = " - First solution";
     private static final String SECOND_SOLUTION = " - Second solution";
 
+    private static final String MESSAGE_TEST_DISABLED = "Test disabled";
+
     private static void createDynamicTest(BeanDefinition component, Consumer<DynamicTest> consumer) {
         try {
             Class<?> clazz = Class.forName(component.getBeanClassName());
             DaySolver daySolver = (DaySolver) clazz.getDeclaredConstructor().newInstance();
+            DisableTest disableTestAnnotation = clazz.getAnnotation(DisableTest.class);
 
-            consumer.accept(dynamicTestOf(daySolver, true));
-            consumer.accept(dynamicTestOf(daySolver, false));
+            consumer.accept(dynamicTestOf(daySolver, true, disableTestAnnotation != null));
+            consumer.accept(dynamicTestOf(daySolver, false, disableTestAnnotation != null));
         } catch (ClassNotFoundException | InvocationTargetException | InstantiationException |
                  IllegalAccessException | NoSuchMethodException e) {
             throw new RuntimeException(e);
         }
     }
 
-    private static DynamicTest dynamicTestOf(DaySolver daySolver, boolean firstSolution) {
+    private static DynamicTest dynamicTestOf(DaySolver daySolver, boolean firstSolution, boolean disabled) {
         return DynamicTest.dynamicTest(daySolver + (firstSolution ? FIRST_SOLUTION : SECOND_SOLUTION),
                                        firstSolution
-                                       ? () -> assertThat(daySolver.solveFirstStar())
-                                               .isEqualTo(daySolver.getFirstStarSolution())
-                                       : () -> assertThat(daySolver.solveSecondStar())
-                                               .isEqualTo(daySolver.getSecondStarSolution())
+                                       ? () -> doTest(disabled, daySolver::solveFirstStar,
+                                                      daySolver::getFirstStarSolution)
+                                       : () -> doTest(disabled, daySolver::solveSecondStar,
+                                                      daySolver::getSecondStarSolution)
+
         );
+    }
+
+    private static void doTest(boolean disabled, IntSupplier method, IntSupplier result) {
+        Assumptions.assumeFalse(disabled, MESSAGE_TEST_DISABLED);
+        assertThat(method.getAsInt()).isEqualTo(result.getAsInt());
     }
 
     @TestFactory
