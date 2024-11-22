@@ -6,6 +6,7 @@ import java.util.Set;
 import java.util.function.Consumer;
 import java.util.function.IntSupplier;
 
+import com.pivovarit.function.ThrowingFunction;
 import org.junit.jupiter.api.Assumptions;
 import org.junit.jupiter.api.DynamicTest;
 import org.junit.jupiter.api.TestFactory;
@@ -15,6 +16,7 @@ import org.springframework.core.type.filter.AssignableTypeFilter;
 
 import com.belellou.kevin.advent.generic.DaySolver;
 import com.belellou.kevin.advent.generic.DisableTest;
+import com.belellou.kevin.advent.generic.NaturalOrderComparator;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -28,10 +30,9 @@ public class DaySolverTest {
 
     private static final String MESSAGE_TEST_DISABLED = "Test disabled";
 
-    private static void createDynamicTest(BeanDefinition component, Consumer<DynamicTest> consumer) {
+    private static void createDynamicTest(Class<?> clazz, Consumer<DynamicTest> consumer) {
         try {
-            Class<?> clazz = Class.forName(component.getBeanClassName());
-            DaySolver daySolver = (DaySolver) clazz.getDeclaredConstructor().newInstance();
+            DaySolver daySolver = clazz.asSubclass(DaySolver.class).getDeclaredConstructor().newInstance();
             boolean firstTestEnabled = !clazz.getMethod(METHOD_GET_FIRST_STAR_SOLUTION)
                                              .isAnnotationPresent(DisableTest.class);
             boolean secondTestEnabled = !clazz.getMethod(METHOD_GET_SECOND_STAR_SOLUTION)
@@ -39,7 +40,7 @@ public class DaySolverTest {
 
             consumer.accept(dynamicTestOf(daySolver, true, firstTestEnabled));
             consumer.accept(dynamicTestOf(daySolver, false, secondTestEnabled));
-        } catch (ClassNotFoundException | InvocationTargetException | InstantiationException |
+        } catch (InvocationTargetException | InstantiationException |
                  IllegalAccessException | NoSuchMethodException e) {
             throw new RuntimeException(e);
         }
@@ -67,6 +68,12 @@ public class DaySolverTest {
         provider.addIncludeFilter(new AssignableTypeFilter(DaySolver.class));
 
         Set<BeanDefinition> components = provider.findCandidateComponents(getClass().getPackageName());
-        return components.stream().mapMulti(DaySolverTest::createDynamicTest).toList();
+
+        return components.stream()
+                         .map(BeanDefinition::getBeanClassName)
+                         .map(ThrowingFunction.unchecked(Class::forName))
+                         .sorted(new NaturalOrderComparator())
+                         .mapMulti(DaySolverTest::createDynamicTest)
+                         .toList();
     }
 }
