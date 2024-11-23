@@ -42,6 +42,7 @@ jobs:
           userId: 4246309
           #          leaderboardId: 9876543
           sessionCookie: ${{ secrets.ADVENT_OF_CODE_SESSION }}
+          year: 2015
       - uses: stefanzweifel/git-auto-commit-action@8621497c8c39c72f3e2a999a26b4ca1b5058a842
         with:
           commit_message: Update README stars
