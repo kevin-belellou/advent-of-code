@@ -13,7 +13,7 @@ import com.belellou.kevin.advent.generic.DisableTest;
 import com.belellou.kevin.advent.generic.Year;
 
 @SuppressWarnings("unused")
-public class Day8 extends AbstractDaySolver {
+public class Day8 extends AbstractDaySolver<Integer> {
 
     private static final Pattern PATTERN_HEXA = Pattern.compile("\\\\x[a-f0-9]{2}");
     private static final Pattern PATTERN_QUOTE = Pattern.compile("\\\\\"");
@@ -90,7 +90,7 @@ public class Day8 extends AbstractDaySolver {
     }
 
     @Override
-    protected int doSolveFirstStar(BufferedReader reader) {
+    protected Integer doSolveFirstStar(BufferedReader reader) {
         List<String> lines = reader.lines().toList();
 
         int totalCodeLength = lines.stream().map(String::length).reduce(Integer::sum).orElseThrow();
@@ -117,18 +117,18 @@ public class Day8 extends AbstractDaySolver {
     }
 
     @Override
-    public int getFirstStarSolution() {
+    public Integer getFirstStarSolution() {
         return 1350;
     }
 
     @Override
-    protected int doSolveSecondStar(BufferedReader reader) {
+    protected Integer doSolveSecondStar(BufferedReader reader) {
         return 0;
     }
 
     @DisableTest
     @Override
-    public int getSecondStarSolution() {
+    public Integer getSecondStarSolution() {
         return 0;
     }
 }

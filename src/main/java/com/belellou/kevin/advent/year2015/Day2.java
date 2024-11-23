@@ -12,7 +12,7 @@ import com.belellou.kevin.advent.generic.Day;
 import com.belellou.kevin.advent.generic.Year;
 
 @SuppressWarnings("unused")
-public class Day2 extends AbstractDaySolver {
+public class Day2 extends AbstractDaySolver<Integer> {
 
     private static final Pattern PATTERN = Pattern.compile("^(\\d+)x(\\d+)x(\\d+)$");
 
@@ -52,22 +52,22 @@ public class Day2 extends AbstractDaySolver {
     }
 
     @Override
-    protected int doSolveFirstStar(BufferedReader reader) {
+    protected Integer doSolveFirstStar(BufferedReader reader) {
         return reader.lines().map(Day2::findAreaNeeded).reduce(Integer::sum).orElseThrow();
     }
 
     @Override
-    public int getFirstStarSolution() {
+    public Integer getFirstStarSolution() {
         return 1_588_178;
     }
 
     @Override
-    protected int doSolveSecondStar(BufferedReader reader) {
+    protected Integer doSolveSecondStar(BufferedReader reader) {
         return reader.lines().map(Day2::findLengthNeeded).reduce(Integer::sum).orElseThrow();
     }
 
     @Override
-    public int getSecondStarSolution() {
+    public Integer getSecondStarSolution() {
         return 3_783_758;
     }
 

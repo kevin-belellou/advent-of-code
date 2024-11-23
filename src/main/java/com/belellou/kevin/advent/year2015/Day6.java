@@ -10,7 +10,7 @@ import com.belellou.kevin.advent.generic.Day;
 import com.belellou.kevin.advent.generic.Year;
 
 @SuppressWarnings("unused")
-public class Day6 extends AbstractDaySolver {
+public class Day6 extends AbstractDaySolver<Integer> {
 
     private static final String GROUP_COMMAND = "command";
     private static final String GROUP_X0 = "x0";
@@ -70,7 +70,7 @@ public class Day6 extends AbstractDaySolver {
     }
 
     @Override
-    protected int doSolveFirstStar(BufferedReader reader) {
+    protected Integer doSolveFirstStar(BufferedReader reader) {
         Boolean[][] lights = new Boolean[1000][1000];
         Arrays.stream(lights).forEach(booleans -> Arrays.fill(booleans, false));
 
@@ -91,12 +91,12 @@ public class Day6 extends AbstractDaySolver {
     }
 
     @Override
-    public int getFirstStarSolution() {
+    public Integer getFirstStarSolution() {
         return 569_999;
     }
 
     @Override
-    protected int doSolveSecondStar(BufferedReader reader) {
+    protected Integer doSolveSecondStar(BufferedReader reader) {
         int[][] lights = new int[1000][1000];
 
         reader.lines()
@@ -115,7 +115,7 @@ public class Day6 extends AbstractDaySolver {
     }
 
     @Override
-    public int getSecondStarSolution() {
+    public Integer getSecondStarSolution() {
         return 17_836_115;
     }
 

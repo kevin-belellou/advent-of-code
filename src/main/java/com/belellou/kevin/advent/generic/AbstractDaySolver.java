@@ -5,7 +5,7 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 
-public abstract class AbstractDaySolver implements DaySolver {
+public abstract class AbstractDaySolver<T> implements DaySolver<T> {
 
     private static final String SEPARATOR = "/";
     private static final String INPUT_FOLDER = "src/main/resources/";
@@ -36,9 +36,9 @@ public abstract class AbstractDaySolver implements DaySolver {
     }
 
     @Override
-    public int solveFirstStar() {
+    public T solveFirstStar() {
         try (BufferedReader reader = getReader()) {
-            int firstSolution = doSolveFirstStar(reader);
+            T firstSolution = doSolveFirstStar(reader);
 
             System.out.println(this + FIRST_SOLUTION + firstSolution);
 
@@ -49,9 +49,9 @@ public abstract class AbstractDaySolver implements DaySolver {
     }
 
     @Override
-    public int solveSecondStar() {
+    public T solveSecondStar() {
         try (BufferedReader reader = getReader()) {
-            int secondSolution = doSolveSecondStar(reader);
+            T secondSolution = doSolveSecondStar(reader);
 
             System.out.println(this + SECOND_SOLUTION + secondSolution);
 
@@ -61,9 +61,9 @@ public abstract class AbstractDaySolver implements DaySolver {
         }
     }
 
-    protected abstract int doSolveFirstStar(BufferedReader reader) throws IOException;
+    protected abstract T doSolveFirstStar(BufferedReader reader) throws IOException;
 
-    protected abstract int doSolveSecondStar(BufferedReader reader) throws IOException;
+    protected abstract T doSolveSecondStar(BufferedReader reader) throws IOException;
 
     @Override
     public String toString() {

@@ -4,7 +4,7 @@ import java.lang.reflect.InvocationTargetException;
 import java.util.List;
 import java.util.Set;
 import java.util.function.Consumer;
-import java.util.function.IntSupplier;
+import java.util.function.Supplier;
 
 import com.pivovarit.function.ThrowingFunction;
 import org.junit.jupiter.api.Assumptions;
@@ -32,7 +32,7 @@ public class DaySolverTest {
 
     private static void createDynamicTest(Class<?> clazz, Consumer<DynamicTest> consumer) {
         try {
-            DaySolver daySolver = clazz.asSubclass(DaySolver.class).getDeclaredConstructor().newInstance();
+            DaySolver<?> daySolver = clazz.asSubclass(DaySolver.class).getDeclaredConstructor().newInstance();
             boolean firstTestEnabled = !clazz.getMethod(METHOD_GET_FIRST_STAR_SOLUTION)
                                              .isAnnotationPresent(DisableTest.class);
             boolean secondTestEnabled = !clazz.getMethod(METHOD_GET_SECOND_STAR_SOLUTION)
@@ -46,7 +46,7 @@ public class DaySolverTest {
         }
     }
 
-    private static DynamicTest dynamicTestOf(DaySolver daySolver, boolean firstSolution, boolean enabled) {
+    private static DynamicTest dynamicTestOf(DaySolver<?> daySolver, boolean firstSolution, boolean enabled) {
         return DynamicTest.dynamicTest(daySolver + (firstSolution ? FIRST_SOLUTION : SECOND_SOLUTION),
                                        firstSolution
                                        ? () -> doTest(enabled, daySolver::solveFirstStar,
@@ -57,9 +57,9 @@ public class DaySolverTest {
         );
     }
 
-    private static void doTest(boolean enabled, IntSupplier method, IntSupplier result) {
+    private static void doTest(boolean enabled, Supplier<?> method, Supplier<?> result) {
         Assumptions.assumeTrue(enabled, MESSAGE_TEST_DISABLED);
-        assertThat(method.getAsInt()).isEqualTo(result.getAsInt());
+        assertThat(method.get()).isEqualTo(result.get());
     }
 
     @TestFactory

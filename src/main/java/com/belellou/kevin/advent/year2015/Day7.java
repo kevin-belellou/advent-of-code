@@ -18,7 +18,7 @@ import com.belellou.kevin.advent.generic.Day;
 import com.belellou.kevin.advent.generic.Year;
 
 @SuppressWarnings("unused")
-public class Day7 extends AbstractDaySolver {
+public class Day7 extends AbstractDaySolver<Integer> {
 
     private static final String GROUP_FIRST_OPERAND = "firstOperand";
     private static final String GROUP_SECOND_OPERAND = "secondOperand";
@@ -193,7 +193,7 @@ public class Day7 extends AbstractDaySolver {
     }
 
     @Override
-    protected int doSolveFirstStar(BufferedReader reader) {
+    protected Integer doSolveFirstStar(BufferedReader reader) {
         SimpleDirectedGraph<String, CustomEdge> graph = new SimpleDirectedGraph<>(CustomEdge.class);
 
         reader.lines().forEach(line -> fillGraph(graph, line));
@@ -206,12 +206,12 @@ public class Day7 extends AbstractDaySolver {
     }
 
     @Override
-    public int getFirstStarSolution() {
+    public Integer getFirstStarSolution() {
         return 16_076;
     }
 
     @Override
-    protected int doSolveSecondStar(BufferedReader reader) {
+    protected Integer doSolveSecondStar(BufferedReader reader) {
         SimpleDirectedGraph<String, CustomEdge> graph = new SimpleDirectedGraph<>(CustomEdge.class);
 
         reader.lines().forEach(line -> fillGraph(graph, line));
@@ -232,7 +232,7 @@ public class Day7 extends AbstractDaySolver {
     }
 
     @Override
-    public int getSecondStarSolution() {
+    public Integer getSecondStarSolution() {
         return 2_797;
     }
 

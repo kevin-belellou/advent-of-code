@@ -1,12 +1,12 @@
 package com.belellou.kevin.advent.generic;
 
-public interface DaySolver {
+public interface DaySolver<T> {
 
-    int solveFirstStar();
+    T solveFirstStar();
 
-    int getFirstStarSolution();
+    T getFirstStarSolution();
 
-    int solveSecondStar();
+    T solveSecondStar();
 
-    int getSecondStarSolution();
+    T getSecondStarSolution();
 }

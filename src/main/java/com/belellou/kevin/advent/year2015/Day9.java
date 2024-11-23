@@ -18,7 +18,7 @@ import com.belellou.kevin.advent.generic.DisableTest;
 import com.belellou.kevin.advent.generic.Year;
 
 @SuppressWarnings("unused")
-public class Day9 extends AbstractDaySolver {
+public class Day9 extends AbstractDaySolver<Integer> {
 
     private static final String GROUP_FIRST_LOCATION = "firstLocation";
     private static final String GROUP_SECOND_LOCATION = "secondLocation";
@@ -37,7 +37,7 @@ public class Day9 extends AbstractDaySolver {
     }
 
     @Override
-    protected int doSolveFirstStar(BufferedReader reader) {
+    protected Integer doSolveFirstStar(BufferedReader reader) {
         SimpleWeightedGraph<String, DefaultWeightedEdge> graph = new SimpleWeightedGraph<>(DefaultWeightedEdge.class);
 
         reader.lines().forEach(line -> {
@@ -87,18 +87,18 @@ public class Day9 extends AbstractDaySolver {
 
     @DisableTest
     @Override
-    public int getFirstStarSolution() {
+    public Integer getFirstStarSolution() {
         return 0;
     }
 
     @Override
-    protected int doSolveSecondStar(BufferedReader reader) {
+    protected Integer doSolveSecondStar(BufferedReader reader) {
         return 0;
     }
 
     @DisableTest
     @Override
-    public int getSecondStarSolution() {
+    public Integer getSecondStarSolution() {
         return 0;
     }
 }
