@@ -30,3 +30,6 @@ jobs:
           path: target/surefire-reports/*.xml
           reporter: java-junit
           use-actions-summary: 'true'
+
+  update:
+    uses: './github/workflows/update-readme-stars.yml'
