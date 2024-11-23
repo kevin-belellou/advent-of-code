@@ -32,4 +32,4 @@ jobs:
           use-actions-summary: 'true'
 
   update:
-    uses: './github/workflows/update-readme-stars.yml'
+    uses: './.github/workflows/update-readme-stars.yml'
