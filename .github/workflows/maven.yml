@@ -69,8 +69,8 @@ jobs:
       - uses: stefanzweifel/git-auto-commit-action@8621497c8c39c72f3e2a999a26b4ca1b5058a842
         with:
           commit_message: Update README with latest stars
-          commit_author: "Kévin Belellou [bot] <kevin.belellou+update-stars[bot]@gmail.com>"
+          commit_author: "Kévin Belellou [bot] <kevin.belellou@gmail.com>"
           commit_user_name: Kévin Belellou [bot]
-          commit_user_email: kevin.belellou+update-stars[bot]@gmail.com
+          commit_user_email: kevin.belellou@gmail.com
           branch: feature/advent-stars-test
           create_branch: true
