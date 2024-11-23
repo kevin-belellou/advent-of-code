@@ -65,11 +65,13 @@ jobs:
           passphrase: ${{ secrets.UPDATE_STARS_BOT_GPG_PASSPHRASE }}
           git_user_signingkey: true
           git_commit_gpgsign: true
+          git_committer_name: Kévin Belellou [bot]
+          git_committer_email: kevin.belellou+update-stars[bot]@gmail.com
 
       - uses: stefanzweifel/git-auto-commit-action@8621497c8c39c72f3e2a999a26b4ca1b5058a842
         with:
           commit_message: Update README with latest stars
-          commit_author: "${{ steps.import-gpg.outputs.name }} (Bot) <${{ steps.import-gpg.outputs.email }}>"
+          commit_author: "${{ steps.import-gpg.outputs.name }} <${{ steps.import-gpg.outputs.email }}>"
           commit_user_name: ${{ steps.import-gpg.outputs.name }}
           commit_user_email: ${{ steps.import-gpg.outputs.email }}
           branch: feature/advent-stars-test
