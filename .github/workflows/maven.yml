@@ -37,12 +37,31 @@ jobs:
       contents: write
     steps:
       - uses: actions/checkout@v4
+
       - uses: k2bd/advent-readme-stars@27bfdb5e0e611d0f006356cfe37dbfb505b0ee49
         with:
           userId: 4246309
-          #          leaderboardId: 9876543
           sessionCookie: ${{ secrets.ADVENT_OF_CODE_SESSION }}
           year: 2015
+
+      - uses: J0B10/aoc-badges-action@75cd611df531bd9aa0675cae13be418d73cbdf76
+        with:
+          userid: 4246309
+          session: ${{ secrets.ADVENT_OF_CODE_SESSION }}
+          year: 2015
+          starsRegex: '(?<=https:\/\/img\.shields\.io\/badge\/%E2%AD%90_in_2015-)[0-9]+(?=_%2F_50-yellow)'
+
+          #         Optional inputs:
+          #
+          #         year: 2021                                                                                     # The year for which stats should be retrieved
+          #         leaderboard: 'https://adventofcode.com/2020/leaderboard/private/view/00000.json'               # The url of the leaderboard from witch the data is fetched. Typically your private leaderboard.
+          #         file: 'README.md'                                                                              # The file that contains the badges
+          #         dayRegex: '(?<=https:\/\/img\.shields\.io\/badge\/day%20📅-)[0-9]+(?=-blue)'                   # Regular expression that finds the content of the day badge in your file.
+          #         starsRegex: '(?<=https:\/\/img\.shields\.io\/badge\/stars%20⭐-)[0-9]+(?=-yellow)'             # Regular expression that finds the content of the stars badge in your file.
+          #         daysCompletedRegex: '(?<=https:\/\/img\.shields\.io\/badge\/days%20completed-)[0-9]+(?=-red)'  # Regular expression that finds the content of the days completed badge iun your file.
+
+
+
       - uses: stefanzweifel/git-auto-commit-action@8621497c8c39c72f3e2a999a26b4ca1b5058a842
         with:
           commit_message: Update README stars
