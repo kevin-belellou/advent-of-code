@@ -29,10 +29,16 @@ public enum Day {
     DAY_24("24"),
     DAY_25("25");
 
+    private static final String PREFIX = "DAY_";
+
     private final String day;
 
     Day(final String day) {
         this.day = day;
+    }
+
+    public static Day getDay(String day) {
+        return Day.valueOf(PREFIX + day);
     }
 
     @Override

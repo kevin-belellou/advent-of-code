@@ -14,8 +14,6 @@ import org.jgrapht.graph.SimpleDirectedGraph;
 import org.jgrapht.traverse.TopologicalOrderIterator;
 
 import com.belellou.kevin.advent.generic.AbstractDaySolver;
-import com.belellou.kevin.advent.generic.Day;
-import com.belellou.kevin.advent.generic.Year;
 
 @SuppressWarnings("unused")
 public class Day7 extends AbstractDaySolver<Integer> {
@@ -60,7 +58,7 @@ public class Day7 extends AbstractDaySolver<Integer> {
                                                                        "$");
 
     public Day7() {
-        super(Year.YEAR_2015, Day.DAY_7);
+        super(Day7.class);
     }
 
     @SuppressWarnings("DuplicatedCode")

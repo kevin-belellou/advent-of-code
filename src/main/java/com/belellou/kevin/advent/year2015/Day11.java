@@ -3,14 +3,12 @@ package com.belellou.kevin.advent.year2015;
 import java.io.BufferedReader;
 
 import com.belellou.kevin.advent.generic.AbstractDaySolver;
-import com.belellou.kevin.advent.generic.Day;
-import com.belellou.kevin.advent.generic.Year;
 
 @SuppressWarnings("unused")
 public class Day11 extends AbstractDaySolver<String> {
 
     public Day11() {
-        super(Year.YEAR_2015, Day.DAY_11);
+        super(Day11.class);
     }
 
     private static boolean isPasswordInvalid(String password) {

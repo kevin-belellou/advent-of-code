@@ -3,14 +3,12 @@ package com.belellou.kevin.advent.year2015;
 import java.io.BufferedReader;
 
 import com.belellou.kevin.advent.generic.AbstractDaySolver;
-import com.belellou.kevin.advent.generic.Day;
-import com.belellou.kevin.advent.generic.Year;
 
 @SuppressWarnings("unused")
 public class Day10 extends AbstractDaySolver<Integer> {
 
     public Day10() {
-        super(Year.YEAR_2015, Day.DAY_10);
+        super(Day10.class);
     }
 
     private static String readLine(String line) {

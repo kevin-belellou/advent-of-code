@@ -13,9 +13,7 @@ import org.jgrapht.graph.DefaultWeightedEdge;
 import org.jgrapht.graph.SimpleWeightedGraph;
 
 import com.belellou.kevin.advent.generic.AbstractDaySolver;
-import com.belellou.kevin.advent.generic.Day;
 import com.belellou.kevin.advent.generic.DisableTest;
-import com.belellou.kevin.advent.generic.Year;
 
 @SuppressWarnings("unused")
 public class Day9 extends AbstractDaySolver<Integer> {
@@ -33,7 +31,7 @@ public class Day9 extends AbstractDaySolver<Integer> {
                                                                    "$");
 
     public Day9() {
-        super(Year.YEAR_2015, Day.DAY_9);
+        super(Day9.class);
     }
 
     @Override

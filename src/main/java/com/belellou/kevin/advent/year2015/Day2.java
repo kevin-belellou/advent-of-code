@@ -8,8 +8,6 @@ import java.util.stream.Stream;
 import org.apache.commons.lang3.math.NumberUtils;
 
 import com.belellou.kevin.advent.generic.AbstractDaySolver;
-import com.belellou.kevin.advent.generic.Day;
-import com.belellou.kevin.advent.generic.Year;
 
 @SuppressWarnings("unused")
 public class Day2 extends AbstractDaySolver<Integer> {
@@ -17,7 +15,7 @@ public class Day2 extends AbstractDaySolver<Integer> {
     private static final Pattern PATTERN = Pattern.compile("^(\\d+)x(\\d+)x(\\d+)$");
 
     public Day2() {
-        super(Year.YEAR_2015, Day.DAY_2);
+        super(Day2.class);
     }
 
     private static int findAreaNeeded(String line) {

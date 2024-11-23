@@ -1,12 +1,15 @@
-package com.belellou.kevin.advent.generic;
+package com.belellou.kevin.advent.year0;
 
 import java.io.BufferedReader;
+
+import com.belellou.kevin.advent.generic.AbstractDaySolver;
+import com.belellou.kevin.advent.generic.DisableTest;
 
 @SuppressWarnings("unused")
 public class Day0 extends AbstractDaySolver<Integer> {
 
     public Day0() {
-        super(Year.YEAR_0, Day.DAY_0);
+        super(Day0.class);
     }
 
     @Override

@@ -6,8 +6,6 @@ import java.io.IOException;
 import org.apache.commons.lang3.StringUtils;
 
 import com.belellou.kevin.advent.generic.AbstractDaySolver;
-import com.belellou.kevin.advent.generic.Day;
-import com.belellou.kevin.advent.generic.Year;
 
 @SuppressWarnings("unused")
 public class Day1 extends AbstractDaySolver<Integer> {
@@ -15,7 +13,7 @@ public class Day1 extends AbstractDaySolver<Integer> {
     private static final int STARTING_FLOOR = 0;
 
     public Day1() {
-        super(Year.YEAR_2015, Day.DAY_1);
+        super(Day1.class);
     }
 
     @Override

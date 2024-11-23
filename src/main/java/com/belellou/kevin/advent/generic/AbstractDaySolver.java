@@ -4,6 +4,8 @@ import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public abstract class AbstractDaySolver<T> implements DaySolver<T> {
 
@@ -13,17 +15,28 @@ public abstract class AbstractDaySolver<T> implements DaySolver<T> {
 
     private static final String FIRST_SOLUTION = " - First solution: ";
     private static final String SECOND_SOLUTION = " - Second solution: ";
+    private static final String REGEX_NUMBER = "(\\d+)";
 
     private final Year year;
     private final Day day;
 
     private final String input;
 
-    protected AbstractDaySolver(Year year, Day day) {
-        this.year = year;
-        this.day = day;
+    protected AbstractDaySolver(Class<? extends AbstractDaySolver<T>> clazz) {
+        this.year = Year.getYear(getNumberFrom(clazz.getPackageName()));
+        this.day = Day.getDay(getNumberFrom(clazz.getSimpleName()));
 
         input = INPUT_FOLDER + year.toString() + SEPARATOR + day.toString() + INPUT_FILE_NAME;
+    }
+
+    private static String getNumberFrom(String input) {
+        Matcher matcher = Pattern.compile(REGEX_NUMBER).matcher(input);
+
+        if (!matcher.find()) {
+            throw new IllegalArgumentException("Invalid input: " + input);
+        }
+
+        return matcher.group(1);
     }
 
     private BufferedReader getReader() {

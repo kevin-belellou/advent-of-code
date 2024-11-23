@@ -5,14 +5,12 @@ import java.util.HashSet;
 import java.util.Set;
 
 import com.belellou.kevin.advent.generic.AbstractDaySolver;
-import com.belellou.kevin.advent.generic.Day;
-import com.belellou.kevin.advent.generic.Year;
 
 @SuppressWarnings("unused")
 public class Day5 extends AbstractDaySolver<Integer> {
 
     public Day5() {
-        super(Year.YEAR_2015, Day.DAY_5);
+        super(Day5.class);
     }
 
     private static boolean firstStarStringTest(String string) {

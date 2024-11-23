@@ -8,9 +8,7 @@ import java.util.Objects;
 import java.util.regex.Pattern;
 
 import com.belellou.kevin.advent.generic.AbstractDaySolver;
-import com.belellou.kevin.advent.generic.Day;
 import com.belellou.kevin.advent.generic.DisableTest;
-import com.belellou.kevin.advent.generic.Year;
 
 @SuppressWarnings("unused")
 public class Day8 extends AbstractDaySolver<Integer> {
@@ -23,7 +21,7 @@ public class Day8 extends AbstractDaySolver<Integer> {
     private static final Map<String, Integer> memAgain = new HashMap<>();
 
     public Day8() {
-        super(Year.YEAR_2015, Day.DAY_8);
+        super(Day8.class);
     }
 
     private static int countMemoryLengthAgain(String line) {

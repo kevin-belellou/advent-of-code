@@ -6,14 +6,12 @@ import java.util.HashSet;
 import java.util.Set;
 
 import com.belellou.kevin.advent.generic.AbstractDaySolver;
-import com.belellou.kevin.advent.generic.Day;
-import com.belellou.kevin.advent.generic.Year;
 
 @SuppressWarnings("unused")
 public class Day3 extends AbstractDaySolver<Integer> {
 
     public Day3() {
-        super(Year.YEAR_2015, Day.DAY_3);
+        super(Day3.class);
     }
 
     @Override

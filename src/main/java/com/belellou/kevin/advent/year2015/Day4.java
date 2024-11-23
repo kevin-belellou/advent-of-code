@@ -7,8 +7,6 @@ import java.util.stream.IntStream;
 import org.apache.commons.codec.digest.DigestUtils;
 
 import com.belellou.kevin.advent.generic.AbstractDaySolver;
-import com.belellou.kevin.advent.generic.Day;
-import com.belellou.kevin.advent.generic.Year;
 
 @SuppressWarnings("unused")
 public class Day4 extends AbstractDaySolver<Integer> {
@@ -17,7 +15,7 @@ public class Day4 extends AbstractDaySolver<Integer> {
     private static final String SIX_ZEROES_PATTERN = "000000";
 
     public Day4() {
-        super(Year.YEAR_2015, Day.DAY_4);
+        super(Day4.class);
     }
 
     private static int findNumber(String line, String pattern) {

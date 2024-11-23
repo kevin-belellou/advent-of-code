@@ -6,8 +6,6 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 import com.belellou.kevin.advent.generic.AbstractDaySolver;
-import com.belellou.kevin.advent.generic.Day;
-import com.belellou.kevin.advent.generic.Year;
 
 @SuppressWarnings("unused")
 public class Day6 extends AbstractDaySolver<Integer> {
@@ -32,7 +30,7 @@ public class Day6 extends AbstractDaySolver<Integer> {
     private static final String COMMAND_TOGGLE = "toggle";
 
     public Day6() {
-        super(Year.YEAR_2015, Day.DAY_6);
+        super(Day6.class);
     }
 
     private static Instruction matcherToInstruction(Matcher matcher) {

@@ -14,10 +14,16 @@ public enum Year {
     YEAR_2023("2023"),
     YEAR_2024("2024");
 
+    private static final String PREFIX = "YEAR_";
+
     private final String year;
 
     Year(final String year) {
         this.year = year;
+    }
+
+    public static Year getYear(String year) {
+        return Year.valueOf(PREFIX + year);
     }
 
     @Override
