@@ -26,7 +26,7 @@ jobs:
       - name: Build with Maven
         run: mvn verify --batch-mode --no-transfer-progress
 
-      - name: Test Report
+      - name: JUnit Test Report
         uses: dorny/test-reporter@1a288b62f8b75c0f433cbfdbc2e4800fbae50bd7
         if: ${{ !cancelled() }}
         with:
@@ -35,18 +35,18 @@ jobs:
           reporter: java-junit
           use-actions-summary: 'true'
 
-      # generates coverage-report.md and publishes as checkrun
       - name: JaCoCo Code Coverage Report
         id: jacoco_reporter
         uses: PavanMudigonda/jacoco-reporter@4fc6bf270fe893e8dda5467e432253a6961345b8
+        if: ${{ !cancelled() }}
         with:
           coverage_results_path: target/site/jacoco/jacoco.xml
           coverage_report_name: Coverage
           coverage_report_title: JaCoCo
           skip_check_run: true
 
-      # Publish Coverage Job Summary # Optional
-      - name: Add Jacoco report to workflow run summary
+      - name: Add JaCoCo report to workflow run summary
+        if: ${{ steps.jacoco_reporter.outputs.coverage_percentage != '' }}
         run: |
           echo "## Code Coverage" >> $GITHUB_STEP_SUMMARY
           echo "| Outcome | Value |" >> $GITHUB_STEP_SUMMARY
