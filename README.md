@@ -1,7 +1,7 @@
 # Advent of Code
 
 [![GitHub License][badge_license]][file_license]
-[![Java version][badge_java_version]]()
+![Java version][badge_java_version]
 [![Test results][badge_test_results]][actions_tests]
 
 [![Java CI with Maven][badge_actions_build]][actions_build]
@@ -10,7 +10,7 @@
 Personal repository to develop
 and store my answers to the incredible puzzles from [adventofcode.com][adventofcode] 🎄 🎅.
 
-[![Static Badge][badge_stars_2015]]()
+![Static Badge][badge_stars_2015]
 
 [//]: # (@formatter:off)
 
