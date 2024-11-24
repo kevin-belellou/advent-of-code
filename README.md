@@ -1,9 +1,18 @@
 # Advent of Code
 
+[![GitHub License][badge_license]][file_license]
+![Java version][badge_java_version]
+[![Test results][badge_test_results]][url_tests]
+
+[//]: # (![GitHub top language][badge_language])
+
+[![Java CI with Maven][badge_actions_build]][actions_build]
+[![Update README ⭐][badge_actions_update_readme]][actions_update_readme]
+
 Personal repository to develop
 and store my answers to the incredible puzzles from [adventofcode.com][adventofcode] 🎄 🎅.
 
-![Static Badge](https://img.shields.io/badge/%E2%AD%90_in_2015-19_%2F_50-yellow)
+![Static Badge][badge_stars_2015]
 
 <!--- advent_readme_stars table --->
 ## 2015 Results
@@ -23,3 +32,23 @@ and store my answers to the incredible puzzles from [adventofcode.com][adventofc
 <!--- advent_readme_stars table --->
 
 [adventofcode]: https://adventofcode.com/
+
+[file_license]: https://github.com/kevin-belellou/advent-of-code/blob/main/LICENSE
+
+[url_tests]: https://github.com/kevin-belellou/advent-of-code/actions/workflows/maven.yml?query=branch%3Amain
+
+[actions_build]: https://github.com/kevin-belellou/advent-of-code/actions/workflows/maven.yml
+
+[actions_update_readme]: https://github.com/kevin-belellou/advent-of-code/actions/workflows/update-readme-stars.yml
+
+[badge_license]: https://img.shields.io/github/license/kevin-belellou/advent-of-code?style=plastic
+
+[badge_java_version]: https://img.shields.io/badge/Java-21-blue?style=plastic
+
+[badge_test_results]: https://img.shields.io/endpoint?url=https%3A%2F%2Fgist.githubusercontent.com%2Fkevin-belellou%2Fb215880fcc3b1db343bccd1147ed9c06%2Fraw%2Fadvent-of-code-junit-tests.json&style=plastic
+
+[badge_actions_build]: https://github.com/kevin-belellou/advent-of-code/actions/workflows/maven.yml/badge.svg?branch=main
+
+[badge_actions_update_readme]: https://github.com/kevin-belellou/advent-of-code/actions/workflows/update-readme-stars.yml/badge.svg?branch=main
+
+[badge_stars_2015]: https://img.shields.io/badge/%E2%AD%90_in_2015-19_%2F_50-yellow

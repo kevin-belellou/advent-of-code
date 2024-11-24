@@ -32,7 +32,7 @@ jobs:
           use-actions-summary: 'true'
 
       - uses: gaelgirodon/ci-badges-action@14c20f94cfdcbb27ce33e8793fa3245c25ddca14
-        #        if: github.event == 'push' && github.ref == 'main'
+        if: github.event == 'push' && github.ref == 'main'
         with:
           gist-id: b215880fcc3b1db343bccd1147ed9c06
           token: ${{ secrets.CI_BADGES_GIST_TOKEN }}
