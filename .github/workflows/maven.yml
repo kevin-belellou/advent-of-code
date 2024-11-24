@@ -61,3 +61,5 @@ jobs:
         with:
           gist-id: ${{ env.GIST_ID }}
           token: ${{ secrets.CI_BADGES_GIST_TOKEN }}
+
+      - uses: kevincobain2000/action-camo-purge@5169e719d6daf0fdbf8d2174f9438f919627aa87

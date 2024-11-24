@@ -47,3 +47,5 @@ jobs:
           commit_author: "${{ steps.import-gpg.outputs.name }} [bot] <${{ steps.import-gpg.outputs.email }}>"
           commit_user_name: ${{ steps.import-gpg.outputs.name }} [bot]
           commit_user_email: ${{ steps.import-gpg.outputs.email }}
+
+      - uses: kevincobain2000/action-camo-purge@5169e719d6daf0fdbf8d2174f9438f919627aa87
