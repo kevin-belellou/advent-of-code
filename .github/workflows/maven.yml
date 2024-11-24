@@ -8,8 +8,12 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       checks: write
+    env:
+      CI_BADGES_GIST: c098f5fa219b3aa17fd8dabf9087cc14
+      CI_BADGES_GIST_STAGING: b215880fcc3b1db343bccd1147ed9c06
 
     steps:
+      - run: env
       - uses: actions/checkout@v4
 
       - name: Set up JDK 21
@@ -32,7 +36,8 @@ jobs:
           use-actions-summary: 'true'
 
       - uses: gaelgirodon/ci-badges-action@14c20f94cfdcbb27ce33e8793fa3245c25ddca14
-        #        if: github.event == 'push' && github.ref == 'main'
+        env:
+          GIST_ID: ${{ github.event == 'push' && github.ref == 'main' && env.CI_BADGES_GIST || env.CI_BADGES_GIST_STAGING }}
         with:
-          gist-id: b215880fcc3b1db343bccd1147ed9c06
+          gist-id: ${{ env.GIST_ID }}
           token: ${{ secrets.CI_BADGES_GIST_TOKEN }}
