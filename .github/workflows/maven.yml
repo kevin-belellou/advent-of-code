@@ -20,7 +20,7 @@ jobs:
           cache: maven
 
       - name: Build with Maven
-        run: mvn package --batch-mode --no-transfer-progress
+        run: mvn verify --batch-mode --no-transfer-progress
 
       - name: Test Report
         uses: dorny/test-reporter@1a288b62f8b75c0f433cbfdbc2e4800fbae50bd7
