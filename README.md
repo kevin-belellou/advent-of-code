@@ -10,7 +10,7 @@
 Personal repository to develop
 and store my answers to the incredible puzzles from [adventofcode.com][adventofcode] 🎄 🎅.
 
-![Static Badge][badge_stars_2015]
+[![Static Badge][badge_stars_2015]]()
 
 [//]: # (@formatter:off)
 
