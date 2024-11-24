@@ -3,6 +3,7 @@
 [![GitHub License][badge_license]][file_license]
 ![Java version][badge_java_version]
 [![Test results][badge_test_results]][actions_tests]
+[![Code coverage][badge_code_coverage]][actions_tests]
 
 [![Java CI with Maven][badge_actions_build]][actions_build]
 [![Update README ⭐][badge_actions_update_readme]][actions_update_readme]
@@ -42,6 +43,7 @@ and store my answers to the incredible puzzles from [adventofcode.com][adventofc
 [badge_license]: https://img.shields.io/github/license/kevin-belellou/advent-of-code?style=plastic
 [badge_java_version]: https://img.shields.io/badge/Java-21-blue?style=plastic
 [badge_test_results]: https://img.shields.io/endpoint?url=https%3A%2F%2Fgist.githubusercontent.com%2Fkevin-belellou%2Fc098f5fa219b3aa17fd8dabf9087cc14%2Fraw%2Fadvent-of-code-junit-tests.json&style=plastic
+[badge_code_coverage]: https://img.shields.io/endpoint?url=https%3A%2F%2Fgist.githubusercontent.com%2Fkevin-belellou%2Fc098f5fa219b3aa17fd8dabf9087cc14%2Fraw%2Fadvent-of-code-jacoco-coverage.json&style=plastic
 [badge_actions_build]: https://github.com/kevin-belellou/advent-of-code/actions/workflows/maven.yml/badge.svg?branch=main
 [badge_actions_update_readme]: https://github.com/kevin-belellou/advent-of-code/actions/workflows/update-readme-stars.yml/badge.svg?branch=main
 [badge_stars_2015]: https://img.shields.io/badge/%E2%AD%90_in_2015-19_%2F_50-yellow
