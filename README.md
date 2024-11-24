@@ -1,7 +1,7 @@
 # Advent of Code
 
 [![GitHub License][badge_license]][file_license]
-![Java version][badge_java_version]
+[![Java version][badge_java_version]]()
 [![Test results][badge_test_results]][actions_tests]
 
 [![Java CI with Maven][badge_actions_build]][actions_build]
