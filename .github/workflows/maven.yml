@@ -1,6 +1,6 @@
 name: Java CI with Maven
 
-on: [ push, pull_request ]
+on: push
 
 jobs:
   build:
@@ -8,8 +8,12 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       checks: write
+    env:
+      CI_BADGES_GIST: c098f5fa219b3aa17fd8dabf9087cc14
+      CI_BADGES_GIST_STAGING: b215880fcc3b1db343bccd1147ed9c06
 
     steps:
+      - run: env
       - uses: actions/checkout@v4
 
       - name: Set up JDK 21
@@ -20,9 +24,9 @@ jobs:
           cache: maven
 
       - name: Build with Maven
-        run: mvn package --batch-mode --no-transfer-progress
+        run: mvn verify --batch-mode --no-transfer-progress
 
-      - name: Test Report
+      - name: JUnit Test Report
         uses: dorny/test-reporter@1a288b62f8b75c0f433cbfdbc2e4800fbae50bd7
         if: ${{ !cancelled() }}
         with:
@@ -31,8 +35,30 @@ jobs:
           reporter: java-junit
           use-actions-summary: 'true'
 
-      - uses: gaelgirodon/ci-badges-action@14c20f94cfdcbb27ce33e8793fa3245c25ddca14
-        if: github.event == 'push' && github.ref == 'main'
+      - name: JaCoCo Code Coverage Report
+        id: jacoco_reporter
+        uses: PavanMudigonda/jacoco-reporter@4fc6bf270fe893e8dda5467e432253a6961345b8
+        if: ${{ !cancelled() }}
         with:
-          gist-id: b215880fcc3b1db343bccd1147ed9c06
+          coverage_results_path: target/site/jacoco/jacoco.xml
+          coverage_report_name: Coverage
+          coverage_report_title: JaCoCo
+          skip_check_run: true
+
+      - name: Add JaCoCo report to workflow run summary
+        if: ${{ steps.jacoco_reporter.outputs.coverage_percentage != '' }}
+        run: |
+          echo "## Code Coverage" >> $GITHUB_STEP_SUMMARY
+          echo "| Outcome | Value |" >> $GITHUB_STEP_SUMMARY
+          echo "| --- | --- |" >> $GITHUB_STEP_SUMMARY
+          echo "| Code Coverage % | ${{ steps.jacoco_reporter.outputs.coverage_percentage }} |" >> $GITHUB_STEP_SUMMARY
+          echo "| :heavy_check_mark: Number of Lines Covered | ${{ steps.jacoco_reporter.outputs.covered_lines }} |" >> $GITHUB_STEP_SUMMARY
+          echo "| :x: Number of Lines Missed | ${{ steps.jacoco_reporter.outputs.missed_lines }} |" >> $GITHUB_STEP_SUMMARY
+          echo "| Total Number of Lines | ${{ steps.jacoco_reporter.outputs.total_lines }} |" >> $GITHUB_STEP_SUMMARY
+
+      - uses: gaelgirodon/ci-badges-action@14c20f94cfdcbb27ce33e8793fa3245c25ddca14
+        env:
+          GIST_ID: ${{ github.event == 'push' && github.ref == 'main' && env.CI_BADGES_GIST || env.CI_BADGES_GIST_STAGING }}
+        with:
+          gist-id: ${{ env.GIST_ID }}
           token: ${{ secrets.CI_BADGES_GIST_TOKEN }}
