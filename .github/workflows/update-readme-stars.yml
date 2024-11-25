@@ -17,16 +17,19 @@ jobs:
       YEAR_2015: 2015
 
     steps:
-      - uses: actions/checkout@v4
+      - name: "Checkout repository"
+        uses: actions/checkout@v4
 
-      - uses: J0B10/aoc-badges-action@75cd611df531bd9aa0675cae13be418d73cbdf76
+      - name: "Update stars badges in README.md"
+        uses: J0B10/aoc-badges-action@75cd611df531bd9aa0675cae13be418d73cbdf76
         with:
           userid: ${{ env.ADVENT_USER_ID }}
           session: ${{ secrets.ADVENT_OF_CODE_SESSION }}
           year: ${{ env.YEAR_2015 }}
           starsRegex: '(?<=https:\/\/img\.shields\.io\/badge\/%E2%AD%90_in_2015-)[0-9]+(?=_%2F_50-yellow)'
 
-      - uses: k2bd/advent-readme-stars@27bfdb5e0e611d0f006356cfe37dbfb505b0ee49
+      - name: "Update stars array in README.md"
+        uses: k2bd/advent-readme-stars@27bfdb5e0e611d0f006356cfe37dbfb505b0ee49
         with:
           userId: ${{ env.ADVENT_USER_ID }}
           sessionCookie: ${{ secrets.ADVENT_OF_CODE_SESSION }}
@@ -41,11 +44,18 @@ jobs:
           git_user_signingkey: true
           git_commit_gpgsign: true
 
-      - uses: stefanzweifel/git-auto-commit-action@8621497c8c39c72f3e2a999a26b4ca1b5058a842
+      - name: "Commit modifications if any"
+        uses: stefanzweifel/git-auto-commit-action@8621497c8c39c72f3e2a999a26b4ca1b5058a842
+        id: auto-commit-action
         with:
           commit_message: Update README with latest stars
           commit_author: "${{ steps.import-gpg.outputs.name }} [bot] <${{ steps.import-gpg.outputs.email }}>"
           commit_user_name: ${{ steps.import-gpg.outputs.name }} [bot]
           commit_user_email: ${{ steps.import-gpg.outputs.email }}
 
-      - uses: kevincobain2000/action-camo-purge@5169e719d6daf0fdbf8d2174f9438f919627aa87
+      - name: "Run if changes have been detected"
+        if: steps.auto-commit-action.outputs.changes_detected == 'true'
+        run: echo "📝 Modifications committed with sha ${{ steps.auto-commit-action.outputs.commit_hash }}"
+
+      - name: "Purge camo cache"
+        uses: kevincobain2000/action-camo-purge@5169e719d6daf0fdbf8d2174f9438f919627aa87
