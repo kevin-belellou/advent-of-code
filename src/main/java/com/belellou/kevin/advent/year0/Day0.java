@@ -20,7 +20,7 @@ public class Day0 extends AbstractDaySolver<Integer> {
     @DisableTest
     @Override
     public Integer getFirstStarSolution() {
-        return 0;
+        return 1;
     }
 
     @Override
@@ -31,6 +31,6 @@ public class Day0 extends AbstractDaySolver<Integer> {
     @DisableTest
     @Override
     public Integer getSecondStarSolution() {
-        return 0;
+        return 1;
     }
 }
