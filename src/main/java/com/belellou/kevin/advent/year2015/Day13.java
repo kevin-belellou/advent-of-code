@@ -6,12 +6,12 @@ import java.util.regex.Pattern;
 
 import org.jgrapht.Graph;
 import org.jgrapht.GraphPath;
-import org.jgrapht.alg.tour.HeldKarpTSP;
 import org.jgrapht.graph.DefaultWeightedEdge;
 import org.jgrapht.graph.SimpleDirectedWeightedGraph;
 import org.jgrapht.graph.SimpleWeightedGraph;
 
 import com.belellou.kevin.advent.generic.AbstractDaySolver;
+import com.belellou.kevin.advent.generic.GraphUtil;
 
 @SuppressWarnings("unused")
 public class Day13 extends AbstractDaySolver<Integer> {
@@ -86,8 +86,8 @@ public class Day13 extends AbstractDaySolver<Integer> {
             SimpleDirectedWeightedGraph<String, DefaultWeightedEdge> directedGraph) {
         SimpleWeightedGraph<String, DefaultWeightedEdge> undirectedGraph = transformGraph(directedGraph);
 
-        GraphPath<String, DefaultWeightedEdge> tour = new HeldKarpTSP<String, DefaultWeightedEdge>().getTour(
-                undirectedGraph);
+        GraphUtil<String, DefaultWeightedEdge> graphUtil = new GraphUtil<>();
+        GraphPath<String, DefaultWeightedEdge> tour = graphUtil.getShortestHamiltonianCycle(undirectedGraph);
 
         return (int) -tour.getWeight();
     }
