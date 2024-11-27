@@ -130,12 +130,12 @@ public class Day14 extends AbstractDaySolver<Integer> {
             return Integer.parseInt(matcher.group(GROUP_SPEED));
         }
 
-        private static int getRestDuration(Matcher matcher) {
-            return Integer.parseInt(matcher.group(GROUP_REST_DURATION));
-        }
-
         private static int getSpeedDuration(Matcher matcher) {
             return Integer.parseInt(matcher.group(GROUP_SPEED_DURATION));
+        }
+
+        private static int getRestDuration(Matcher matcher) {
+            return Integer.parseInt(matcher.group(GROUP_REST_DURATION));
         }
     }
 }

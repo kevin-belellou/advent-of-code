@@ -9,8 +9,7 @@
     <version>1.0-SNAPSHOT</version>
 
     <name>Advent of Code</name>
-    <description>Personal repository to develop and store my answers to the incredible puzzles from adventofcode.com
-    </description>
+    <description>Personal repository to develop and store my answers to the incredible puzzles from adventofcode.com</description>
     <url>https://github.com/kevin-belellou/advent-of-code</url>
 
     <developers>
@@ -28,6 +27,7 @@
         <assertj.version>3.26.3</assertj.version>
         <commons-codec.version>1.17.1</commons-codec.version>
         <commons-lang3.version>3.17.0</commons-lang3.version>
+        <ejml-simple.version>0.43.1</ejml-simple.version>
         <gson.version>2.11.0</gson.version>
         <jgrapht-core.version>1.5.2</jgrapht-core.version>
         <junit.version>5.11.3</junit.version>
@@ -36,7 +36,6 @@
 
         <!-- Plugin versions -->
         <jacoco-maven-plugin.version>0.8.12</jacoco-maven-plugin.version>
-        <maven-failsafe-plugin.version>3.5.2</maven-failsafe-plugin.version>
         <maven-surefire-plugin.version>3.5.2</maven-surefire-plugin.version>
     </properties>
 
@@ -54,31 +53,43 @@
 
     <dependencies>
         <dependency>
+            <!-- Message digest (like md5) -->
             <groupId>commons-codec</groupId>
             <artifactId>commons-codec</artifactId>
             <version>${commons-codec.version}</version>
         </dependency>
         <dependency>
+            <!-- Json parsing -->
             <groupId>com.google.code.gson</groupId>
             <artifactId>gson</artifactId>
             <version>${gson.version}</version>
         </dependency>
         <dependency>
+            <!-- Stream functions for avoiding exceptions -->
             <groupId>com.pivovarit</groupId>
             <artifactId>throwing-function</artifactId>
             <version>${throwing-function.version}</version>
         </dependency>
         <dependency>
+            <!-- Some utils -->
             <groupId>org.apache.commons</groupId>
             <artifactId>commons-lang3</artifactId>
             <version>${commons-lang3.version}</version>
         </dependency>
         <dependency>
+            <!-- Matrices -->
+            <groupId>org.ejml</groupId>
+            <artifactId>ejml-simple</artifactId>
+            <version>${ejml-simple.version}</version>
+        </dependency>
+        <dependency>
+            <!-- Graphs -->
             <groupId>org.jgrapht</groupId>
             <artifactId>jgrapht-core</artifactId>
             <version>${jgrapht-core.version}</version>
         </dependency>
         <dependency>
+            <!-- Class search -->
             <groupId>org.springframework</groupId>
             <artifactId>spring-context</artifactId>
             <version>${spring-context.version}</version>
@@ -86,12 +97,14 @@
 
         <!-- Test scope -->
         <dependency>
+            <!-- Better assertions -->
             <groupId>org.assertj</groupId>
             <artifactId>assertj-core</artifactId>
             <version>${assertj.version}</version>
             <scope>test</scope>
         </dependency>
         <dependency>
+            <!-- JUnit test framework -->
             <groupId>org.junit.jupiter</groupId>
             <artifactId>junit-jupiter</artifactId>
             <scope>test</scope>
@@ -101,9 +114,11 @@
     <build>
         <plugins>
             <plugin>
+                <!-- Unit test execution -->
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>${maven-surefire-plugin.version}</version>
 
+                <!-- Configuration for DynamicTests to retain their names -->
                 <configuration>
                     <statelessTestsetReporter
                             implementation="org.apache.maven.plugin.surefire.extensions.junit5.JUnit5Xml30StatelessReporter">
@@ -133,11 +148,7 @@
             </plugin>
 
             <plugin>
-                <artifactId>maven-failsafe-plugin</artifactId>
-                <version>${maven-failsafe-plugin.version}</version>
-            </plugin>
-
-            <plugin>
+                <!-- Code coverage -->
                 <groupId>org.jacoco</groupId>
                 <artifactId>jacoco-maven-plugin</artifactId>
                 <version>${jacoco-maven-plugin.version}</version>
