@@ -18,3 +18,5 @@ updates:
       interval: "daily"
     commit-message:
       prefix: "[Actions] "
+    ignore:
+      - dependency-name: "dorny/test-reporter"
