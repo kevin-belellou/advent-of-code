@@ -29,11 +29,12 @@ jobs:
           starsRegex: '(?<=https:\/\/img\.shields\.io\/badge\/%E2%AD%90_in_2015-)[0-9]+(?=_%2F_50-yellow)'
 
       - name: "Update stars array in README.md"
-        uses: k2bd/advent-readme-stars@27bfdb5e0e611d0f006356cfe37dbfb505b0ee49
+        uses: kevin-belellou/fork-k2bd-advent-readme-stars@d61a4afb9a6ee5b11745253fdf5bfd11caafcb99
         with:
           userId: ${{ env.ADVENT_USER_ID }}
           sessionCookie: ${{ secrets.ADVENT_OF_CODE_SESSION }}
           year: ${{ env.YEAR_2015 }}
+          showMissingDays: true
 
       - name: "Import GPG key"
         id: import-gpg
