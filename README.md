@@ -28,6 +28,7 @@ and store my answers to the incredible puzzles from [adventofcode.com][adventofc
 | [Day 6](https://adventofcode.com/2015/day/6) | ⭐ | ⭐ |
 | [Day 7](https://adventofcode.com/2015/day/7) | ⭐ | ⭐ |
 | [Day 8](https://adventofcode.com/2015/day/8) | ⭐ |   |
+| [Day 9](https://adventofcode.com/2015/day/9) |   |   |
 | [Day 10](https://adventofcode.com/2015/day/10) | ⭐ | ⭐ |
 | [Day 11](https://adventofcode.com/2015/day/11) | ⭐ | ⭐ |
 | [Day 12](https://adventofcode.com/2015/day/12) | ⭐ | ⭐ |
@@ -40,7 +41,9 @@ and store my answers to the incredible puzzles from [adventofcode.com][adventofc
 | [Day 19](https://adventofcode.com/2015/day/19) | ⭐ |   |
 | [Day 20](https://adventofcode.com/2015/day/20) | ⭐ | ⭐ |
 | [Day 21](https://adventofcode.com/2015/day/21) | ⭐ | ⭐ |
+| [Day 22](https://adventofcode.com/2015/day/22) |   |   |
 | [Day 23](https://adventofcode.com/2015/day/23) | ⭐ | ⭐ |
+| [Day 24](https://adventofcode.com/2015/day/24) |   |   |
 | [Day 25](https://adventofcode.com/2015/day/25) | ⭐ |   |
 <!--- advent_readme_stars table --->
 
