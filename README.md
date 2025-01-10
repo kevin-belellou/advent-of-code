@@ -19,62 +19,62 @@ and store my answers to the incredible puzzles from [adventofcode.com][adventofc
 <!--- advent_readme_stars 2015 table --->
 ## 2015 Results
 
-| Day | Part 1 | Part 2 |
-| :---: | :---: | :---: |
-| [Day 1](https://adventofcode.com/2015/day/1) | ⭐ | ⭐ |
-| [Day 2](https://adventofcode.com/2015/day/2) | ⭐ | ⭐ |
-| [Day 3](https://adventofcode.com/2015/day/3) | ⭐ | ⭐ |
-| [Day 4](https://adventofcode.com/2015/day/4) | ⭐ | ⭐ |
-| [Day 5](https://adventofcode.com/2015/day/5) | ⭐ | ⭐ |
-| [Day 6](https://adventofcode.com/2015/day/6) | ⭐ | ⭐ |
-| [Day 7](https://adventofcode.com/2015/day/7) | ⭐ | ⭐ |
-| [Day 8](https://adventofcode.com/2015/day/8) | ⭐ |   |
-| [Day 10](https://adventofcode.com/2015/day/10) | ⭐ | ⭐ |
-| [Day 11](https://adventofcode.com/2015/day/11) | ⭐ | ⭐ |
-| [Day 12](https://adventofcode.com/2015/day/12) | ⭐ | ⭐ |
-| [Day 13](https://adventofcode.com/2015/day/13) | ⭐ | ⭐ |
-| [Day 14](https://adventofcode.com/2015/day/14) | ⭐ | ⭐ |
-| [Day 15](https://adventofcode.com/2015/day/15) | ⭐ | ⭐ |
-| [Day 16](https://adventofcode.com/2015/day/16) | ⭐ | ⭐ |
-| [Day 17](https://adventofcode.com/2015/day/17) | ⭐ | ⭐ |
-| [Day 18](https://adventofcode.com/2015/day/18) | ⭐ | ⭐ |
-| [Day 19](https://adventofcode.com/2015/day/19) | ⭐ |   |
-| [Day 20](https://adventofcode.com/2015/day/20) | ⭐ | ⭐ |
-| [Day 21](https://adventofcode.com/2015/day/21) | ⭐ | ⭐ |
-| [Day 23](https://adventofcode.com/2015/day/23) | ⭐ | ⭐ |
-| [Day 25](https://adventofcode.com/2015/day/25) | ⭐ |   |
+| Day | Solution | Part 1 | Part 2 |
+| :---: | :---: | :---: | :---: |
+| [Day 1](https://adventofcode.com/2015/day/1) | [Day1.java](src/main/java/com/belellou/kevin/advent/year2015/Day1.java) | ⭐ | ⭐ |
+| [Day 2](https://adventofcode.com/2015/day/2) | [Day2.java](src/main/java/com/belellou/kevin/advent/year2015/Day2.java) | ⭐ | ⭐ |
+| [Day 3](https://adventofcode.com/2015/day/3) | [Day3.java](src/main/java/com/belellou/kevin/advent/year2015/Day3.java) | ⭐ | ⭐ |
+| [Day 4](https://adventofcode.com/2015/day/4) | [Day4.java](src/main/java/com/belellou/kevin/advent/year2015/Day4.java) | ⭐ | ⭐ |
+| [Day 5](https://adventofcode.com/2015/day/5) | [Day5.java](src/main/java/com/belellou/kevin/advent/year2015/Day5.java) | ⭐ | ⭐ |
+| [Day 6](https://adventofcode.com/2015/day/6) | [Day6.java](src/main/java/com/belellou/kevin/advent/year2015/Day6.java) | ⭐ | ⭐ |
+| [Day 7](https://adventofcode.com/2015/day/7) | [Day7.java](src/main/java/com/belellou/kevin/advent/year2015/Day7.java) | ⭐ | ⭐ |
+| [Day 8](https://adventofcode.com/2015/day/8) | [Day8.java](src/main/java/com/belellou/kevin/advent/year2015/Day8.java) | ⭐ |   |
+| [Day 10](https://adventofcode.com/2015/day/10) | [Day10.java](src/main/java/com/belellou/kevin/advent/year2015/Day10.java) | ⭐ | ⭐ |
+| [Day 11](https://adventofcode.com/2015/day/11) | [Day11.java](src/main/java/com/belellou/kevin/advent/year2015/Day11.java) | ⭐ | ⭐ |
+| [Day 12](https://adventofcode.com/2015/day/12) | [Day12.java](src/main/java/com/belellou/kevin/advent/year2015/Day12.java) | ⭐ | ⭐ |
+| [Day 13](https://adventofcode.com/2015/day/13) | [Day13.java](src/main/java/com/belellou/kevin/advent/year2015/Day13.java) | ⭐ | ⭐ |
+| [Day 14](https://adventofcode.com/2015/day/14) | [Day14.java](src/main/java/com/belellou/kevin/advent/year2015/Day14.java) | ⭐ | ⭐ |
+| [Day 15](https://adventofcode.com/2015/day/15) | [Day15.java](src/main/java/com/belellou/kevin/advent/year2015/Day15.java) | ⭐ | ⭐ |
+| [Day 16](https://adventofcode.com/2015/day/16) | [Day16.java](src/main/java/com/belellou/kevin/advent/year2015/Day16.java) | ⭐ | ⭐ |
+| [Day 17](https://adventofcode.com/2015/day/17) | [Day17.java](src/main/java/com/belellou/kevin/advent/year2015/Day17.java) | ⭐ | ⭐ |
+| [Day 18](https://adventofcode.com/2015/day/18) | [Day18.java](src/main/java/com/belellou/kevin/advent/year2015/Day18.java) | ⭐ | ⭐ |
+| [Day 19](https://adventofcode.com/2015/day/19) | [Day19.java](src/main/java/com/belellou/kevin/advent/year2015/Day19.java) | ⭐ |   |
+| [Day 20](https://adventofcode.com/2015/day/20) | [Day20.java](src/main/java/com/belellou/kevin/advent/year2015/Day20.java) | ⭐ | ⭐ |
+| [Day 21](https://adventofcode.com/2015/day/21) | [Day21.java](src/main/java/com/belellou/kevin/advent/year2015/Day21.java) | ⭐ | ⭐ |
+| [Day 23](https://adventofcode.com/2015/day/23) | [Day23.java](src/main/java/com/belellou/kevin/advent/year2015/Day23.java) | ⭐ | ⭐ |
+| [Day 25](https://adventofcode.com/2015/day/25) | [Day25.java](src/main/java/com/belellou/kevin/advent/year2015/Day25.java) | ⭐ |   |
 <!--- advent_readme_stars 2015 table --->
 
 <!--- advent_readme_stars 2016 table --->
 ## 2016 Results
 
-| Day | Part 1 | Part 2 |
-| :---: | :---: | :---: |
-| [Day 1](https://adventofcode.com/2016/day/1) |   |   |
-| [Day 2](https://adventofcode.com/2016/day/2) |   |   |
-| [Day 3](https://adventofcode.com/2016/day/3) |   |   |
-| [Day 4](https://adventofcode.com/2016/day/4) |   |   |
-| [Day 5](https://adventofcode.com/2016/day/5) |   |   |
-| [Day 6](https://adventofcode.com/2016/day/6) |   |   |
-| [Day 7](https://adventofcode.com/2016/day/7) |   |   |
-| [Day 8](https://adventofcode.com/2016/day/8) |   |   |
-| [Day 9](https://adventofcode.com/2016/day/9) |   |   |
-| [Day 10](https://adventofcode.com/2016/day/10) |   |   |
-| [Day 11](https://adventofcode.com/2016/day/11) |   |   |
-| [Day 12](https://adventofcode.com/2016/day/12) |   |   |
-| [Day 13](https://adventofcode.com/2016/day/13) |   |   |
-| [Day 14](https://adventofcode.com/2016/day/14) |   |   |
-| [Day 15](https://adventofcode.com/2016/day/15) |   |   |
-| [Day 16](https://adventofcode.com/2016/day/16) |   |   |
-| [Day 17](https://adventofcode.com/2016/day/17) |   |   |
-| [Day 18](https://adventofcode.com/2016/day/18) |   |   |
-| [Day 19](https://adventofcode.com/2016/day/19) |   |   |
-| [Day 20](https://adventofcode.com/2016/day/20) |   |   |
-| [Day 21](https://adventofcode.com/2016/day/21) |   |   |
-| [Day 22](https://adventofcode.com/2016/day/22) |   |   |
-| [Day 23](https://adventofcode.com/2016/day/23) |   |   |
-| [Day 24](https://adventofcode.com/2016/day/24) |   |   |
-| [Day 25](https://adventofcode.com/2016/day/25) |   |   |
+| Day | Solution | Part 1 | Part 2 |
+| :---: | :---: | :---: | :---: |
+| [Day 1](https://adventofcode.com/2016/day/1) | [Day1.java](src/main/java/com/belellou/kevin/advent/year2016/Day1.java) |   |   |
+| [Day 2](https://adventofcode.com/2016/day/2) |  |   |   |
+| [Day 3](https://adventofcode.com/2016/day/3) |  |   |   |
+| [Day 4](https://adventofcode.com/2016/day/4) |  |   |   |
+| [Day 5](https://adventofcode.com/2016/day/5) |  |   |   |
+| [Day 6](https://adventofcode.com/2016/day/6) |  |   |   |
+| [Day 7](https://adventofcode.com/2016/day/7) |  |   |   |
+| [Day 8](https://adventofcode.com/2016/day/8) |  |   |   |
+| [Day 9](https://adventofcode.com/2016/day/9) |  |   |   |
+| [Day 10](https://adventofcode.com/2016/day/10) |  |   |   |
+| [Day 11](https://adventofcode.com/2016/day/11) |  |   |   |
+| [Day 12](https://adventofcode.com/2016/day/12) |  |   |   |
+| [Day 13](https://adventofcode.com/2016/day/13) |  |   |   |
+| [Day 14](https://adventofcode.com/2016/day/14) |  |   |   |
+| [Day 15](https://adventofcode.com/2016/day/15) |  |   |   |
+| [Day 16](https://adventofcode.com/2016/day/16) |  |   |   |
+| [Day 17](https://adventofcode.com/2016/day/17) |  |   |   |
+| [Day 18](https://adventofcode.com/2016/day/18) |  |   |   |
+| [Day 19](https://adventofcode.com/2016/day/19) |  |   |   |
+| [Day 20](https://adventofcode.com/2016/day/20) |  |   |   |
+| [Day 21](https://adventofcode.com/2016/day/21) |  |   |   |
+| [Day 22](https://adventofcode.com/2016/day/22) |  |   |   |
+| [Day 23](https://adventofcode.com/2016/day/23) |  |   |   |
+| [Day 24](https://adventofcode.com/2016/day/24) |  |   |   |
+| [Day 25](https://adventofcode.com/2016/day/25) |  |   |   |
 <!--- advent_readme_stars 2016 table --->
 
 [adventofcode]: https://adventofcode.com/
