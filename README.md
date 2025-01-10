@@ -74,6 +74,7 @@ and store my answers to the incredible puzzles from [adventofcode.com][adventofc
 | [Day 22](https://adventofcode.com/2016/day/22) |   |   |
 | [Day 23](https://adventofcode.com/2016/day/23) |   |   |
 | [Day 24](https://adventofcode.com/2016/day/24) |   |   |
+| [Day 25](https://adventofcode.com/2016/day/25) |   |   |
 <!--- advent_readme_stars 2016 table --->
 
 [adventofcode]: https://adventofcode.com/
