@@ -29,7 +29,7 @@ jobs:
           starsRegex: '(?<=https:\/\/img\.shields\.io\/badge\/%E2%AD%90_in_2015-)[0-9]+(?=_%2F_50-yellow)'
 
       - name: "Update stars array in README.md"
-        uses: kevin-belellou/fork-k2bd-advent-readme-stars@b5a148584a39be7909aa2b4d27aaeb719c657ead
+        uses: kevin-belellou/fork-k2bd-advent-readme-stars@3be811ec5c58ec69a8307e590839ceedaee17b1a
         with:
           userId: ${{ env.ADVENT_USER_ID }}
           sessionCookie: ${{ secrets.ADVENT_OF_CODE_SESSION }}
