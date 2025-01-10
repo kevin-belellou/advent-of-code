@@ -45,7 +45,7 @@ jobs:
           tableMarker: "<!--- advent_readme_stars 2015 table --->"
 
       - name: "Update 2016 stars array in README.md"
-        uses: kevin-belellou/fork-k2bd-advent-readme-stars@fb691d31f2e5daf9017d0f774d95fc2f1fba7ef7
+        uses: kevin-belellou/fork-k2bd-advent-readme-stars@8ba2bf40f82bf8129cbc5a8f4a25e5eb13e303f9
         with:
           userId: ${{ env.ADVENT_USER_ID }}
           sessionCookie: ${{ secrets.ADVENT_OF_CODE_SESSION }}
