@@ -29,6 +29,7 @@ and store my answers to the incredible puzzles from [adventofcode.com][adventofc
 | [Day 6](https://adventofcode.com/2015/day/6) | [Day6.java](src/main/java/com/belellou/kevin/advent/year2015/Day6.java) | ⭐ | ⭐ |
 | [Day 7](https://adventofcode.com/2015/day/7) | [Day7.java](src/main/java/com/belellou/kevin/advent/year2015/Day7.java) | ⭐ | ⭐ |
 | [Day 8](https://adventofcode.com/2015/day/8) | [Day8.java](src/main/java/com/belellou/kevin/advent/year2015/Day8.java) | ⭐ |   |
+| [Day 9](https://adventofcode.com/2015/day/9) | [Day9.java](src/main/java/com/belellou/kevin/advent/year2015/Day9.java) |   |   |
 | [Day 10](https://adventofcode.com/2015/day/10) | [Day10.java](src/main/java/com/belellou/kevin/advent/year2015/Day10.java) | ⭐ | ⭐ |
 | [Day 11](https://adventofcode.com/2015/day/11) | [Day11.java](src/main/java/com/belellou/kevin/advent/year2015/Day11.java) | ⭐ | ⭐ |
 | [Day 12](https://adventofcode.com/2015/day/12) | [Day12.java](src/main/java/com/belellou/kevin/advent/year2015/Day12.java) | ⭐ | ⭐ |
@@ -41,7 +42,9 @@ and store my answers to the incredible puzzles from [adventofcode.com][adventofc
 | [Day 19](https://adventofcode.com/2015/day/19) | [Day19.java](src/main/java/com/belellou/kevin/advent/year2015/Day19.java) | ⭐ |   |
 | [Day 20](https://adventofcode.com/2015/day/20) | [Day20.java](src/main/java/com/belellou/kevin/advent/year2015/Day20.java) | ⭐ | ⭐ |
 | [Day 21](https://adventofcode.com/2015/day/21) | [Day21.java](src/main/java/com/belellou/kevin/advent/year2015/Day21.java) | ⭐ | ⭐ |
+| [Day 22](https://adventofcode.com/2015/day/22) | [Day22.java](src/main/java/com/belellou/kevin/advent/year2015/Day22.java) |   |   |
 | [Day 23](https://adventofcode.com/2015/day/23) | [Day23.java](src/main/java/com/belellou/kevin/advent/year2015/Day23.java) | ⭐ | ⭐ |
+| [Day 24](https://adventofcode.com/2015/day/24) | [Day24.java](src/main/java/com/belellou/kevin/advent/year2015/Day24.java) |   |   |
 | [Day 25](https://adventofcode.com/2015/day/25) | [Day25.java](src/main/java/com/belellou/kevin/advent/year2015/Day25.java) | ⭐ |   |
 <!--- advent_readme_stars 2015 table --->
 
