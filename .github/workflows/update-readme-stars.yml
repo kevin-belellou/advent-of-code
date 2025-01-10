@@ -44,7 +44,7 @@ jobs:
           year: ${{ env.YEAR_2015 }}
           tableMarker: "<!--- advent_readme_stars 2015 table --->"
           solutionLocations: "src/main/java/com/belellou/kevin/advent/year{yyyy}/Day{d}.java"
-          showAllMissingDays: false
+          showMissingDays: true
 
       - name: "Update 2016 stars array in README.md"
         uses: kevin-belellou/fork-k2bd-advent-readme-stars@6c9a58a4e39e094bac0e209b30b96c24d7dce5b0
