@@ -51,7 +51,7 @@ jobs:
           sessionCookie: ${{ secrets.ADVENT_OF_CODE_SESSION }}
           year: ${{ env.YEAR_2016 }}
           tableMarker: "<!--- advent_readme_stars 2016 table --->"
-          showMissingDays: true
+          showAllMissingDays: true
 
       - name: "Import GPG key"
         id: import-gpg
