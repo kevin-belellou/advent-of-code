@@ -2,7 +2,6 @@ name: Update README ⭐
 
 on:
   workflow_dispatch:
-  workflow_call:
   schedule:
     - cron: "38 2 * * *" # at 02:38 everyday
 
@@ -15,12 +14,13 @@ jobs:
     env:
       ADVENT_USER_ID: 4246309
       YEAR_2015: 2015
+      YEAR_2016: 2016
 
     steps:
       - name: "Checkout repository"
         uses: actions/checkout@v4
 
-      - name: "Update stars badges in README.md"
+      - name: "Update 2015 stars badges in README.md"
         uses: J0B10/aoc-badges-action@75cd611df531bd9aa0675cae13be418d73cbdf76
         with:
           userid: ${{ env.ADVENT_USER_ID }}
@@ -28,12 +28,33 @@ jobs:
           year: ${{ env.YEAR_2015 }}
           starsRegex: '(?<=https:\/\/img\.shields\.io\/badge\/%E2%AD%90_in_2015-)[0-9]+(?=_%2F_50-yellow)'
 
-      - name: "Update stars array in README.md"
-        uses: k2bd/advent-readme-stars@27bfdb5e0e611d0f006356cfe37dbfb505b0ee49
+      - name: "Update 2016 stars badges in README.md"
+        uses: J0B10/aoc-badges-action@75cd611df531bd9aa0675cae13be418d73cbdf76
+        with:
+          userid: ${{ env.ADVENT_USER_ID }}
+          session: ${{ secrets.ADVENT_OF_CODE_SESSION }}
+          year: ${{ env.YEAR_2016 }}
+          starsRegex: '(?<=https:\/\/img\.shields\.io\/badge\/%E2%AD%90_in_2016-)[0-9]+(?=_%2F_50-yellow)'
+
+      - name: "Update 2015 stars array in README.md"
+        uses: kevin-belellou/fork-k2bd-advent-readme-stars@df1a0e14eae7581456ff518c67316f9a74bfd37a
         with:
           userId: ${{ env.ADVENT_USER_ID }}
           sessionCookie: ${{ secrets.ADVENT_OF_CODE_SESSION }}
           year: ${{ env.YEAR_2015 }}
+          tableMarker: "<!--- advent_readme_stars 2015 table --->"
+          solutionLocations: "src/main/java/com/belellou/kevin/advent/year{yyyy}/Day{d}.java"
+          showMissingDays: true
+
+      - name: "Update 2016 stars array in README.md"
+        uses: kevin-belellou/fork-k2bd-advent-readme-stars@df1a0e14eae7581456ff518c67316f9a74bfd37a
+        with:
+          userId: ${{ env.ADVENT_USER_ID }}
+          sessionCookie: ${{ secrets.ADVENT_OF_CODE_SESSION }}
+          year: ${{ env.YEAR_2016 }}
+          tableMarker: "<!--- advent_readme_stars 2016 table --->"
+          solutionLocations: "src/main/java/com/belellou/kevin/advent/year{yyyy}/Day{d}.java"
+          showMissingDays: true
 
       - name: "Import GPG key"
         id: import-gpg
