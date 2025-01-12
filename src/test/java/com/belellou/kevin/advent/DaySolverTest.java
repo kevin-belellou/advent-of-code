@@ -4,6 +4,7 @@ import java.lang.reflect.InvocationTargetException;
 import java.util.List;
 import java.util.Set;
 import java.util.function.Consumer;
+import java.util.function.Predicate;
 import java.util.function.Supplier;
 
 import com.pivovarit.function.ThrowingFunction;
@@ -40,19 +41,18 @@ public class DaySolverTest {
 
             consumer.accept(dynamicTestOf(daySolver, true, firstTestEnabled));
             consumer.accept(dynamicTestOf(daySolver, false, secondTestEnabled));
-        } catch (InvocationTargetException | InstantiationException |
-                 IllegalAccessException | NoSuchMethodException e) {
+        } catch (InvocationTargetException | InstantiationException | IllegalAccessException |
+                 NoSuchMethodException e) {
             throw new RuntimeException(e);
         }
     }
 
     private static DynamicTest dynamicTestOf(DaySolver<?> daySolver, boolean firstSolution, boolean enabled) {
         return DynamicTest.dynamicTest(daySolver + (firstSolution ? FIRST_SOLUTION : SECOND_SOLUTION),
-                                       firstSolution
-                                       ? () -> doTest(enabled, daySolver::solveFirstStar,
-                                                      daySolver::getFirstStarSolution)
-                                       : () -> doTest(enabled, daySolver::solveSecondStar,
-                                                      daySolver::getSecondStarSolution)
+                                       firstSolution ? () -> doTest(enabled, daySolver::solveFirstStar,
+                                                                    daySolver::getFirstStarSolution)
+                                                     : () -> doTest(enabled, daySolver::solveSecondStar,
+                                                                    daySolver::getSecondStarSolution)
 
         );
     }
@@ -60,6 +60,12 @@ public class DaySolverTest {
     private static void doTest(boolean enabled, Supplier<?> method, Supplier<?> result) {
         Assumptions.assumeTrue(enabled, MESSAGE_TEST_DISABLED);
         assertThat(method.get()).isEqualTo(result.get());
+    }
+
+    private static Predicate<Class<?>> getYearFilter() {
+        String enableYear = System.getenv("ENABLE_ONLY_YEAR");
+
+        return enableYear == null ? (aClass -> true) : (aClass -> aClass.getPackageName().endsWith(enableYear));
     }
 
     @TestFactory
@@ -72,6 +78,7 @@ public class DaySolverTest {
         return components.stream()
                          .map(BeanDefinition::getBeanClassName)
                          .map(ThrowingFunction.unchecked(Class::forName))
+                         .filter(getYearFilter())
                          .sorted(new NaturalOrderComparator())
                          .mapMulti(DaySolverTest::createDynamicTest)
                          .toList();
