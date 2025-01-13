@@ -53,6 +53,12 @@ and store my answers to the incredible puzzles from [adventofcode.com][adventofc
 
 | Day | Solution | Part 1 | Part 2 |
 | :---: | :---: | :---: | :---: |
+| [Day 1](https://adventofcode.com/2016/day/1) | [Day1.java](src/main/java/com/belellou/kevin/advent/year2016/Day1.java) | ⭐ | ⭐ |
+| [Day 2](https://adventofcode.com/2016/day/2) | [Day2.java](src/main/java/com/belellou/kevin/advent/year2016/Day2.java) | ⭐ | ⭐ |
+| [Day 3](https://adventofcode.com/2016/day/3) | [Day3.java](src/main/java/com/belellou/kevin/advent/year2016/Day3.java) | ⭐ | ⭐ |
+| [Day 4](https://adventofcode.com/2016/day/4) | [Day4.java](src/main/java/com/belellou/kevin/advent/year2016/Day4.java) | ⭐ | ⭐ |
+| [Day 5](https://adventofcode.com/2016/day/5) | [Day5.java](src/main/java/com/belellou/kevin/advent/year2016/Day5.java) | ⭐ | ⭐ |
+| [Day 6](https://adventofcode.com/2016/day/6) | [Day6.java](src/main/java/com/belellou/kevin/advent/year2016/Day6.java) | ⭐ | ⭐ |
 <!--- advent_readme_stars 2016 table --->
 
 [adventofcode]: https://adventofcode.com/
@@ -70,6 +76,6 @@ and store my answers to the incredible puzzles from [adventofcode.com][adventofc
 [badge_actions_build]: https://github.com/kevin-belellou/advent-of-code/actions/workflows/maven.yml/badge.svg?branch=main
 [badge_actions_update_readme]: https://github.com/kevin-belellou/advent-of-code/actions/workflows/update-readme-stars.yml/badge.svg?branch=main
 [badge_stars_2015]: https://img.shields.io/badge/%E2%AD%90_in_2015-41_%2F_50-yellow
-[badge_stars_2016]: https://img.shields.io/badge/%E2%AD%90_in_2016-0_%2F_50-yellow
+[badge_stars_2016]: https://img.shields.io/badge/%E2%AD%90_in_2016-12_%2F_50-yellow
 
 [//]: # (@formatter:on)
