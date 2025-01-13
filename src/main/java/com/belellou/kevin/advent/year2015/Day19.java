@@ -14,7 +14,7 @@ import com.belellou.kevin.advent.generic.AbstractDaySolver;
 import com.belellou.kevin.advent.generic.DisableTest;
 
 @SuppressWarnings("unused")
-public class Day19 extends AbstractDaySolver<Integer> {
+public class Day19 extends AbstractDaySolver<Integer, Integer> {
 
     public Day19() {
         super(Day19.class);

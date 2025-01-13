@@ -8,7 +8,7 @@ import org.apache.commons.lang3.StringUtils;
 import com.belellou.kevin.advent.generic.AbstractDaySolver;
 
 @SuppressWarnings("unused")
-public class Day1 extends AbstractDaySolver<Integer> {
+public class Day1 extends AbstractDaySolver<Integer, Integer> {
 
     private static final int STARTING_FLOOR = 0;
 

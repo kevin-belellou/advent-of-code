@@ -10,7 +10,7 @@ import com.belellou.kevin.advent.generic.AbstractDaySolver;
 import com.belellou.kevin.advent.generic.DisableTest;
 
 @SuppressWarnings("unused")
-public class Day25 extends AbstractDaySolver<Integer> {
+public class Day25 extends AbstractDaySolver<Integer, Integer> {
 
     private static final long SEED = 20_151_125;
     private static final long MULTIPLIER = 252_533;

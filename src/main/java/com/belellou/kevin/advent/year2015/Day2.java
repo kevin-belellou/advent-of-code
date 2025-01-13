@@ -10,7 +10,7 @@ import org.apache.commons.lang3.math.NumberUtils;
 import com.belellou.kevin.advent.generic.AbstractDaySolver;
 
 @SuppressWarnings("unused")
-public class Day2 extends AbstractDaySolver<Integer> {
+public class Day2 extends AbstractDaySolver<Integer, Integer> {
 
     private static final Pattern PATTERN = Pattern.compile("^(\\d+)x(\\d+)x(\\d+)$");
 

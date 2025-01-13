@@ -9,7 +9,7 @@ import java.util.regex.Pattern;
 import com.belellou.kevin.advent.generic.AbstractDaySolver;
 
 @SuppressWarnings("unused")
-public class Day16 extends AbstractDaySolver<Integer> {
+public class Day16 extends AbstractDaySolver<Integer, Integer> {
 
     private static final String GROUP_SUE = "Sue (\\d+)";
     private static final String GROUP_CHILDREN = "children: (\\d+)";
@@ -87,7 +87,9 @@ public class Day16 extends AbstractDaySolver<Integer> {
     }
 
     private enum Range {
-        EXACT, FEWER_THAN, GREATER_THAN
+        EXACT,
+        FEWER_THAN,
+        GREATER_THAN
     }
 
     private record Sue(int number, Map<Compound, Integer> map) {

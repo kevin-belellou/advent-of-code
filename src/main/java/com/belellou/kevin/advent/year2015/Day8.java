@@ -11,7 +11,7 @@ import com.belellou.kevin.advent.generic.AbstractDaySolver;
 import com.belellou.kevin.advent.generic.DisableTest;
 
 @SuppressWarnings("unused")
-public class Day8 extends AbstractDaySolver<Integer> {
+public class Day8 extends AbstractDaySolver<Integer, Integer> {
 
     private static final Pattern PATTERN_HEXA = Pattern.compile("\\\\x[a-f0-9]{2}");
     private static final Pattern PATTERN_QUOTE = Pattern.compile("\\\\\"");

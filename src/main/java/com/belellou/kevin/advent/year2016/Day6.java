@@ -10,7 +10,7 @@ import java.util.Map;
 import com.belellou.kevin.advent.generic.AbstractDaySolver;
 
 @SuppressWarnings("unused")
-public class Day6 extends AbstractDaySolver<String> {
+public class Day6 extends AbstractDaySolver<String, String> {
 
     public Day6() {
         super(Day6.class);

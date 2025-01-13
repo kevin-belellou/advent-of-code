@@ -6,7 +6,7 @@ import java.util.List;
 import com.belellou.kevin.advent.generic.AbstractDaySolver;
 
 @SuppressWarnings("unused")
-public class Day21 extends AbstractDaySolver<Integer> {
+public class Day21 extends AbstractDaySolver<Integer, Integer> {
 
     private static final List<Item> WEAPONS = List.of(new Item(ItemType.WEAPON, 8, 4, 0),
                                                       new Item(ItemType.WEAPON, 10, 5, 0),
@@ -203,7 +203,9 @@ public class Day21 extends AbstractDaySolver<Integer> {
     }
 
     private enum ItemType {
-        WEAPON, ARMOR, RING
+        WEAPON,
+        ARMOR,
+        RING
     }
 
     private record Item(ItemType type, int cost, int damage, int armor) {}

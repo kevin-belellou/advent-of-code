@@ -11,7 +11,7 @@ import org.jgrapht.util.ModifiableInteger;
 import com.belellou.kevin.advent.generic.AbstractDaySolver;
 
 @SuppressWarnings("unused")
-public class Day17 extends AbstractDaySolver<Integer> {
+public class Day17 extends AbstractDaySolver<Integer, Integer> {
 
     private static final int EGGNOG = 150;
 

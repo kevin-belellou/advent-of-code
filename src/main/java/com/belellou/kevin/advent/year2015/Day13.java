@@ -14,7 +14,7 @@ import com.belellou.kevin.advent.generic.AbstractDaySolver;
 import com.belellou.kevin.advent.generic.GraphUtil;
 
 @SuppressWarnings("unused")
-public class Day13 extends AbstractDaySolver<Integer> {
+public class Day13 extends AbstractDaySolver<Integer, Integer> {
 
     private static final String GROUP_FIRST_GUEST = "firstGuest";
     private static final String GROUP_ACTION = "action";

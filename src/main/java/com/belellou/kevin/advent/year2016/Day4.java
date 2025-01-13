@@ -15,7 +15,7 @@ import org.apache.commons.lang3.tuple.Pair;
 import com.belellou.kevin.advent.generic.AbstractDaySolver;
 
 @SuppressWarnings("unused")
-public class Day4 extends AbstractDaySolver<Integer> {
+public class Day4 extends AbstractDaySolver<Integer, Integer> {
 
     private static final Pattern PATTERN = Pattern.compile("^([a-z|-]+)-([0-9]+)\\[([a-z]{5})]$");
 

@@ -7,7 +7,7 @@ import java.util.List;
 import com.belellou.kevin.advent.generic.AbstractDaySolver;
 
 @SuppressWarnings("unused")
-public class Day18 extends AbstractDaySolver<Integer> {
+public class Day18 extends AbstractDaySolver<Integer, Integer> {
 
     public Day18() {
         super(Day18.class);

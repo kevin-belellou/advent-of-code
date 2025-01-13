@@ -16,7 +16,7 @@ import org.jgrapht.traverse.TopologicalOrderIterator;
 import com.belellou.kevin.advent.generic.AbstractDaySolver;
 
 @SuppressWarnings("unused")
-public class Day7 extends AbstractDaySolver<Integer> {
+public class Day7 extends AbstractDaySolver<Integer, Integer> {
 
     private static final String GROUP_FIRST_OPERAND = "firstOperand";
     private static final String GROUP_SECOND_OPERAND = "secondOperand";

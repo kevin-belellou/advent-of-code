@@ -16,7 +16,7 @@ import com.belellou.kevin.advent.generic.AbstractDaySolver;
 import com.belellou.kevin.advent.generic.DisableTest;
 
 @SuppressWarnings("unused")
-public class Day9 extends AbstractDaySolver<Integer> {
+public class Day9 extends AbstractDaySolver<Integer, Integer> {
 
     private static final String GROUP_FIRST_LOCATION = "firstLocation";
     private static final String GROUP_SECOND_LOCATION = "secondLocation";

@@ -7,7 +7,8 @@ import java.io.IOException;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public abstract class AbstractDaySolver<T> implements DaySolver<T> {
+public abstract class AbstractDaySolver<FirstSolutionType, SecondSolutionType>
+        implements DaySolver<FirstSolutionType, SecondSolutionType> {
 
     private static final String SEPARATOR = "/";
     private static final String INPUT_FOLDER = "src/main/resources/";
@@ -22,7 +23,7 @@ public abstract class AbstractDaySolver<T> implements DaySolver<T> {
 
     private final String input;
 
-    protected AbstractDaySolver(Class<? extends AbstractDaySolver<T>> clazz) {
+    protected AbstractDaySolver(Class<? extends AbstractDaySolver<FirstSolutionType, SecondSolutionType>> clazz) {
         this.year = Year.getYear(getNumberFrom(clazz.getPackageName()));
         this.day = Day.getDay(getNumberFrom(clazz.getSimpleName()));
 
@@ -49,9 +50,9 @@ public abstract class AbstractDaySolver<T> implements DaySolver<T> {
     }
 
     @Override
-    public T solveFirstStar() {
+    public FirstSolutionType solveFirstStar() {
         try (BufferedReader reader = getReader()) {
-            T firstSolution = doSolveFirstStar(reader);
+            FirstSolutionType firstSolution = doSolveFirstStar(reader);
 
             System.out.println(this + FIRST_SOLUTION + firstSolution);
 
@@ -62,9 +63,9 @@ public abstract class AbstractDaySolver<T> implements DaySolver<T> {
     }
 
     @Override
-    public T solveSecondStar() {
+    public SecondSolutionType solveSecondStar() {
         try (BufferedReader reader = getReader()) {
-            T secondSolution = doSolveSecondStar(reader);
+            SecondSolutionType secondSolution = doSolveSecondStar(reader);
 
             System.out.println(this + SECOND_SOLUTION + secondSolution);
 
@@ -74,9 +75,9 @@ public abstract class AbstractDaySolver<T> implements DaySolver<T> {
         }
     }
 
-    protected abstract T doSolveFirstStar(BufferedReader reader) throws IOException;
+    protected abstract FirstSolutionType doSolveFirstStar(BufferedReader reader) throws IOException;
 
-    protected abstract T doSolveSecondStar(BufferedReader reader) throws IOException;
+    protected abstract SecondSolutionType doSolveSecondStar(BufferedReader reader) throws IOException;
 
     @Override
     public String toString() {

@@ -9,7 +9,7 @@ import org.apache.commons.lang3.tuple.MutablePair;
 import com.belellou.kevin.advent.generic.AbstractDaySolver;
 
 @SuppressWarnings("unused")
-public class Day7 extends AbstractDaySolver<Integer> {
+public class Day7 extends AbstractDaySolver<Integer, Integer> {
 
     private static final char OPENING_BRACKET = '[';
     private static final char CLOSING_BRACKET = ']';

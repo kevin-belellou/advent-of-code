@@ -9,7 +9,7 @@ import org.apache.commons.codec.digest.DigestUtils;
 import com.belellou.kevin.advent.generic.AbstractDaySolver;
 
 @SuppressWarnings("unused")
-public class Day4 extends AbstractDaySolver<Integer> {
+public class Day4 extends AbstractDaySolver<Integer, Integer> {
 
     private static final String FIVE_ZEROES_PATTERN = "00000";
     private static final String SIX_ZEROES_PATTERN = "000000";

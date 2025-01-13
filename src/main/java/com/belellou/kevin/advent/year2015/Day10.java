@@ -5,7 +5,7 @@ import java.io.BufferedReader;
 import com.belellou.kevin.advent.generic.AbstractDaySolver;
 
 @SuppressWarnings("unused")
-public class Day10 extends AbstractDaySolver<Integer> {
+public class Day10 extends AbstractDaySolver<Integer, Integer> {
 
     public Day10() {
         super(Day10.class);

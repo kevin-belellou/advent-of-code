@@ -14,7 +14,7 @@ import org.ejml.simple.SimpleMatrix;
 import com.belellou.kevin.advent.generic.AbstractDaySolver;
 
 @SuppressWarnings("unused")
-public class Day15 extends AbstractDaySolver<Integer> {
+public class Day15 extends AbstractDaySolver<Integer, Integer> {
 
     private static final String GROUP_NAME = "name";
     private static final String GROUP_CAPACITY = "capacity";

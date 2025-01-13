@@ -8,7 +8,7 @@ import java.util.regex.Pattern;
 import com.belellou.kevin.advent.generic.AbstractDaySolver;
 
 @SuppressWarnings("unused")
-public class Day6 extends AbstractDaySolver<Integer> {
+public class Day6 extends AbstractDaySolver<Integer, Integer> {
 
     private static final String GROUP_COMMAND = "command";
     private static final String GROUP_X0 = "x0";

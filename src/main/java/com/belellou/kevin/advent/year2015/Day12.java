@@ -10,7 +10,7 @@ import org.jgrapht.util.ModifiableInteger;
 import com.belellou.kevin.advent.generic.AbstractDaySolver;
 
 @SuppressWarnings("unused")
-public class Day12 extends AbstractDaySolver<Integer> {
+public class Day12 extends AbstractDaySolver<Integer, Integer> {
 
     private static final String RED = "red";
 
