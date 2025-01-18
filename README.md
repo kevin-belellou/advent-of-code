@@ -61,8 +61,14 @@ and store my answers to the incredible puzzles from [adventofcode.com][adventofc
 | [Day 6](https://adventofcode.com/2016/day/6) | [Day6.java](src/main/java/com/belellou/kevin/advent/year2016/Day6.java) | ⭐ | ⭐ |
 | [Day 7](https://adventofcode.com/2016/day/7) | [Day7.java](src/main/java/com/belellou/kevin/advent/year2016/Day7.java) | ⭐ | ⭐ |
 | [Day 8](https://adventofcode.com/2016/day/8) | [Day8.java](src/main/java/com/belellou/kevin/advent/year2016/Day8.java) | ⭐ | ⭐ |
-| [Day 9](https://adventofcode.com/2016/day/9) |  | ⭐ |   |
-| [Day 10](https://adventofcode.com/2016/day/10) |  | ⭐ |   |
+| [Day 9](https://adventofcode.com/2016/day/9) | [Day9.java](src/main/java/com/belellou/kevin/advent/year2016/Day9.java) | ⭐ |   |
+| [Day 10](https://adventofcode.com/2016/day/10) | [Day10.java](src/main/java/com/belellou/kevin/advent/year2016/Day10.java) | ⭐ | ⭐ |
+| [Day 11](https://adventofcode.com/2016/day/11) |  |   |   |
+| [Day 12](https://adventofcode.com/2016/day/12) | [Day12.java](src/main/java/com/belellou/kevin/advent/year2016/Day12.java) | ⭐ | ⭐ |
+| [Day 13](https://adventofcode.com/2016/day/13) |  |   |   |
+| [Day 14](https://adventofcode.com/2016/day/14) | [Day14.java](src/main/java/com/belellou/kevin/advent/year2016/Day14.java) | ⭐ | ⭐ |
+| [Day 15](https://adventofcode.com/2016/day/15) | [Day15.java](src/main/java/com/belellou/kevin/advent/year2016/Day15.java) | ⭐ | ⭐ |
+| [Day 16](https://adventofcode.com/2016/day/16) | [Day16.java](src/main/java/com/belellou/kevin/advent/year2016/Day16.java) | ⭐ | ⭐ |
 <!--- advent_readme_stars 2016 table --->
 
 [adventofcode]: https://adventofcode.com/
@@ -80,6 +86,6 @@ and store my answers to the incredible puzzles from [adventofcode.com][adventofc
 [badge_actions_build]: https://github.com/kevin-belellou/advent-of-code/actions/workflows/maven.yml/badge.svg?branch=main
 [badge_actions_update_readme]: https://github.com/kevin-belellou/advent-of-code/actions/workflows/update-readme-stars.yml/badge.svg?branch=main
 [badge_stars_2015]: https://img.shields.io/badge/%E2%AD%90_in_2015-41_%2F_50-yellow
-[badge_stars_2016]: https://img.shields.io/badge/%E2%AD%90_in_2016-18_%2F_50-yellow
+[badge_stars_2016]: https://img.shields.io/badge/%E2%AD%90_in_2016-27_%2F_50-yellow
 
 [//]: # (@formatter:on)
