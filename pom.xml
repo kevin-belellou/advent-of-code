@@ -24,6 +24,10 @@
         <maven.compiler.release>23</maven.compiler.release>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
+        <!-- Enable JEPs in preview -->
+        <!-- Must be declared here and not in surefire configuration to avoid erasing JaCoCo configuration -->
+        <argLine>--enable-preview</argLine>
+
         <!-- Dependency versions -->
         <assertj.version>3.27.2</assertj.version>
         <commons-codec.version>1.17.2</commons-codec.version>
@@ -128,7 +132,7 @@
                     <encoding>${project.build.sourceEncoding}</encoding>
                     <compilerArgs>
                         <!-- Enable JEPs in preview -->
-                        <arg>--enable-preview</arg>
+                        <arg>${argLine}</arg>
                     </compilerArgs>
                 </configuration>
             </plugin>
@@ -140,9 +144,6 @@
 
                 <!-- Configuration for DynamicTests to retain their names -->
                 <configuration>
-                    <!-- Enable JEPs in preview -->
-                    <argLine>--enable-preview</argLine>
-
                     <statelessTestsetReporter
                             implementation="org.apache.maven.plugin.surefire.extensions.junit5.JUnit5Xml30StatelessReporter">
                         <disable>false</disable>
