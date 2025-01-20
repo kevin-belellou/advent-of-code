@@ -29,7 +29,7 @@
         <argLine>--enable-preview</argLine>
 
         <!-- Dependency versions -->
-        <assertj.version>3.27.2</assertj.version>
+        <assertj.version>3.27.3</assertj.version>
         <commons-codec.version>1.17.2</commons-codec.version>
         <commons-lang3.version>3.17.0</commons-lang3.version>
         <ejml-simple.version>0.43.1</ejml-simple.version>
