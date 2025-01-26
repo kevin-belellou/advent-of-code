@@ -13,13 +13,13 @@ import org.apache.commons.lang3.tuple.Pair;
 import com.belellou.kevin.advent.generic.AbstractDaySolver;
 
 @SuppressWarnings("unused")
-public class Day14 extends AbstractDaySolver<Integer, Integer> {
+public class Day14 extends AbstractDaySolver<Long, Long> {
 
     public Day14() {
         super(Day14.class);
     }
 
-    private static int find64thKeyIndex(BufferedReader reader, boolean useKeyStretching) throws IOException {
+    private static Long find64thKeyIndex(BufferedReader reader, boolean useKeyStretching) throws IOException {
         String salt = reader.readLine();
         long index = 0;
 
@@ -63,7 +63,7 @@ public class Day14 extends AbstractDaySolver<Integer, Integer> {
                         // Keys should be verified in order, so we overshoot the target
                         if (keys.size() == 64 + 10) {
                             keys.sort(Comparator.comparingLong(Pair::getRight));
-                            return Math.toIntExact(keys.get(63).getRight());
+                            return keys.get(63).getRight();
                         }
                     }
                 }
@@ -74,22 +74,22 @@ public class Day14 extends AbstractDaySolver<Integer, Integer> {
     }
 
     @Override
-    protected Integer doSolveFirstStar(BufferedReader reader) throws IOException {
+    protected Long doSolveFirstStar(BufferedReader reader) throws IOException {
         return find64thKeyIndex(reader, false);
     }
 
     @Override
-    public Integer getFirstStarSolution() {
-        return 18_626;
+    public Long getFirstStarSolution() {
+        return 18_626L;
     }
 
     @Override
-    protected Integer doSolveSecondStar(BufferedReader reader) throws IOException {
+    protected Long doSolveSecondStar(BufferedReader reader) throws IOException {
         return find64thKeyIndex(reader, true);
     }
 
     @Override
-    public Integer getSecondStarSolution() {
-        return 20_092;
+    public Long getSecondStarSolution() {
+        return 20_092L;
     }
 }

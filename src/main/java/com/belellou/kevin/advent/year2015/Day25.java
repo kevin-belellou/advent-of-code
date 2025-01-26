@@ -10,7 +10,7 @@ import com.belellou.kevin.advent.generic.AbstractDaySolver;
 import com.belellou.kevin.advent.generic.DisableTest;
 
 @SuppressWarnings("unused")
-public class Day25 extends AbstractDaySolver<Integer, Integer> {
+public class Day25 extends AbstractDaySolver<Long, Integer> {
 
     private static final long SEED = 20_151_125;
     private static final long MULTIPLIER = 252_533;
@@ -40,7 +40,7 @@ public class Day25 extends AbstractDaySolver<Integer, Integer> {
     }
 
     @Override
-    protected Integer doSolveFirstStar(BufferedReader reader) throws IOException {
+    protected Long doSolveFirstStar(BufferedReader reader) throws IOException {
         String line = reader.readLine();
 
         int numberOfOperations = getNumberOfOperations(line);
@@ -53,12 +53,12 @@ public class Day25 extends AbstractDaySolver<Integer, Integer> {
             throw new IllegalArgumentException("Invalid number of operations");
         }
 
-        return Math.toIntExact(array[array.length - 1]);
+        return array[array.length - 1];
     }
 
     @Override
-    public Integer getFirstStarSolution() {
-        return 2_650_453;
+    public Long getFirstStarSolution() {
+        return 2_650_453L;
     }
 
     @Override

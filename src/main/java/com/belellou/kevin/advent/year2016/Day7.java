@@ -9,7 +9,7 @@ import org.apache.commons.lang3.tuple.MutablePair;
 import com.belellou.kevin.advent.generic.AbstractDaySolver;
 
 @SuppressWarnings("unused")
-public class Day7 extends AbstractDaySolver<Integer, Integer> {
+public class Day7 extends AbstractDaySolver<Long, Long> {
 
     private static final char OPENING_BRACKET = '[';
     private static final char CLOSING_BRACKET = ']';
@@ -78,22 +78,22 @@ public class Day7 extends AbstractDaySolver<Integer, Integer> {
     }
 
     @Override
-    protected Integer doSolveFirstStar(BufferedReader reader) {
-        return Math.toIntExact(reader.lines().filter(Day7::doesIpSupportTls).count());
+    protected Long doSolveFirstStar(BufferedReader reader) {
+        return reader.lines().filter(Day7::doesIpSupportTls).count();
     }
 
     @Override
-    public Integer getFirstStarSolution() {
-        return 110;
+    public Long getFirstStarSolution() {
+        return 110L;
     }
 
     @Override
-    protected Integer doSolveSecondStar(BufferedReader reader) {
-        return Math.toIntExact(reader.lines().filter(Day7::doesIpSupportSsl).count());
+    protected Long doSolveSecondStar(BufferedReader reader) {
+        return reader.lines().filter(Day7::doesIpSupportSsl).count();
     }
 
     @Override
-    public Integer getSecondStarSolution() {
-        return 242;
+    public Long getSecondStarSolution() {
+        return 242L;
     }
 }
