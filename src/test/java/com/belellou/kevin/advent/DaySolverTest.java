@@ -31,6 +31,12 @@ public class DaySolverTest {
 
     private static final String MESSAGE_TEST_DISABLED = "Test disabled";
 
+    private static final String FLAG_ENABLE_ONLY_YEAR = "ENABLE_ONLY_YEAR";
+    private static final String FLAG_ENABLE_ONLY_DAY = "ENABLE_ONLY_DAY";
+
+    private static final String PREFIX_YEAR = "year";
+    private static final String PREFIX_DAY = "Day";
+
     private static void createDynamicTest(Class<?> clazz, Consumer<DynamicTest> consumer) {
         try {
             DaySolver<?, ?> daySolver = clazz.asSubclass(DaySolver.class).getDeclaredConstructor().newInstance();
@@ -63,9 +69,15 @@ public class DaySolverTest {
     }
 
     private static Predicate<Class<?>> getYearFilter() {
-        String enableYear = System.getenv("ENABLE_ONLY_YEAR");
+        String year = System.getenv(FLAG_ENABLE_ONLY_YEAR);
 
-        return enableYear == null ? (aClass -> true) : (aClass -> aClass.getPackageName().endsWith(enableYear));
+        return year == null ? _ -> true : clazz -> clazz.getPackageName().endsWith(PREFIX_YEAR + year);
+    }
+
+    private static Predicate<Class<?>> getDayFilter() {
+        String day = System.getenv(FLAG_ENABLE_ONLY_DAY);
+
+        return day == null ? _ -> true : clazz -> clazz.getSimpleName().equals(PREFIX_DAY + day);
     }
 
     @TestFactory
@@ -79,6 +91,7 @@ public class DaySolverTest {
                          .map(BeanDefinition::getBeanClassName)
                          .map(ThrowingFunction.unchecked(Class::forName))
                          .filter(getYearFilter())
+                         .filter(getDayFilter())
                          .sorted(new NaturalOrderComparator())
                          .mapMulti(DaySolverTest::createDynamicTest)
                          .toList();
