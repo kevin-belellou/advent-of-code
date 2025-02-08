@@ -12,6 +12,11 @@ import com.belellou.kevin.advent.generic.AbstractDaySolver;
 @SuppressWarnings("unused")
 public class Day12 extends AbstractDaySolver<Integer, Integer> {
 
+    private static final String REGISTER_A = "a";
+    private static final String REGISTER_B = "b";
+    private static final String REGISTER_C = "c";
+    private static final String REGISTER_D = "d";
+
     public Day12() {
         super(Day12.class);
     }
@@ -30,13 +35,20 @@ public class Day12 extends AbstractDaySolver<Integer, Integer> {
         return new Instruction(type, firstOperand, secondOperand);
     }
 
+    private static Map<String, ModifiableInteger> getRegisters(int registerCValue) {
+        return Map.of(REGISTER_A, new ModifiableInteger(0), //
+                      REGISTER_B, new ModifiableInteger(0), //
+                      REGISTER_C, new ModifiableInteger(registerCValue), //
+                      REGISTER_D, new ModifiableInteger(0));
+    }
+
     private static void executeInstructions(List<Instruction> instructions, Map<String, ModifiableInteger> registers) {
         for (int i = 0; i < instructions.size(); i++) {
             Instruction instruction = instructions.get(i);
 
             switch (instruction.type) {
                 case CPY -> {
-                    if (NumberUtils.isDigits(instruction.firstOperand)) {
+                    if (NumberUtils.isCreatable(instruction.firstOperand)) {
                         registers.get(instruction.secondOperand).setValue(Integer.parseInt(instruction.firstOperand));
                     } else {
                         registers.get(instruction.secondOperand)
@@ -46,9 +58,9 @@ public class Day12 extends AbstractDaySolver<Integer, Integer> {
                 case INC -> registers.get(instruction.firstOperand).increment();
                 case DEC -> registers.get(instruction.firstOperand).decrement();
                 case JNZ -> {
-                    if (NumberUtils.isDigits(instruction.firstOperand) &&
+                    if (NumberUtils.isCreatable(instruction.firstOperand) &&
                             Integer.parseInt(instruction.firstOperand) != 0 ||
-                            !NumberUtils.isDigits(instruction.firstOperand) &&
+                            !NumberUtils.isCreatable(instruction.firstOperand) &&
                                     registers.get(instruction.firstOperand).getValue() != 0) {
                         i += Integer.parseInt(instruction.secondOperand) - 1;
                     }
@@ -60,11 +72,10 @@ public class Day12 extends AbstractDaySolver<Integer, Integer> {
     @Override
     protected Integer doSolveFirstStar(BufferedReader reader) {
         List<Instruction> instructions = getInstructions(reader);
-        Map<String, ModifiableInteger> registers = Map.of("a", new ModifiableInteger(0), "b", new ModifiableInteger(0),
-                                                          "c", new ModifiableInteger(0), "d", new ModifiableInteger(0));
+        Map<String, ModifiableInteger> registers = getRegisters(0);
 
         executeInstructions(instructions, registers);
-        return registers.get("a").getValue();
+        return registers.get(REGISTER_A).getValue();
     }
 
     @Override
@@ -75,11 +86,10 @@ public class Day12 extends AbstractDaySolver<Integer, Integer> {
     @Override
     protected Integer doSolveSecondStar(BufferedReader reader) {
         List<Instruction> instructions = getInstructions(reader);
-        Map<String, ModifiableInteger> registers = Map.of("a", new ModifiableInteger(0), "b", new ModifiableInteger(0),
-                                                          "c", new ModifiableInteger(1), "d", new ModifiableInteger(0));
+        Map<String, ModifiableInteger> registers = getRegisters(1);
 
         executeInstructions(instructions, registers);
-        return registers.get("a").getValue();
+        return registers.get(REGISTER_A).getValue();
     }
 
     @Override
