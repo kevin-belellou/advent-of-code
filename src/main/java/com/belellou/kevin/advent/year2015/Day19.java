@@ -47,10 +47,7 @@ public class Day19 extends AbstractDaySolver<Integer, Integer> {
                 if (newMedicine.equals(medicine)) {
                     System.out.println("Found");
                     throw new RuntimeException("Found");
-                } else if (newMedicine.length() > medicine.length()) {
-//                    System.out.println("Too long");
-                    // Do nothing
-                } else {
+                } else if (newMedicine.length() <= medicine.length()) {
                     int endIndex = newMedicine.length();
                     while (!medicine.startsWith(newMedicine.substring(0, endIndex))) {
                         endIndex--;
@@ -73,7 +70,7 @@ public class Day19 extends AbstractDaySolver<Integer, Integer> {
 //
 //                           String newCurrent =
 //                                   realCurrent.substring(0, localIndex) + s + realCurrent.substring(matchResult.end());
-////                           System.out.println(newCurrent);
+//                           System.out.println(newCurrent);
 //                           String newMedicine = prefix + newCurrent;
 //                           System.out.println("newMedicine: " + newMedicine);
 //

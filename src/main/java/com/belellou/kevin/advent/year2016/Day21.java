@@ -38,9 +38,7 @@ public class Day21 extends AbstractDaySolver<String, String> {
 
         for (Operation operation : operations) {
             switch (operation.type) {
-                case SWAP_POSITION -> {
-                    ArrayUtils.swap(array, operation.firstOperand, operation.secondOperand);
-                }
+                case SWAP_POSITION -> ArrayUtils.swap(array, operation.firstOperand, operation.secondOperand);
                 case SWAP_LETTER -> {
                     int firstOperandIndex = getIndexedOf(array, operation.firstOperand);
                     int secondOperandIndex = getIndexedOf(array, operation.secondOperand);

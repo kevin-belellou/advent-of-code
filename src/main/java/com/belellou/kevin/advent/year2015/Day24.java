@@ -15,14 +15,11 @@ public class Day24 extends AbstractDaySolver<Integer, Integer> {
 //                              AtomicLong currentSize,
                               AtomicLong minSize,
 //                              AtomicLong currentQuantum,
-                              AtomicLong minQuantum,
-                              List<Long> list) {
+                              AtomicLong minQuantum, List<Long> list) {
         for (int i = index - 1; i >= 0; i--) {
             int currentPackage = packages.get(i);
 
-            if (currentPackage > weightLeft) {
-                continue;
-            } else if (currentPackage == weightLeft) {
+            if (currentPackage == weightLeft) {
 //                long finalSize = currentSize.get() + 1;
 //                long finalQuantum = currentQuantum.get() * currentPackage;
                 list.add((long) currentPackage);
@@ -40,7 +37,7 @@ public class Day24 extends AbstractDaySolver<Integer, Integer> {
 
                 list.removeLast();
 //                return;
-            } else {
+            } else if (currentPackage < weightLeft) {
 //                currentSize.incrementAndGet();
 //                currentQuantum.set(currentQuantum.get() * currentPackage);
 

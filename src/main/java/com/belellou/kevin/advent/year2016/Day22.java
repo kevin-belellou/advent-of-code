@@ -14,7 +14,7 @@ import org.apache.commons.lang3.tuple.Pair;
 import com.belellou.kevin.advent.generic.AbstractDaySolver;
 import com.belellou.kevin.advent.generic.DisableTest;
 
-@SuppressWarnings({"unused", "preview"})
+@SuppressWarnings({"unused"})
 public class Day22 extends AbstractDaySolver<Integer, Integer> {
 
     private static final String SPACE_DELIMITER_REGEX = "\\s+";

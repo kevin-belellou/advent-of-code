@@ -17,7 +17,7 @@ import org.apache.commons.lang3.tuple.ImmutablePair;
 
 import com.belellou.kevin.advent.generic.AbstractDaySolver;
 
-@SuppressWarnings({"unused", "preview"})
+@SuppressWarnings({"unused"})
 public class Day17 extends AbstractDaySolver<String, Integer> {
 
     private static final Position startingPosition = Position.of(0, 0);
