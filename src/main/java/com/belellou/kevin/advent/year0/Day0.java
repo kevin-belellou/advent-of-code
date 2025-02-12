@@ -8,10 +8,6 @@ import com.belellou.kevin.advent.generic.DisableTest;
 @SuppressWarnings("unused")
 public class Day0 extends AbstractDaySolver<Integer, Integer> {
 
-    public Day0() {
-        super(Day0.class);
-    }
-
     @Override
     protected Integer doSolveFirstStar(BufferedReader reader) {
         return 0;

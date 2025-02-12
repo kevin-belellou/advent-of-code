@@ -16,10 +16,6 @@ import com.belellou.kevin.advent.generic.DisableTest;
 @SuppressWarnings("unused")
 public class Day19 extends AbstractDaySolver<Integer, Integer> {
 
-    public Day19() {
-        super(Day19.class);
-    }
-
     private static void find(String medicine, String current, int currentIndex, ModifiableInteger maxIndex,
                              Map<String, List<String>> map) {
         maxIndex.setValue(Math.max(currentIndex, maxIndex.getValue()));

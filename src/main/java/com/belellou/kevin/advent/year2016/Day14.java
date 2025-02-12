@@ -15,10 +15,6 @@ import com.belellou.kevin.advent.generic.AbstractDaySolver;
 @SuppressWarnings("unused")
 public class Day14 extends AbstractDaySolver<Long, Long> {
 
-    public Day14() {
-        super(Day14.class);
-    }
-
     private static Long find64thKeyIndex(BufferedReader reader, boolean useKeyStretching) throws IOException {
         String salt = reader.readLine();
         long index = 0;

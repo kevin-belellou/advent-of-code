@@ -9,10 +9,6 @@ import com.belellou.kevin.advent.generic.AbstractDaySolver;
 @SuppressWarnings("unused")
 public class Day1 extends AbstractDaySolver<Integer, Integer> {
 
-    public Day1() {
-        super(Day1.class);
-    }
-
     private static int solve(BufferedReader reader, boolean checkForPoints) throws IOException {
         String line = reader.readLine();
         String[] split = line.split(", ");

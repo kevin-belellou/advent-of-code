@@ -17,10 +17,6 @@ public class Day21 extends AbstractDaySolver<String, String> {
     private static final String SPACE = " ";
     private static final String UNDERSCORE = "_";
 
-    public Day21() {
-        super(Day21.class);
-    }
-
     private static Operation parseOperation(String line) {
         String[] split = line.split(SPACE);
 

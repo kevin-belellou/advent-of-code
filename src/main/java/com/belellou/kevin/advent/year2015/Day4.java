@@ -14,10 +14,6 @@ public class Day4 extends AbstractDaySolver<Integer, Integer> {
     private static final String FIVE_ZEROES_PATTERN = "00000";
     private static final String SIX_ZEROES_PATTERN = "000000";
 
-    public Day4() {
-        super(Day4.class);
-    }
-
     private static int findNumber(String line, String pattern) {
         return IntStream.range(1, Integer.MAX_VALUE)
                         .takeWhile(value -> {

@@ -20,10 +20,6 @@ public class Day8 extends AbstractDaySolver<Integer, Integer> {
     private static final Map<String, Integer> mem = new HashMap<>();
     private static final Map<String, Integer> memAgain = new HashMap<>();
 
-    public Day8() {
-        super(Day8.class);
-    }
-
     private static int countMemoryLengthAgain(String line) {
         String newLine = PATTERN_HEXA.matcher(line).replaceAll("-");
         newLine = PATTERN_QUOTE.matcher(newLine).replaceAll("-");

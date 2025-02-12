@@ -14,10 +14,6 @@ public class Day7 extends AbstractDaySolver<Long, Long> {
     private static final char OPENING_BRACKET = '[';
     private static final char CLOSING_BRACKET = ']';
 
-    public Day7() {
-        super(Day7.class);
-    }
-
     private static boolean doesIpSupportTls(String ip) {
         boolean hasAbba = false;
         boolean isInHypernet = false;

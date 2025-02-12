@@ -14,10 +14,6 @@ public class Day10 extends AbstractDaySolver<Integer, Integer> {
     private static final String VALUE = "value";
     private static final String SPACE = " ";
 
-    public Day10() {
-        super(Day10.class);
-    }
-
     private static List<Instruction> getInstructions(List<String> lines, List<Bot> bots) {
         List<Instruction> instructions = new ArrayList<>();
 

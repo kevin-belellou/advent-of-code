@@ -33,10 +33,6 @@ public class Day13 extends AbstractDaySolver<Integer, Integer> {
     private static final String ACTION_GAIN = "gain";
     private static final String ME = "Me";
 
-    public Day13() {
-        super(Day13.class);
-    }
-
     private static void fillGraph(String line, Graph<String, DefaultWeightedEdge> graph) {
         Matcher matcher = PATTERN.matcher(line);
 

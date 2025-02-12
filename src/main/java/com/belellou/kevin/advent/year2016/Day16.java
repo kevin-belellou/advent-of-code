@@ -14,10 +14,6 @@ public class Day16 extends AbstractDaySolver<String, String> {
     private static final char ZERO = '0';
     private static final char ONE = '1';
 
-    public Day16() {
-        super(Day16.class);
-    }
-
     private static String generateData(String seed, int length) {
         if (seed.length() >= length) {
             return seed.substring(0, length);

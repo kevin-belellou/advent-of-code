@@ -17,10 +17,6 @@ public class Day12 extends AbstractDaySolver<Integer, Integer> {
     private static final String REGISTER_C = "c";
     private static final String REGISTER_D = "d";
 
-    public Day12() {
-        super(Day12.class);
-    }
-
     private static List<Instruction> getInstructions(BufferedReader reader) {
         return reader.lines().map(Day12::parseInstruction).toList();
     }

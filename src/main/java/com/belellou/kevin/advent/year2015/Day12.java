@@ -14,10 +14,6 @@ public class Day12 extends AbstractDaySolver<Integer, Integer> {
 
     private static final String RED = "red";
 
-    public Day12() {
-        super(Day12.class);
-    }
-
     private static void readMap(Map<?, ?> map, ModifiableInteger count, boolean stopForRed) {
         if (stopForRed && map.containsValue(RED)) {
             return;

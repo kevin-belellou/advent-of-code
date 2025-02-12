@@ -7,10 +7,6 @@ import com.belellou.kevin.advent.generic.AbstractDaySolver;
 @SuppressWarnings("unused")
 public class Day10 extends AbstractDaySolver<Integer, Integer> {
 
-    public Day10() {
-        super(Day10.class);
-    }
-
     private static String readLine(String line) {
         int length = line.length();
         int pos = 0;

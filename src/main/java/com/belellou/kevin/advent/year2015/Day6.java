@@ -29,10 +29,6 @@ public class Day6 extends AbstractDaySolver<Integer, Integer> {
     private static final String COMMAND_TURN_OFF = "turn off";
     private static final String COMMAND_TOGGLE = "toggle";
 
-    public Day6() {
-        super(Day6.class);
-    }
-
     private static Instruction matcherToInstruction(Matcher matcher) {
         //noinspection ResultOfMethodCallIgnored
         matcher.matches();

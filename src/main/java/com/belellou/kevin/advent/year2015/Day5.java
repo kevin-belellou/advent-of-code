@@ -9,10 +9,6 @@ import com.belellou.kevin.advent.generic.AbstractDaySolver;
 @SuppressWarnings("unused")
 public class Day5 extends AbstractDaySolver<Integer, Integer> {
 
-    public Day5() {
-        super(Day5.class);
-    }
-
     private static boolean firstStarStringTest(String string) {
         int vowelCount = 0;
         char lastChar = '0';

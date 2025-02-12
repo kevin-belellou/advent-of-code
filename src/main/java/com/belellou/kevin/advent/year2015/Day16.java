@@ -54,10 +54,6 @@ public class Day16 extends AbstractDaySolver<Integer, Integer> {
         REAL_SUE = Sue.from(0, 3, 7, 2, 3, 0, 0, 5, 3, 2, 1);
     }
 
-    public Day16() {
-        super(Day16.class);
-    }
-
     @Override
     protected Integer doSolveFirstStar(BufferedReader reader) {
         return reader.lines()

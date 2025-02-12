@@ -14,10 +14,6 @@ public class Day20 extends AbstractDaySolver<Long, Long> {
     private static final long MIN_IP = 0L;
     private static final long MAX_IP = 4_294_967_295L;
 
-    public Day20() {
-        super(Day20.class);
-    }
-
     private static List<BlacklistEntry> getBlacklist(BufferedReader reader) {
         List<BlacklistEntry> blacklist = reader.lines().map(Day20::parseEntry).sorted().toList();
 

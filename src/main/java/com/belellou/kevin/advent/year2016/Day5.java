@@ -12,10 +12,6 @@ import com.belellou.kevin.advent.generic.AbstractDaySolver;
 @SuppressWarnings("unused")
 public class Day5 extends AbstractDaySolver<String, String> {
 
-    public Day5() {
-        super(Day5.class);
-    }
-
     @Override
     protected String doSolveFirstStar(BufferedReader reader) throws IOException {
         String doorId = reader.readLine();

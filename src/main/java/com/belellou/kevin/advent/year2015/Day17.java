@@ -15,10 +15,6 @@ public class Day17 extends AbstractDaySolver<Integer, Integer> {
 
     private static final int EGGNOG = 150;
 
-    public Day17() {
-        super(Day17.class);
-    }
-
     private static void countCombinations(List<Integer> containers, int eggnogLeft, ModifiableInteger count,
                                           List<ModifiableInteger> chains) {
         if (chains.isEmpty()) {

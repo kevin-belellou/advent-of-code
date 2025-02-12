@@ -37,10 +37,6 @@ public class Day15 extends AbstractDaySolver<Integer, Integer> {
                                                                    "(?<" + GROUP_CALORIES + ">-?\\d+)" +
                                                                    "$");
 
-    public Day15() {
-        super(Day15.class);
-    }
-
     private static Ingredient getIngredient(String line) {
         Matcher matcher = PATTERN.matcher(line);
 

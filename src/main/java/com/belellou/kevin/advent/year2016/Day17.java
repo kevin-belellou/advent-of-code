@@ -23,10 +23,6 @@ public class Day17 extends AbstractDaySolver<String, Integer> {
     private static final Position startingPosition = Position.of(0, 0);
     private static final Position vaultPosition = Position.of(3, 3);
 
-    public Day17() {
-        super(Day17.class);
-    }
-
     private static String findPath(Position position, String passcode, String path, boolean findShortestPath)
             throws InterruptedException, ExecutionException {
         if (position.equals(vaultPosition)) {

@@ -18,10 +18,6 @@ public class Day23 extends AbstractDaySolver<Integer, Integer> {
     private static final String REGISTER_C = "c";
     private static final String REGISTER_D = "d";
 
-    public Day23() {
-        super(Day23.class);
-    }
-
     private static List<Instruction> getInstructions(BufferedReader reader) {
         return reader.lines().map(Day23::parseInstruction).toList();
     }

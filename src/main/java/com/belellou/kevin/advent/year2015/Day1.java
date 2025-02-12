@@ -12,10 +12,6 @@ public class Day1 extends AbstractDaySolver<Integer, Integer> {
 
     private static final int STARTING_FLOOR = 0;
 
-    public Day1() {
-        super(Day1.class);
-    }
-
     @Override
     protected Integer doSolveFirstStar(BufferedReader reader) throws IOException {
         String line = reader.readLine();

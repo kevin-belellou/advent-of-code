@@ -9,10 +9,6 @@ import com.belellou.kevin.advent.generic.AbstractDaySolver;
 @SuppressWarnings("unused")
 public class Day15 extends AbstractDaySolver<Integer, Integer> {
 
-    public Day15() {
-        super(Day15.class);
-    }
-
     private static Disc createDisc(String line) {
         String[] split = line.split(" ");
         return new Disc(Integer.parseInt(split[3]), Integer.parseInt(split[11].split("\\.")[0]));

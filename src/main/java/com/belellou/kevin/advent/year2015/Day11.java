@@ -7,10 +7,6 @@ import com.belellou.kevin.advent.generic.AbstractDaySolver;
 @SuppressWarnings("unused")
 public class Day11 extends AbstractDaySolver<String, String> {
 
-    public Day11() {
-        super(Day11.class);
-    }
-
     private static boolean isPasswordInvalid(String password) {
         if (password.matches("^.*[iol].*$")) {
             return true;

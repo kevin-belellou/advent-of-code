@@ -18,10 +18,6 @@ public class Day18 extends AbstractDaySolver<Integer, Integer> {
     private static final char SAFE_TILE = '.';
     private static final char TRAP_TILE = '^';
 
-    public Day18() {
-        super(Day18.class);
-    }
-
     private static void generateTiles(List<String> tiles, int rowCount) {
         for (int i = 1; i < rowCount; i++) {
             StringBuilder builder = new StringBuilder();

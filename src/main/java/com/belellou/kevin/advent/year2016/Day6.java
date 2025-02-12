@@ -12,10 +12,6 @@ import com.belellou.kevin.advent.generic.AbstractDaySolver;
 @SuppressWarnings("unused")
 public class Day6 extends AbstractDaySolver<String, String> {
 
-    public Day6() {
-        super(Day6.class);
-    }
-
     private static List<HashMap<Character, Integer>> extractFrequencies(BufferedReader reader) {
         List<HashMap<Character, Integer>> frequencies = new ArrayList<>();
 

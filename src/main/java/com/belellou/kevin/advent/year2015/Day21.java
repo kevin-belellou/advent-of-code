@@ -27,10 +27,6 @@ public class Day21 extends AbstractDaySolver<Integer, Integer> {
                                                     new Item(ItemType.RING, 40, 0, 2),
                                                     new Item(ItemType.RING, 80, 0, 3));
 
-    public Day21() {
-        super(Day21.class);
-    }
-
     private static Character readBoss(BufferedReader reader) {
         List<String> lines = reader.lines().toList();
 

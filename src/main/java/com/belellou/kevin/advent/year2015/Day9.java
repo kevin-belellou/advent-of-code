@@ -30,10 +30,6 @@ public class Day9 extends AbstractDaySolver<Integer, Integer> {
                                                                    "(?<" + GROUP_DISTANCE + ">\\d+)" +
                                                                    "$");
 
-    public Day9() {
-        super(Day9.class);
-    }
-
     @Override
     protected Integer doSolveFirstStar(BufferedReader reader) {
         SimpleWeightedGraph<String, DefaultWeightedEdge> graph = new SimpleWeightedGraph<>(DefaultWeightedEdge.class);

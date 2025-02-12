@@ -9,10 +9,6 @@ import com.belellou.kevin.advent.generic.AbstractDaySolver;
 @SuppressWarnings("unused")
 public class Day3 extends AbstractDaySolver<Integer, Integer> {
 
-    public Day3() {
-        super(Day3.class);
-    }
-
     private static Integer[] getSplit(String line) {
         return Arrays.stream(line.trim().split("\\s+")).map(Integer::valueOf).toArray(Integer[]::new);
     }

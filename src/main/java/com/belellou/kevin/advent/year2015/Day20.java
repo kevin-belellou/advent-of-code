@@ -9,10 +9,6 @@ import com.belellou.kevin.advent.generic.AbstractDaySolver;
 @SuppressWarnings("unused")
 public class Day20 extends AbstractDaySolver<Integer, Integer> {
 
-    public Day20() {
-        super(Day20.class);
-    }
-
     @Override
     protected Integer doSolveFirstStar(BufferedReader reader) {
         int searchedPresent = Integer.parseInt(reader.lines().findFirst().orElseThrow());

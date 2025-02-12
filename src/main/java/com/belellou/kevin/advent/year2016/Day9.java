@@ -10,10 +10,6 @@ import com.belellou.kevin.advent.generic.DisableTest;
 @SuppressWarnings("unused")
 public class Day9 extends AbstractDaySolver<Integer, Integer> {
 
-    public Day9() {
-        super(Day9.class);
-    }
-
     private static String decompress(String line) {
         StringBuilder builder = new StringBuilder();
 

@@ -17,10 +17,6 @@ import com.belellou.kevin.advent.generic.DisableTest;
 @SuppressWarnings("unused")
 public class Day19 extends AbstractDaySolver<Integer, Integer> {
 
-    public Day19() {
-        super(Day19.class);
-    }
-
     private static Optional<Integer> findVictim1(Map<Integer, Boolean> map, int currentElfIndex,
                                                  int numberOfElvesLeft) {
         int nextIndex = currentElfIndex;

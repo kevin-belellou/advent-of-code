@@ -9,10 +9,6 @@ import com.belellou.kevin.advent.generic.AbstractDaySolver;
 @SuppressWarnings("unused")
 public class Day23 extends AbstractDaySolver<Integer, Integer> {
 
-    public Day23() {
-        super(Day23.class);
-    }
-
     private static void executeProgram(BufferedReader reader, AtomicLong a, AtomicLong b) {
         List<Instruction> instructions = reader.lines().map(line -> Instruction.parse(line, a, b)).toList();
 

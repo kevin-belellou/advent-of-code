@@ -21,10 +21,6 @@ public class Day8 extends AbstractDaySolver<Integer, String> {
 
     private static final String KEYWORD_ROW = "row";
 
-    public Day8() {
-        super(Day8.class);
-    }
-
     private static Function<String, Operation> getOperation() {
         return line -> {
             Matcher rectMatcher = PATTERN_RECT.matcher(line);

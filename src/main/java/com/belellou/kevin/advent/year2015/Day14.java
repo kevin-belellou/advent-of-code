@@ -34,10 +34,6 @@ public class Day14 extends AbstractDaySolver<Integer, Integer> {
 
     private static final int DURATION = 2503;
 
-    public Day14() {
-        super(Day14.class);
-    }
-
     private static Reindeer getReindeer(String line) {
         Matcher matcher = PATTERN.matcher(line);
 

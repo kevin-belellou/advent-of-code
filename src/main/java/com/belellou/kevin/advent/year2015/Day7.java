@@ -57,10 +57,6 @@ public class Day7 extends AbstractDaySolver<Integer, Integer> {
                                                                        "(?<" + GROUP_OUT + ">[a-z]+)" +
                                                                        "$");
 
-    public Day7() {
-        super(Day7.class);
-    }
-
     @SuppressWarnings("DuplicatedCode")
     private static void fillGraph(Graph<String, CustomEdge> graph, String line) {
         Matcher matcher;

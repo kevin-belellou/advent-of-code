@@ -19,10 +19,6 @@ public class Day25 extends AbstractDaySolver<Long, Integer> {
     private static final Pattern ROW_PATTERN = Pattern.compile("row (\\d+)");
     private static final Pattern COLUMN_PATTERN = Pattern.compile("column (\\d+)");
 
-    public Day25() {
-        super(Day25.class);
-    }
-
     private static int getNumberOfOperations(String line) {
         Matcher matcher = ROW_PATTERN.matcher(line);
         if (!matcher.find()) {

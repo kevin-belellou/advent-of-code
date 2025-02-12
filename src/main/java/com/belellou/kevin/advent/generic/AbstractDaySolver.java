@@ -23,9 +23,9 @@ public abstract class AbstractDaySolver<FirstSolutionType, SecondSolutionType>
 
     private final String input;
 
-    protected AbstractDaySolver(Class<? extends AbstractDaySolver<FirstSolutionType, SecondSolutionType>> clazz) {
-        this.year = Year.getYear(getNumberFrom(clazz.getPackageName()));
-        this.day = Day.getDay(getNumberFrom(clazz.getSimpleName()));
+    protected AbstractDaySolver() {
+        this.year = Year.getYear(getNumberFrom(this.getClass().getPackageName()));
+        this.day = Day.getDay(getNumberFrom(this.getClass().getSimpleName()));
 
         input = INPUT_FOLDER + year.toString() + SEPARATOR + day.toString() + INPUT_FILE_NAME;
     }

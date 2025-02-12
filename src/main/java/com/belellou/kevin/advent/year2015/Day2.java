@@ -14,10 +14,6 @@ public class Day2 extends AbstractDaySolver<Integer, Integer> {
 
     private static final Pattern PATTERN = Pattern.compile("^(\\d+)x(\\d+)x(\\d+)$");
 
-    public Day2() {
-        super(Day2.class);
-    }
-
     private static int findAreaNeeded(String line) {
         Dimensions dimensions = getDimensions(line);
 

@@ -24,10 +24,6 @@ public class Day22 extends AbstractDaySolver<Integer, Integer> {
     private static final String Y_CHAR = "y";
     private static final String T_CHAR = "T";
 
-    public Day22() {
-        super(Day22.class);
-    }
-
     private static List<Node> getInitialNodes(BufferedReader reader) {
         List<String> lines = new ArrayList<>(reader.lines().toList());
         lines.removeFirst();

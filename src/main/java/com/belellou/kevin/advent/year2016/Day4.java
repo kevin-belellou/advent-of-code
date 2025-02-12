@@ -19,10 +19,6 @@ public class Day4 extends AbstractDaySolver<Integer, Integer> {
 
     private static final Pattern PATTERN = Pattern.compile("^([a-z|-]+)-([0-9]+)\\[([a-z]{5})]$");
 
-    public Day4() {
-        super(Day4.class);
-    }
-
     private static Optional<Integer> getSectorIdIfValid(Matcher matcher) {
         String name = matcher.group(1);
         int sectorId = Integer.parseInt(matcher.group(2));

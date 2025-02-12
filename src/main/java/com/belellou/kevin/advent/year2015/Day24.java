@@ -11,10 +11,6 @@ import com.belellou.kevin.advent.generic.DisableTest;
 @SuppressWarnings("unused")
 public class Day24 extends AbstractDaySolver<Integer, Integer> {
 
-    public Day24() {
-        super(Day24.class);
-    }
-
     private static void solve(List<Integer> packages, int index, int weightPerGroup, int weightLeft,
 //                              AtomicLong currentSize,
                               AtomicLong minSize,
