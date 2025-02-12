@@ -7,6 +7,7 @@
 
 [![Java CI with Maven][badge_actions_build]][actions_build]
 [![Update README ⭐][badge_actions_update_readme]][actions_update_readme]
+[![Dependabot Updates][badge_actions_dependabot_updates]][actions_dependabot_updates]
 
 Personal repository to develop
 and store my answers to the incredible puzzles from [adventofcode.com][adventofcode] 🎄 🎅.
@@ -84,6 +85,7 @@ and store my answers to the incredible puzzles from [adventofcode.com][adventofc
 [actions_tests]: https://github.com/kevin-belellou/advent-of-code/actions/workflows/maven.yml?query=branch%3Amain
 [actions_build]: https://github.com/kevin-belellou/advent-of-code/actions/workflows/maven.yml
 [actions_update_readme]: https://github.com/kevin-belellou/advent-of-code/actions/workflows/update-readme-stars.yml
+[actions_dependabot_updates]: https://github.com/kevin-belellou/advent-of-code/actions/workflows/dependabot/dependabot-updates
 
 [badge_license]: https://img.shields.io/github/license/kevin-belellou/advent-of-code?style=plastic
 [badge_java_version]: https://img.shields.io/badge/Java-21-blue?style=plastic
@@ -91,6 +93,7 @@ and store my answers to the incredible puzzles from [adventofcode.com][adventofc
 [badge_code_coverage]: https://img.shields.io/endpoint?url=https%3A%2F%2Fgist.githubusercontent.com%2Fkevin-belellou%2Fc098f5fa219b3aa17fd8dabf9087cc14%2Fraw%2Fadvent-of-code-jacoco-coverage.json&style=plastic
 [badge_actions_build]: https://github.com/kevin-belellou/advent-of-code/actions/workflows/maven.yml/badge.svg?branch=main
 [badge_actions_update_readme]: https://github.com/kevin-belellou/advent-of-code/actions/workflows/update-readme-stars.yml/badge.svg?branch=main
+[badge_actions_dependabot_updates]: https://github.com/kevin-belellou/advent-of-code/actions/workflows/dependabot/dependabot-updates/badge.svg?branch=main
 [badge_stars_2015]: https://img.shields.io/badge/%E2%AD%90_in_2015-41_%2F_50-yellow
 [badge_stars_2016]: https://img.shields.io/badge/%E2%AD%90_in_2016-36_%2F_50-yellow
 
