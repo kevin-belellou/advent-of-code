@@ -57,7 +57,7 @@ jobs:
           echo "| Total Number of Lines | ${{ steps.jacoco_reporter.outputs.total_lines }} |" >> $GITHUB_STEP_SUMMARY
 
       - name: "Update CI badges"
-        uses: gaelgirodon/ci-badges-action@d4394e8ae1180779c579e768aea23a0e7b02c53a
+        uses: gaelgirodon/ci-badges-action@aca4b1887f66c6129499b428dfdb6b1875604b46
         env:
           GIST_ID: ${{ github.event_name == 'push' && github.ref_name == 'main' && env.CI_BADGES_GIST || env.CI_BADGES_GIST_STAGING }}
         with:
