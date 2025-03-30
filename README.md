@@ -14,6 +14,7 @@ and store my answers to the incredible puzzles from [adventofcode.com][adventofc
 
 ![2015 stars][badge_stars_2015]
 ![2016 stars][badge_stars_2016]
+![2017 stars][badge_stars_2017]
 
 [//]: # (@formatter:off)
 
@@ -78,6 +79,13 @@ and store my answers to the incredible puzzles from [adventofcode.com][adventofc
 | [Day 22](https://adventofcode.com/2016/day/22) | [Day22.java](src/main/java/com/belellou/kevin/advent/year2016/Day22.java) | ⭐ |   |
 <!--- advent_readme_stars 2016 table --->
 
+<!--- advent_readme_stars 2017 table --->
+## 2017 Results
+
+| Day | Solution | Part 1 | Part 2 |
+| :---: | :---: | :---: | :---: |
+<!--- advent_readme_stars 2017 table --->
+
 [adventofcode]: https://adventofcode.com/
 
 [file_license]: https://github.com/kevin-belellou/advent-of-code/blob/main/LICENSE
@@ -96,5 +104,6 @@ and store my answers to the incredible puzzles from [adventofcode.com][adventofc
 [badge_actions_dependabot_updates]: https://github.com/kevin-belellou/advent-of-code/actions/workflows/dependabot/dependabot-updates/badge.svg?branch=main
 [badge_stars_2015]: https://img.shields.io/badge/%E2%AD%90_in_2015-41_%2F_50-yellow
 [badge_stars_2016]: https://img.shields.io/badge/%E2%AD%90_in_2016-36_%2F_50-yellow
+[badge_stars_2017]: https://img.shields.io/badge/%E2%AD%90_in_2017-0_%2F_50-yellow
 
 [//]: # (@formatter:on)
