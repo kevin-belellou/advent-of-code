@@ -19,9 +19,9 @@
     </developers>
 
     <properties>
-        <maven.compiler.source>23</maven.compiler.source>
-        <maven.compiler.target>23</maven.compiler.target>
-        <maven.compiler.release>23</maven.compiler.release>
+        <maven.compiler.source>24</maven.compiler.source>
+        <maven.compiler.target>24</maven.compiler.target>
+        <maven.compiler.release>24</maven.compiler.release>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
         <!-- Enable JEPs in preview -->
@@ -40,7 +40,7 @@
         <throwing-function.version>1.6.1</throwing-function.version>
 
         <!-- Plugin versions -->
-        <jacoco-maven-plugin.version>0.8.12</jacoco-maven-plugin.version>
+        <jacoco-maven-plugin.version>0.8.13-SNAPSHOT</jacoco-maven-plugin.version>
         <maven-surefire-plugin.version>3.5.2</maven-surefire-plugin.version>
         <maven-compiler-plugin.version>3.14.0</maven-compiler-plugin.version>
     </properties>
@@ -56,6 +56,14 @@
             </dependency>
         </dependencies>
     </dependencyManagement>
+
+    <pluginRepositories>
+        <pluginRepository>
+            <id>jacoco-snapshots</id>
+            <name>JaCoCo Snapshots</name>
+            <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+        </pluginRepository>
+    </pluginRepositories>
 
     <dependencies>
         <dependency>
