@@ -27,7 +27,7 @@ jobs:
         run: mvn verify --batch-mode --no-transfer-progress
 
       - name: "JUnit test report"
-        uses: kevin-belellou/fork-dorny-test-reporter@1a288b62f8b75c0f433cbfdbc2e4800fbae50bd7
+        uses: dorny/test-reporter@6e6a65b7a0bd2c9197df7d0ae36ac5cee784230c
         if: ${{ !cancelled() }}
         with:
           name: JUnit Tests
