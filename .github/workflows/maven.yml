@@ -14,26 +14,26 @@ jobs:
 
     steps:
       - name: "Checkout repository"
-        uses: actions/checkout@v4
+        uses: actions/checkout@v4.2.2
 
       - name: "Set up JDK 24"
-        uses: actions/setup-java@v4
+        uses: actions/setup-java@v4.7.0
         with:
-          java-version: '24'
-          distribution: 'temurin'
+          java-version: "24"
+          distribution: temurin
           cache: maven
 
       - name: "Build with Maven"
         run: mvn verify --batch-mode --no-transfer-progress
 
       - name: "JUnit test report"
-        uses: kevin-belellou/fork-dorny-test-reporter@1a288b62f8b75c0f433cbfdbc2e4800fbae50bd7
+        uses: dorny/test-reporter@6e6a65b7a0bd2c9197df7d0ae36ac5cee784230c
         if: ${{ !cancelled() }}
         with:
           name: JUnit Tests
           path: target/surefire-reports/*.xml
           reporter: java-junit
-          use-actions-summary: 'true'
+          use-actions-summary: true
 
       - name: "JaCoCo code coverage report"
         id: jacoco_reporter
