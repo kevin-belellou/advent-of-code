@@ -41,7 +41,7 @@
 
         <!-- Plugin versions -->
         <jacoco-maven-plugin.version>0.8.13-SNAPSHOT</jacoco-maven-plugin.version>
-        <maven-surefire-plugin.version>3.5.2</maven-surefire-plugin.version>
+        <maven-surefire-plugin.version>3.5.3</maven-surefire-plugin.version>
         <maven-compiler-plugin.version>3.14.0</maven-compiler-plugin.version>
     </properties>
 
