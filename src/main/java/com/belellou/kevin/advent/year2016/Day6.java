@@ -12,8 +12,8 @@ import com.belellou.kevin.advent.generic.AbstractDaySolver;
 @SuppressWarnings("unused")
 public class Day6 extends AbstractDaySolver<String, String> {
 
-    private static List<HashMap<Character, Integer>> extractFrequencies(BufferedReader reader) {
-        List<HashMap<Character, Integer>> frequencies = new ArrayList<>();
+    private static List<Map<Character, Integer>> extractFrequencies(BufferedReader reader) {
+        List<Map<Character, Integer>> frequencies = new ArrayList<>();
 
         reader.lines().forEach(line -> {
             for (int i = 0; i < line.length(); i++) {
@@ -32,7 +32,7 @@ public class Day6 extends AbstractDaySolver<String, String> {
 
     @Override
     protected String doSolveFirstStar(BufferedReader reader) {
-        List<HashMap<Character, Integer>> frequencies = extractFrequencies(reader);
+        List<Map<Character, Integer>> frequencies = extractFrequencies(reader);
 
         return frequencies.stream()
                           .map(frequency -> frequency.entrySet()
@@ -52,7 +52,7 @@ public class Day6 extends AbstractDaySolver<String, String> {
 
     @Override
     protected String doSolveSecondStar(BufferedReader reader) {
-        List<HashMap<Character, Integer>> frequencies = extractFrequencies(reader);
+        List<Map<Character, Integer>> frequencies = extractFrequencies(reader);
 
         return frequencies.stream()
                           .map(frequency -> frequency.entrySet()

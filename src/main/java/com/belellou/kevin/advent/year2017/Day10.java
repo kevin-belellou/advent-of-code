@@ -42,7 +42,7 @@ public class Day10 extends AbstractDaySolver<Integer, String> {
                     List<Integer> firstPartSelection = numbers.subList(currentPosition, LIST_LENGTH);
                     List<Integer> secondPartSelection = numbers.subList(0, rest);
 
-                    ArrayList<Integer> finalSelection = new ArrayList<>(firstPartSelection);
+                    List<Integer> finalSelection = new ArrayList<>(firstPartSelection);
                     finalSelection.addAll(secondPartSelection);
                     List<Integer> reversed = finalSelection.reversed();
 

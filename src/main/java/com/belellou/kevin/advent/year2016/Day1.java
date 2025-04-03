@@ -3,6 +3,7 @@ package com.belellou.kevin.advent.year2016;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.util.HashSet;
+import java.util.Set;
 
 import com.belellou.kevin.advent.generic.AbstractDaySolver;
 
@@ -18,7 +19,7 @@ public class Day1 extends AbstractDaySolver<Integer, Integer> {
         int y = 0;
 
         Point lastPoint = new Point(x, y);
-        HashSet<Point> points = new HashSet<>();
+        Set<Point> points = new HashSet<>();
 
         for (String step : split) {
             int blocks = Integer.parseInt(step.substring(1));

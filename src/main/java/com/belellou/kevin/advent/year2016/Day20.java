@@ -26,7 +26,7 @@ public class Day20 extends AbstractDaySolver<Long, Long> {
     }
 
     private static List<BlacklistEntry> consolidateBlacklist(List<BlacklistEntry> blacklist) {
-        ArrayList<BlacklistEntry> consolidatedBlackList = new ArrayList<>();
+        List<BlacklistEntry> consolidatedBlackList = new ArrayList<>();
         consolidatedBlackList.add(blacklist.getFirst());
 
         for (int i = 1; i < blacklist.size(); i++) {
