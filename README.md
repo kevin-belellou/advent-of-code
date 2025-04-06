@@ -97,6 +97,7 @@ and store my answers to the incredible puzzles from [adventofcode.com][adventofc
 | [Day 11](https://adventofcode.com/2017/day/11) | [Day11.java](src/main/java/com/belellou/kevin/advent/year2017/Day11.java) | ⭐ | ⭐ |
 | [Day 12](https://adventofcode.com/2017/day/12) | [Day12.java](src/main/java/com/belellou/kevin/advent/year2017/Day12.java) | ⭐ | ⭐ |
 | [Day 13](https://adventofcode.com/2017/day/13) | [Day13.java](src/main/java/com/belellou/kevin/advent/year2017/Day13.java) | ⭐ | ⭐ |
+| [Day 14](https://adventofcode.com/2017/day/14) |  | ⭐ |   |
 <!--- advent_readme_stars 2017 table --->
 
 [adventofcode]: https://adventofcode.com/
@@ -117,6 +118,6 @@ and store my answers to the incredible puzzles from [adventofcode.com][adventofc
 [badge_actions_dependabot_updates]: https://github.com/kevin-belellou/advent-of-code/actions/workflows/dependabot/dependabot-updates/badge.svg?branch=main
 [badge_stars_2015]: https://img.shields.io/badge/%E2%AD%90_in_2015-41_%2F_50-yellow
 [badge_stars_2016]: https://img.shields.io/badge/%E2%AD%90_in_2016-36_%2F_50-yellow
-[badge_stars_2017]: https://img.shields.io/badge/%E2%AD%90_in_2017-26_%2F_50-yellow
+[badge_stars_2017]: https://img.shields.io/badge/%E2%AD%90_in_2017-27_%2F_50-yellow
 
 [//]: # (@formatter:on)
