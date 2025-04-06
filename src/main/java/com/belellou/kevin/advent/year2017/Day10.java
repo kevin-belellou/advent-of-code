@@ -16,13 +16,10 @@ public class Day10 extends AbstractDaySolver<Integer, String> {
 
     private static final int LIST_LENGTH = 256;
 
-    private static List<Integer> getNumbers() {
-        return new ArrayList<>(IntStream.range(0, LIST_LENGTH)
-                                        .boxed()
-                                        .toList());
-    }
-
-    private static void doRounds(List<Integer> selectionLengths, List<Integer> numbers, int numberOfRounds) {
+    static List<Integer> getSparseHash(List<Integer> selectionLengths, int numberOfRounds) {
+        List<Integer> numbers = new ArrayList<>(IntStream.range(0, LIST_LENGTH)
+                                                         .boxed()
+                                                         .toList());
         int currentPosition = 0;
         int skipSize = 0;
 
@@ -59,6 +56,25 @@ public class Day10 extends AbstractDaySolver<Integer, String> {
                 skipSize++;
             }
         }
+
+        return numbers;
+    }
+
+    static List<Integer> getAsciiCodes(String line) {
+        List<Integer> inputLine = new ArrayList<>(line.chars().boxed().toList());
+        inputLine.addAll(List.of(17, 31, 73, 47, 23));
+        return inputLine;
+    }
+
+    static String getKnotHash(List<Integer> sparseHash) {
+        return sparseHash.stream()
+                         .gather(Gatherers.windowFixed(16))
+                         .map(integers -> integers.stream()
+                                                  .reduce((a, b) -> a ^ b)
+                                                  .orElseThrow())
+                         .map(Integer::toHexString)
+                         .map(hex -> hex.length() == 1 ? "0" + hex : hex)
+                         .collect(Collectors.joining());
     }
 
     @Override
@@ -67,11 +83,9 @@ public class Day10 extends AbstractDaySolver<Integer, String> {
                                                .map(Integer::valueOf)
                                                .toList();
 
-        List<Integer> numbers = getNumbers();
+        List<Integer> sparseHash = getSparseHash(selectionLengths, 1);
 
-        doRounds(selectionLengths, numbers, 1);
-
-        return numbers.get(0) * numbers.get(1);
+        return sparseHash.get(0) * sparseHash.get(1);
     }
 
     @Override
@@ -83,21 +97,11 @@ public class Day10 extends AbstractDaySolver<Integer, String> {
     protected String doSolveSecondStar(BufferedReader reader) throws IOException {
         String line = reader.readLine();
 
-        List<Integer> inputLine = new ArrayList<>(line.chars().boxed().toList());
-        inputLine.addAll(List.of(17, 31, 73, 47, 23));
+        List<Integer> asciiCodes = getAsciiCodes(line);
 
-        List<Integer> numbers = getNumbers();
+        List<Integer> sparseHash = getSparseHash(asciiCodes, 64);
 
-        doRounds(inputLine, numbers, 64);
-
-        return numbers.stream()
-                      .gather(Gatherers.windowFixed(16))
-                      .map(integers -> integers.stream()
-                                               .reduce((a, b) -> a ^ b)
-                                               .orElseThrow())
-                      .map(Integer::toHexString)
-                      .map(hex -> hex.length() == 1 ? "0" + hex : hex)
-                      .collect(Collectors.joining());
+        return getKnotHash(sparseHash);
     }
 
     @Override
