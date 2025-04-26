@@ -97,6 +97,7 @@ public class Day21 extends AbstractDaySolver<String, String> {
 
     @Override
     public String getFirstStarSolution() {
+        //noinspection SpellCheckingInspection
         return "agcebfdh";
     }
 

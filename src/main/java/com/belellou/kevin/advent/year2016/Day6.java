@@ -47,6 +47,7 @@ public class Day6 extends AbstractDaySolver<String, String> {
 
     @Override
     public String getFirstStarSolution() {
+        //noinspection SpellCheckingInspection
         return "agmwzecr";
     }
 
@@ -67,6 +68,7 @@ public class Day6 extends AbstractDaySolver<String, String> {
 
     @Override
     public String getSecondStarSolution() {
+        //noinspection SpellCheckingInspection
         return "owlaxqvq";
     }
 }

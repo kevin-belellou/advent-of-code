@@ -103,11 +103,13 @@ public class Day8 extends AbstractDaySolver<Integer, String> {
     @Override
     protected String doSolveSecondStar(BufferedReader reader) {
         // This puzzle is visual only (based on the displayed matrix from the first solution)
+        //noinspection SpellCheckingInspection
         return "EOARGPHYAO";
     }
 
     @Override
     public String getSecondStarSolution() {
+        //noinspection SpellCheckingInspection
         return "EOARGPHYAO";
     }
 
