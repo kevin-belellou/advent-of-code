@@ -110,7 +110,7 @@ public class Day9 extends AbstractDaySolver<Integer, Integer> {
         return 6_346;
     }
 
-    record Group(int score, int start, ModifiableInteger end) {
+    private record Group(int score, int start, ModifiableInteger end) {
 
         public static Group of(int score, int start) {
             return new Group(score, start, new ModifiableInteger(Integer.MIN_VALUE));

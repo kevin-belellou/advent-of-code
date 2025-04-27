@@ -162,5 +162,5 @@ public class Day16 extends AbstractDaySolver<String, String> {
         }
     }
 
-    record DanceStep(DanceMove danceMove, int firstOperand, int secondOperand) {}
+    private record DanceStep(DanceMove danceMove, int firstOperand, int secondOperand) {}
 }
