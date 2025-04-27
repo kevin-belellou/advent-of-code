@@ -99,7 +99,9 @@ and store my answers to the incredible puzzles from [adventofcode.com][adventofc
 | [Day 13](https://adventofcode.com/2017/day/13) | [Day13.java](src/main/java/com/belellou/kevin/advent/year2017/Day13.java) | ⭐ | ⭐ |
 | [Day 14](https://adventofcode.com/2017/day/14) | [Day14.java](src/main/java/com/belellou/kevin/advent/year2017/Day14.java) | ⭐ | ⭐ |
 | [Day 15](https://adventofcode.com/2017/day/15) | [Day15.java](src/main/java/com/belellou/kevin/advent/year2017/Day15.java) | ⭐ | ⭐ |
-| [Day 16](https://adventofcode.com/2017/day/16) |  | ⭐ |   |
+| [Day 16](https://adventofcode.com/2017/day/16) | [Day16.java](src/main/java/com/belellou/kevin/advent/year2017/Day16.java) | ⭐ | ⭐ |
+| [Day 17](https://adventofcode.com/2017/day/17) | [Day17.java](src/main/java/com/belellou/kevin/advent/year2017/Day17.java) | ⭐ | ⭐ |
+| [Day 18](https://adventofcode.com/2017/day/18) |  | ⭐ |   |
 <!--- advent_readme_stars 2017 table --->
 
 [adventofcode]: https://adventofcode.com/
@@ -120,6 +122,6 @@ and store my answers to the incredible puzzles from [adventofcode.com][adventofc
 [badge_actions_dependabot_updates]: https://github.com/kevin-belellou/advent-of-code/actions/workflows/dependabot/dependabot-updates/badge.svg?branch=main
 [badge_stars_2015]: https://img.shields.io/badge/%E2%AD%90_in_2015-41_%2F_50-yellow
 [badge_stars_2016]: https://img.shields.io/badge/%E2%AD%90_in_2016-36_%2F_50-yellow
-[badge_stars_2017]: https://img.shields.io/badge/%E2%AD%90_in_2017-31_%2F_50-yellow
+[badge_stars_2017]: https://img.shields.io/badge/%E2%AD%90_in_2017-35_%2F_50-yellow
 
 [//]: # (@formatter:on)
