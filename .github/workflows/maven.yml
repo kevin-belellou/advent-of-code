@@ -65,4 +65,4 @@ jobs:
           token: ${{ secrets.CI_BADGES_GIST_TOKEN }}
 
       - name: "Purge camo cache"
-        uses: kevincobain2000/action-camo-purge@5169e719d6daf0fdbf8d2174f9438f919627aa87
+        uses: kevincobain2000/action-camo-purge@4c6f4dfa9a09be940f04c311bc0dbdc5ec4753b1
