@@ -15,6 +15,7 @@ and store my answers to the incredible puzzles from [adventofcode.com][adventofc
 ![2015 stars][badge_stars_2015]
 ![2016 stars][badge_stars_2016]
 ![2017 stars][badge_stars_2017]
+![2018 stars][badge_stars_2018]
 
 [//]: # (@formatter:off)
 
@@ -106,6 +107,9 @@ and store my answers to the incredible puzzles from [adventofcode.com][adventofc
 | [Day 20](https://adventofcode.com/2017/day/20) | [Day20.java](src/main/java/com/belellou/kevin/advent/year2017/Day20.java) | ⭐ | ⭐ |
 <!--- advent_readme_stars 2017 table --->
 
+<!--- advent_readme_stars 2017 table --->
+<!--- advent_readme_stars 2017 table --->
+
 [adventofcode]: https://adventofcode.com/
 
 [file_license]: https://github.com/kevin-belellou/advent-of-code/blob/main/LICENSE
@@ -125,5 +129,6 @@ and store my answers to the incredible puzzles from [adventofcode.com][adventofc
 [badge_stars_2015]: https://img.shields.io/badge/%E2%AD%90_in_2015-41_%2F_50-yellow
 [badge_stars_2016]: https://img.shields.io/badge/%E2%AD%90_in_2016-36_%2F_50-yellow
 [badge_stars_2017]: https://img.shields.io/badge/%E2%AD%90_in_2017-40_%2F_50-yellow
+[badge_stars_2018]: https://img.shields.io/badge/%E2%AD%90_in_2018-40_%2F_50-yellow
 
 [//]: # (@formatter:on)

@@ -16,6 +16,7 @@ jobs:
       YEAR_2015: 2015
       YEAR_2016: 2016
       YEAR_2017: 2017
+      YEAR_2018: 2018
 
     steps:
       - name: "Checkout repository"
@@ -45,6 +46,14 @@ jobs:
           year: ${{ env.YEAR_2017 }}
           starsRegex: '(?<=https:\/\/img\.shields\.io\/badge\/%E2%AD%90_in_2017-)[0-9]+(?=_%2F_50-yellow)'
 
+      - name: "Update 2018 stars badges in README.md"
+        uses: J0B10/aoc-badges-action@75cd611df531bd9aa0675cae13be418d73cbdf76
+        with:
+          userid: ${{ env.ADVENT_USER_ID }}
+          session: ${{ secrets.ADVENT_OF_CODE_SESSION }}
+          year: ${{ env.YEAR_2018 }}
+          starsRegex: '(?<=https:\/\/img\.shields\.io\/badge\/%E2%AD%90_in_2018-)[0-9]+(?=_%2F_50-yellow)'
+
       - name: "Update 2015 stars array in README.md"
         uses: kevin-belellou/fork-k2bd-advent-readme-stars@df1a0e14eae7581456ff518c67316f9a74bfd37a
         with:
@@ -72,6 +81,16 @@ jobs:
           sessionCookie: ${{ secrets.ADVENT_OF_CODE_SESSION }}
           year: ${{ env.YEAR_2017 }}
           tableMarker: "<!--- advent_readme_stars 2017 table --->"
+          solutionLocations: "src/main/java/com/belellou/kevin/advent/year{yyyy}/Day{d}.java"
+          showMissingDays: true
+
+      - name: "Update 2018 stars array in README.md"
+        uses: kevin-belellou/fork-k2bd-advent-readme-stars@df1a0e14eae7581456ff518c67316f9a74bfd37a
+        with:
+          userId: ${{ env.ADVENT_USER_ID }}
+          sessionCookie: ${{ secrets.ADVENT_OF_CODE_SESSION }}
+          year: ${{ env.YEAR_2018 }}
+          tableMarker: "<!--- advent_readme_stars 2018 table --->"
           solutionLocations: "src/main/java/com/belellou/kevin/advent/year{yyyy}/Day{d}.java"
           showMissingDays: true
 
