@@ -129,6 +129,6 @@ and store my answers to the incredible puzzles from [adventofcode.com][adventofc
 [badge_stars_2015]: https://img.shields.io/badge/%E2%AD%90_in_2015-41_%2F_50-yellow
 [badge_stars_2016]: https://img.shields.io/badge/%E2%AD%90_in_2016-36_%2F_50-yellow
 [badge_stars_2017]: https://img.shields.io/badge/%E2%AD%90_in_2017-40_%2F_50-yellow
-[badge_stars_2018]: https://img.shields.io/badge/%E2%AD%90_in_2018-40_%2F_50-yellow
+[badge_stars_2018]: https://img.shields.io/badge/%E2%AD%90_in_2018-4_%2F_50-yellow
 
 [//]: # (@formatter:on)
