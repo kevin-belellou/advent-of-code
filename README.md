@@ -107,8 +107,8 @@ and store my answers to the incredible puzzles from [adventofcode.com][adventofc
 | [Day 20](https://adventofcode.com/2017/day/20) | [Day20.java](src/main/java/com/belellou/kevin/advent/year2017/Day20.java) | ⭐ | ⭐ |
 <!--- advent_readme_stars 2017 table --->
 
-<!--- advent_readme_stars 2017 table --->
-<!--- advent_readme_stars 2017 table --->
+<!--- advent_readme_stars 2018 table --->
+<!--- advent_readme_stars 2018 table --->
 
 [adventofcode]: https://adventofcode.com/
 
