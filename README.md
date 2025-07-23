@@ -108,6 +108,12 @@ and store my answers to the incredible puzzles from [adventofcode.com][adventofc
 <!--- advent_readme_stars 2017 table --->
 
 <!--- advent_readme_stars 2018 table --->
+## 2018 Results
+
+| Day | Solution | Part 1 | Part 2 |
+| :---: | :---: | :---: | :---: |
+| [Day 1](https://adventofcode.com/2018/day/1) | [Day1.java](src/main/java/com/belellou/kevin/advent/year2018/Day1.java) | ⭐ | ⭐ |
+| [Day 2](https://adventofcode.com/2018/day/2) | [Day2.java](src/main/java/com/belellou/kevin/advent/year2018/Day2.java) | ⭐ | ⭐ |
 <!--- advent_readme_stars 2018 table --->
 
 [adventofcode]: https://adventofcode.com/
