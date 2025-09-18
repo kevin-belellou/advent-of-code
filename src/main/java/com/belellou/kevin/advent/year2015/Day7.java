@@ -156,7 +156,7 @@ public class Day7 extends AbstractDaySolver<Integer, Integer> {
             if (customEdges.isEmpty()) {
                 throw new IllegalStateException("Empty edges for " + vertex);
             } else if (customEdges.size() == 1) {
-                CustomEdge customEdge = customEdges.stream().findFirst().get();
+                CustomEdge customEdge = customEdges.stream().findFirst().orElseThrow();
                 String edgeSource = graph.getEdgeSource(customEdge);
 
                 switch (customEdge.operation) {

@@ -94,8 +94,8 @@ public class Day4 extends AbstractDaySolver<Integer, Integer> {
                      .filter(Matcher::matches)
                      .map(matcher -> new ImmutablePair<>(matcher.group(1), getSectorIdIfValid(matcher)))
                      .filter(pair -> pair.getRight().isPresent())
-                     .map(pair -> new ImmutablePair<>(caesarCypher(pair.getLeft(), pair.getRight().get()),
-                                                      pair.getRight().get()))
+                     .map(pair -> new ImmutablePair<>(caesarCypher(pair.getLeft(), pair.getRight().orElseThrow()),
+                                                      pair.getRight().orElseThrow()))
                      .filter(pair -> pair.getLeft().equals("northpole-object-storage"))
                      .map(Pair::getRight)
                      .findFirst()

@@ -75,7 +75,7 @@ public class Day19 extends AbstractDaySolver<Integer, Integer> {
                     Optional<Integer> victim = findVictim1(map, i, elvesLeft);
 
                     if (victim.isPresent()) {
-                        map.put(victim.get(), Boolean.FALSE);
+                        map.put(victim.orElseThrow(), Boolean.FALSE);
                         elvesLeft--;
                     }
                 }

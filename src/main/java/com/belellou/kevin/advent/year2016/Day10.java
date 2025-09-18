@@ -59,7 +59,7 @@ public class Day10 extends AbstractDaySolver<Integer, Integer> {
         Optional<Instruction> optionalInstruction = findFirstExecutableInstruction(instructions);
 
         while (optionalInstruction.isPresent()) {
-            Instruction instruction = optionalInstruction.get();
+            Instruction instruction = optionalInstruction.orElseThrow();
             instructions.remove(instruction);
 
             if (searchForBot && isSearchedBot(instruction.giver())) {

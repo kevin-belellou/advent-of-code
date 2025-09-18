@@ -52,7 +52,7 @@ public class Day22 extends AbstractDaySolver<Integer, Integer> {
                 if (optionalSpell.isEmpty()) {
                     return false;
                 }
-                Spell newSpell = optionalSpell.get();
+                Spell newSpell = optionalSpell.orElseThrow();
 
                 if (newSpell.isInstant()) {
                     newSpell.effect.accept(player, boss);

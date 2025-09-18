@@ -30,9 +30,9 @@ public class Day18 extends AbstractDaySolver<Long, Integer> {
 
             if (executionResult.isPresent()) {
                 switch (instruction.type()) {
-                    case SOUND -> secondProgram.queue.add(executionResult.get());
+                    case SOUND -> secondProgram.queue.add(executionResult.orElseThrow());
                     case RECOVER -> instructionIndex--;
-                    case JUMP -> instructionIndex += executionResult.get().intValue();
+                    case JUMP -> instructionIndex += executionResult.orElseThrow().intValue();
                     default -> throw new IllegalStateException("Invalid instruction type");
                 }
             }

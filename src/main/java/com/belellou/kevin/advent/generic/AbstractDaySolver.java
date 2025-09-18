@@ -1,9 +1,9 @@
 package com.belellou.kevin.advent.generic;
 
 import java.io.BufferedReader;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
 import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -42,9 +42,8 @@ public abstract class AbstractDaySolver<FirstSolutionType, SecondSolutionType>
 
     private BufferedReader getReader() {
         try {
-            FileReader fileReader = new FileReader(input);
-            return new BufferedReader(fileReader);
-        } catch (FileNotFoundException e) {
+            return Files.newBufferedReader(Path.of(input));
+        } catch (IOException e) {
             throw new RuntimeException(e);
         }
     }
