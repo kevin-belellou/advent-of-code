@@ -32,7 +32,7 @@
 
         <!-- Dependency versions -->
         <assertj.version>3.27.6</assertj.version>
-        <commons-codec.version>1.19.0</commons-codec.version>
+        <commons-codec.version>1.20.0</commons-codec.version>
         <commons-lang3.version>3.19.0</commons-lang3.version>
         <ejml-simple.version>0.44.0</ejml-simple.version>
         <gson.version>2.13.2</gson.version>
