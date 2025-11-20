@@ -20,7 +20,7 @@ jobs:
 
     steps:
       - name: "Checkout repository"
-        uses: actions/checkout@v5.0.0
+        uses: actions/checkout@v6.0.0
 
       - name: "Update 2015 stars badges in README.md"
         uses: J0B10/aoc-badges-action@75cd611df531bd9aa0675cae13be418d73cbdf76
