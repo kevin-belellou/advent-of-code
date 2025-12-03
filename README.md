@@ -5,7 +5,7 @@
 [![Test results][badge_test_results]][actions_tests]
 [![Code coverage][badge_code_coverage]][actions_tests]
 
-[![Java CI with Maven][badge_actions_build]][actions_build]
+[![Build][badge_actions_build]][actions_build]
 [![Qodana][badge_actions_qodana]][actions_qodana]
 [![Update README ⭐][badge_actions_update_readme]][actions_update_readme]
 [![Dependabot Updates][badge_actions_dependabot_updates]][actions_dependabot_updates]
