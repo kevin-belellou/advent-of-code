@@ -26,6 +26,12 @@ jobs:
       - name: "Build with Maven"
         run: mvn verify --batch-mode --no-transfer-progress
 
+      - name: "Check for uncommitted changes"
+        uses: CatChen/check-git-status-action@bde80484b437cece974f79da735a5cd1dfdc9b0b
+        with:
+          fail-if-not-clean: true
+          request-changes-if-not-clean: true
+
       - name: "JUnit test report"
         uses: dorny/test-reporter@fe45e9537387dac839af0d33ba56eed8e24189e8
         if: ${{ !cancelled() }}
@@ -58,6 +64,7 @@ jobs:
 
       - name: "Update CI badges"
         uses: gaelgirodon/ci-badges-action@80d40916d70425ec3e712402231bf2ecd0ed7384
+        if: ${{ !cancelled() }}
         env:
           GIST_ID: ${{ github.event_name == 'push' && github.ref_name == 'main' && env.CI_BADGES_GIST || env.CI_BADGES_GIST_STAGING }}
         with:
@@ -65,10 +72,5 @@ jobs:
           token: ${{ secrets.CI_BADGES_GIST_TOKEN }}
 
       - name: "Purge camo cache"
+        if: ${{ !cancelled() }}
         uses: kevincobain2000/action-camo-purge@4c6f4dfa9a09be940f04c311bc0dbdc5ec4753b1
-
-      - name: "Check for uncommitted changes"
-        uses: CatChen/check-git-status-action@bde80484b437cece974f79da735a5cd1dfdc9b0b
-        with:
-          fail-if-not-clean: true
-          request-changes-if-not-clean: true
