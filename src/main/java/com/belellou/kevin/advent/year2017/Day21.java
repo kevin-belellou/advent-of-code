@@ -61,14 +61,14 @@ public class Day21 extends AbstractDaySolver<Integer, Integer> {
 
     private static final class Rule {
 
-        private static int NUMBER = 0;
+//        private static int NUMBER = 0;
 
         private static final Pattern RULE_PATTERN = Pattern.compile("^([.#/]+) => ([.#/]+)$");
         private static final String SEPARATOR = "/";
 
         public final char[][] outputPattern;
 
-        private final int number;
+        //        private final int number;
         private final int inputSize;
         private final char[][][] inputPatterns;
 
@@ -79,7 +79,7 @@ public class Day21 extends AbstractDaySolver<Integer, Integer> {
                 throw new IllegalArgumentException("Invalid rule format: " + line);
             }
 
-            number = NUMBER++;
+//            number = NUMBER++;
 
             String inputPatternString = matcher.group(1);
             inputSize = StringUtils.countMatches(inputPatternString, SEPARATOR) == 1 ? 2 : 3;
