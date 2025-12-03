@@ -26,17 +26,11 @@ jobs:
       - name: "Build with Maven"
         run: mvn verify --batch-mode --no-transfer-progress
 
-      - name: Build
-        run: |
-          # replace the following line with the real build script
-          touch some-build-artefact-newly-generated-in-the-build-process
-          echo "test" >> .github/workflows/maven.yml
-
       - name: "Check for uncommitted changes"
         uses: CatChen/check-git-status-action@bde80484b437cece974f79da735a5cd1dfdc9b0b
         with:
           fail-if-not-clean: true
-          request-changes-if-not-clean: true
+          request-changes-if-not-clean: false
 
       - name: "JUnit test report"
         uses: dorny/test-reporter@fe45e9537387dac839af0d33ba56eed8e24189e8
