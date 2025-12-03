@@ -10,28 +10,28 @@ import java.util.regex.Pattern;
 public abstract class AbstractDaySolver<FirstSolutionType, SecondSolutionType>
         implements DaySolver<FirstSolutionType, SecondSolutionType> {
 
-    private static final String SEPARATOR = "/";
-    private static final String INPUT_FOLDER = "src/main/resources/";
-    private static final String INPUT_FILE_NAME = "/input.txt";
+    private static final String INPUT_FOLDER = "src/main/resources";
+    private static final String INPUT_FILE_NAME = "input-%s.txt";
 
     private static final String FIRST_SOLUTION = " - First solution: ";
     private static final String SECOND_SOLUTION = " - Second solution: ";
-    private static final String REGEX_NUMBER = "(\\d+)";
+
+    private static final Pattern NUMBER_PATTERN = Pattern.compile("(\\d+)");
 
     private final Year year;
     private final Day day;
 
-    private final String input;
+    private final Path inputPath;
 
     protected AbstractDaySolver() {
-        this.year = Year.getYear(getNumberFrom(this.getClass().getPackageName()));
-        this.day = Day.getDay(getNumberFrom(this.getClass().getSimpleName()));
+        this.year = Year.getYear(getNumberFrom(getClass().getPackageName()));
+        this.day = Day.getDay(getNumberFrom(getClass().getSimpleName()));
 
-        input = INPUT_FOLDER + year.toString() + SEPARATOR + day.toString() + INPUT_FILE_NAME;
+        inputPath = Path.of(INPUT_FOLDER, year.toString(), String.format(INPUT_FILE_NAME, day.toString()));
     }
 
     private static String getNumberFrom(String input) {
-        Matcher matcher = Pattern.compile(REGEX_NUMBER).matcher(input);
+        Matcher matcher = NUMBER_PATTERN.matcher(input);
 
         if (!matcher.find()) {
             throw new IllegalArgumentException("Invalid input: " + input);
@@ -42,7 +42,7 @@ public abstract class AbstractDaySolver<FirstSolutionType, SecondSolutionType>
 
     private BufferedReader getReader() {
         try {
-            return Files.newBufferedReader(Path.of(input));
+            return Files.newBufferedReader(inputPath);
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
