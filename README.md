@@ -6,6 +6,7 @@
 [![Code coverage][badge_code_coverage]][actions_tests]
 
 [![Java CI with Maven][badge_actions_build]][actions_build]
+[![Qodana][badge_actions_qodana]][actions_qodana]
 [![Update README ⭐][badge_actions_update_readme]][actions_update_readme]
 [![Dependabot Updates][badge_actions_dependabot_updates]][actions_dependabot_updates]
 
@@ -126,6 +127,7 @@ and store my answers to the incredible puzzles from [adventofcode.com][adventofc
 
 [actions_tests]: https://github.com/kevin-belellou/advent-of-code/actions/workflows/maven.yml?query=branch%3Amain
 [actions_build]: https://github.com/kevin-belellou/advent-of-code/actions/workflows/maven.yml
+[actions_qodana]: https://github.com/kevin-belellou/advent-of-code/actions/workflows/qodana_code_quality.yml
 [actions_update_readme]: https://github.com/kevin-belellou/advent-of-code/actions/workflows/update-readme-stars.yml
 [actions_dependabot_updates]: https://github.com/kevin-belellou/advent-of-code/actions/workflows/dependabot/dependabot-updates
 
@@ -134,6 +136,7 @@ and store my answers to the incredible puzzles from [adventofcode.com][adventofc
 [badge_test_results]: https://img.shields.io/endpoint?url=https%3A%2F%2Fgist.githubusercontent.com%2Fkevin-belellou%2Fc098f5fa219b3aa17fd8dabf9087cc14%2Fraw%2Fadvent-of-code-junit-tests.json&style=plastic
 [badge_code_coverage]: https://img.shields.io/endpoint?url=https%3A%2F%2Fgist.githubusercontent.com%2Fkevin-belellou%2Fc098f5fa219b3aa17fd8dabf9087cc14%2Fraw%2Fadvent-of-code-jacoco-coverage.json&style=plastic
 [badge_actions_build]: https://github.com/kevin-belellou/advent-of-code/actions/workflows/maven.yml/badge.svg?branch=main
+[badge_actions_qodana]: https://github.com/kevin-belellou/advent-of-code/actions/workflows/qodana_code_quality.yml/badge.svg?branch=main
 [badge_actions_update_readme]: https://github.com/kevin-belellou/advent-of-code/actions/workflows/update-readme-stars.yml/badge.svg?branch=main
 [badge_actions_dependabot_updates]: https://github.com/kevin-belellou/advent-of-code/actions/workflows/dependabot/dependabot-updates/badge.svg?branch=main
 [badge_stars_2015]: https://img.shields.io/badge/%E2%AD%90_in_2015-41_%2F_50-yellow
