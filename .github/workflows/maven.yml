@@ -66,3 +66,9 @@ jobs:
 
       - name: "Purge camo cache"
         uses: kevincobain2000/action-camo-purge@4c6f4dfa9a09be940f04c311bc0dbdc5ec4753b1
+
+      - name: "Check for uncommitted changes"
+        uses: CatChen/check-git-status-action@bde80484b437cece974f79da735a5cd1dfdc9b0b
+        with:
+          fail-if-not-clean: true
+          request-changes-if-not-clean: true
