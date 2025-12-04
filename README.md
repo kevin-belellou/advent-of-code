@@ -27,7 +27,7 @@ and store my answers to the incredible puzzles from [adventofcode.com][adventofc
 [//]: # (@formatter:off)
 
 <!--- advent_readme_stars 2015 table --->
-## 2015 Results
+### 2015 Results
 
 | Day | Solution | Part 1 | Part 2 |
 | :---: | :---: | :---: | :---: |
@@ -59,7 +59,7 @@ and store my answers to the incredible puzzles from [adventofcode.com][adventofc
 <!--- advent_readme_stars 2015 table --->
 
 <!--- advent_readme_stars 2016 table --->
-## 2016 Results
+### 2016 Results
 
 | Day | Solution | Part 1 | Part 2 |
 | :---: | :---: | :---: | :---: |
@@ -88,7 +88,7 @@ and store my answers to the incredible puzzles from [adventofcode.com][adventofc
 <!--- advent_readme_stars 2016 table --->
 
 <!--- advent_readme_stars 2017 table --->
-## 2017 Results
+### 2017 Results
 
 | Day | Solution | Part 1 | Part 2 |
 | :---: | :---: | :---: | :---: |
@@ -115,7 +115,7 @@ and store my answers to the incredible puzzles from [adventofcode.com][adventofc
 <!--- advent_readme_stars 2017 table --->
 
 <!--- advent_readme_stars 2018 table --->
-## 2018 Results
+### 2018 Results
 
 | Day | Solution | Part 1 | Part 2 |
 | :---: | :---: | :---: | :---: |
