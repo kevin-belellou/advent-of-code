@@ -63,6 +63,7 @@ jobs:
           tableMarker: "<!--- advent_readme_stars 2015 table --->"
           solutionLocations: "src/main/java/com/belellou/kevin/advent/year{yyyy}/Day{d}.java"
           showMissingDays: true
+          headerPrefix: '###'
 
       - name: "Update 2016 stars array in README.md"
         uses: kevin-belellou/fork-k2bd-advent-readme-stars@df1a0e14eae7581456ff518c67316f9a74bfd37a
@@ -73,6 +74,7 @@ jobs:
           tableMarker: "<!--- advent_readme_stars 2016 table --->"
           solutionLocations: "src/main/java/com/belellou/kevin/advent/year{yyyy}/Day{d}.java"
           showMissingDays: true
+          headerPrefix: '###'
 
       - name: "Update 2017 stars array in README.md"
         uses: kevin-belellou/fork-k2bd-advent-readme-stars@df1a0e14eae7581456ff518c67316f9a74bfd37a
@@ -83,6 +85,7 @@ jobs:
           tableMarker: "<!--- advent_readme_stars 2017 table --->"
           solutionLocations: "src/main/java/com/belellou/kevin/advent/year{yyyy}/Day{d}.java"
           showMissingDays: true
+          headerPrefix: '###'
 
       - name: "Update 2018 stars array in README.md"
         uses: kevin-belellou/fork-k2bd-advent-readme-stars@df1a0e14eae7581456ff518c67316f9a74bfd37a
@@ -93,6 +96,7 @@ jobs:
           tableMarker: "<!--- advent_readme_stars 2018 table --->"
           solutionLocations: "src/main/java/com/belellou/kevin/advent/year{yyyy}/Day{d}.java"
           showMissingDays: true
+          headerPrefix: '###'
 
       - name: "Import GPG key"
         id: import-gpg

@@ -5,18 +5,24 @@
 [![Test results][badge_test_results]][actions_tests]
 [![Code coverage][badge_code_coverage]][actions_tests]
 
+Personal repository to develop
+and store my answers to the incredible puzzles from [adventofcode.com][adventofcode] 🎄 🎅.
+
+## GitHub jobs status
+
 [![Build][badge_actions_build]][actions_build]
 [![Qodana][badge_actions_qodana]][actions_qodana]
 [![Update README ⭐][badge_actions_update_readme]][actions_update_readme]
 [![Dependabot Updates][badge_actions_dependabot_updates]][actions_dependabot_updates]
 
-Personal repository to develop
-and store my answers to the incredible puzzles from [adventofcode.com][adventofcode] 🎄 🎅.
+## All my stars
 
 ![2015 stars][badge_stars_2015]
 ![2016 stars][badge_stars_2016]
 ![2017 stars][badge_stars_2017]
 ![2018 stars][badge_stars_2018]
+
+## Results by year
 
 [//]: # (@formatter:off)
 
