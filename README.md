@@ -126,6 +126,7 @@ and store my answers to the incredible puzzles from [adventofcode.com][adventofc
 | [Day 5](https://adventofcode.com/2018/day/5) | [Day5.java](src/main/java/com/belellou/kevin/advent/year2018/Day5.java) | ⭐ | ⭐ |
 | [Day 6](https://adventofcode.com/2018/day/6) | [Day6.java](src/main/java/com/belellou/kevin/advent/year2018/Day6.java) | ⭐ | ⭐ |
 | [Day 7](https://adventofcode.com/2018/day/7) | [Day7.java](src/main/java/com/belellou/kevin/advent/year2018/Day7.java) | ⭐ | ⭐ |
+| [Day 8](https://adventofcode.com/2018/day/8) | [Day8.java](src/main/java/com/belellou/kevin/advent/year2018/Day8.java) | ⭐ | ⭐ |
 <!--- advent_readme_stars 2018 table --->
 
 [adventofcode]: https://adventofcode.com/
@@ -149,6 +150,6 @@ and store my answers to the incredible puzzles from [adventofcode.com][adventofc
 [badge_stars_2015]: https://img.shields.io/badge/%E2%AD%90_in_2015-41_%2F_50-yellow
 [badge_stars_2016]: https://img.shields.io/badge/%E2%AD%90_in_2016-36_%2F_50-yellow
 [badge_stars_2017]: https://img.shields.io/badge/%E2%AD%90_in_2017-40_%2F_50-yellow
-[badge_stars_2018]: https://img.shields.io/badge/%E2%AD%90_in_2018-14_%2F_50-yellow
+[badge_stars_2018]: https://img.shields.io/badge/%E2%AD%90_in_2018-16_%2F_50-yellow
 
 [//]: # (@formatter:on)
