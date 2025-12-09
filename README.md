@@ -142,7 +142,7 @@ and store my answers to the incredible puzzles from [adventofcode.com][adventofc
 [actions_dependabot_updates]: https://github.com/kevin-belellou/advent-of-code/actions/workflows/dependabot/dependabot-updates
 
 [badge_license]: https://img.shields.io/github/license/kevin-belellou/advent-of-code?style=plastic
-[badge_java_version]: https://img.shields.io/badge/Java-24-blue?style=plastic
+[badge_java_version]: https://img.shields.io/badge/Java-25-blue?style=plastic
 [badge_test_results]: https://img.shields.io/endpoint?url=https%3A%2F%2Fgist.githubusercontent.com%2Fkevin-belellou%2Fc098f5fa219b3aa17fd8dabf9087cc14%2Fraw%2Fadvent-of-code-junit-tests.json&style=plastic
 [badge_code_coverage]: https://img.shields.io/endpoint?url=https%3A%2F%2Fgist.githubusercontent.com%2Fkevin-belellou%2Fc098f5fa219b3aa17fd8dabf9087cc14%2Fraw%2Fadvent-of-code-jacoco-coverage.json&style=plastic
 [badge_actions_build]: https://github.com/kevin-belellou/advent-of-code/actions/workflows/maven.yml/badge.svg?branch=main

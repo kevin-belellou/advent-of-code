@@ -29,7 +29,7 @@ public class Day17 extends AbstractDaySolver<String, Integer> {
             return path;
         }
 
-        try (var scope = new StructuredTaskScope.ShutdownOnFailure()) {
+        try (var scope = StructuredTaskScope.open()) {
             List<Subtask<String>> subtasks = new ArrayList<>();
 
             String hash = DigestUtils.md5Hex(passcode + path).substring(0, 4);
@@ -48,7 +48,7 @@ public class Day17 extends AbstractDaySolver<String, Integer> {
                                                              findShortestPath)));
                   });
 
-            scope.join().throwIfFailed();
+            scope.join();
 
             Comparator<String> comparator = Comparator.comparingInt(String::length);
             BinaryOperator<String> binaryOperator =

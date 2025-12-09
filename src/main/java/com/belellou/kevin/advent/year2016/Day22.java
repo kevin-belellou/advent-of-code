@@ -92,7 +92,7 @@ public class Day22 extends AbstractDaySolver<Integer, Integer> {
             return numberOfSteps;
         }
 
-        try (var scope = new StructuredTaskScope.ShutdownOnFailure()) {
+        try (var scope = StructuredTaskScope.open()) {
             List<Subtask<Integer>> subtasks = new ArrayList<>();
 
             nodes.stream().mapMulti(getAllValidPairs(nodes, lastOperation)).forEach(pair -> {
@@ -110,7 +110,7 @@ public class Day22 extends AbstractDaySolver<Integer, Integer> {
                 subtasks.add(scope.fork(() -> explorePaths(newNodes, numberOfSteps + 1, pair)));
             });
 
-            scope.join().throwIfFailed();
+            scope.join();
 
             return subtasks.stream()
                            .mapToInt(Subtask::get)
