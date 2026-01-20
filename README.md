@@ -15,6 +15,49 @@ and store my answers to the incredible puzzles from [adventofcode.com][adventofc
 [![Update README ⭐][badge_actions_update_readme]][actions_update_readme]
 [![Dependabot Updates][badge_actions_dependabot_updates]][actions_dependabot_updates]
 
+## How it works
+
+This repository is organized to solve Advent of Code puzzles in a structured and testable way.
+
+### Project Structure
+
+Each day's puzzle is represented by a separate class in a year-specific package:
+
+- Classes are located in `src/main/java/com/belellou/kevin/advent/year{YYYY}/Day{N}.java`
+- For example: `Day10.java` in the `year2018` package solves Day 10 of Advent of Code 2018
+
+### Implementation Pattern
+
+Every day class:
+
+1. **Extends `AbstractDaySolver<FirstSolutionType, SecondSolutionType>`** - a generic base class where:
+   - `FirstSolutionType` is the return type for Part 1's solution (e.g., `String`, `Integer`, `Long`)
+   - `SecondSolutionType` is the return type for Part 2's solution
+
+2. **Implements the `DaySolver` interface** which requires four methods:
+   - `solveFirstStar()` - Computes the solution for Part 1
+   - `getFirstStarSolution()` - Returns the expected answer for Part 1 (for verification)
+   - `solveSecondStar()` - Computes the solution for Part 2
+   - `getSecondStarSolution()` - Returns the expected answer for Part 2 (for verification)
+
+3. **Processes input from text files** located at `src/main/resources/year{YYYY}/input-{N}.txt`
+
+### Testing
+
+Tests are automatically executed for each puzzle solution to verify correctness:
+
+- Each day's solution is tested by comparing the computed results from `solveFirstStar()` and `solveSecondStar()`
+  against the expected values returned by `getFirstStarSolution()` and `getSecondStarSolution()`
+- Tests run against the actual puzzle input files to ensure solutions work with real data
+- The test suite is executed via GitHub Actions on every commit, with results visible in the test results badge above
+- Code coverage metrics are also tracked to ensure comprehensive testing of the solution implementations
+
+Execution of the tests is done by the `DaySolverTest` class, which scans the classpath for all classes implementing the
+DaySolver interface and creates dynamic tests for both the first and second star solutions.
+Tests can be filtered by year and day using environment variables.
+
+Skipped tests (annotated with `@DisableTest`) are challenges that have not yet been solved.
+
 ## All my stars
 
 ![2015 stars][badge_stars_2015]

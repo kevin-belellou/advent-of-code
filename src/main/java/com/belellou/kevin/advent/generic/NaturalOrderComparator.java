@@ -25,17 +25,61 @@ package com.belellou.kevin.advent.generic;
 
 import java.util.Comparator;
 
+/**
+ * Comparator that performs 'natural order' comparisons of strings.
+ * <p>
+ * Natural order sorting treats multi-digit numbers as single characters, so that
+ * "file2.txt" comes before "file10.txt" (unlike lexicographic sorting where "file10.txt"
+ * would come before "file2.txt").
+ * <p>
+ * This implementation handles:
+ * <ul>
+ *   <li>Numbers with leading zeros</li>
+ *   <li>Decimal numbers (with '.' or ',' separators)</li>
+ *   <li>Leading whitespace</li>
+ *   <li>Mixed alphanumeric strings</li>
+ * </ul>
+ * <p>
+ * Based on the C version by Martin Pool and converted to Java by Pierre-Luc Paour.
+ */
 public class NaturalOrderComparator implements Comparator<Object> {
 
+    /**
+     * Checks if a character is a digit or a decimal separator.
+     *
+     * @param c the character to check
+     *
+     * @return true if the character is a digit, '.', or ','; false otherwise
+     */
     @SuppressWarnings("BooleanMethodIsAlwaysInverted")
     private static boolean isDigit(char c) {
         return Character.isDigit(c) || c == '.' || c == ',';
     }
 
+    /**
+     * Returns the character at the specified index, or 0 if the index is out of bounds.
+     *
+     * @param s the string to get the character from
+     * @param i the index of the character
+     *
+     * @return the character at the specified index, or 0 if index >= string length
+     */
     private static char charAt(String s, int i) {
         return i >= s.length() ? 0 : s.charAt(i);
     }
 
+    /**
+     * Compares two strings when their natural order comparison is equal.
+     * Uses leading zero count and string length as tiebreakers.
+     *
+     * @param a   the first string
+     * @param b   the second string
+     * @param nza the number of leading zeros in the first string
+     * @param nzb the number of leading zeros in the second string
+     *
+     * @return a negative integer, zero, or a positive integer as the first argument
+     * is less than, equal to, or greater than the second
+     */
     private static int compareEqual(String a, String b, int nza, int nzb) {
         if (nza - nzb != 0) {
             return nza - nzb;
@@ -48,6 +92,16 @@ public class NaturalOrderComparator implements Comparator<Object> {
         return a.length() - b.length();
     }
 
+    /**
+     * Compares two numeric strings digit by digit from left to right.
+     * The longest run of digits wins. If the lengths are equal, the greatest value wins.
+     *
+     * @param a the first numeric string
+     * @param b the second numeric string
+     *
+     * @return a negative integer, zero, or a positive integer as the first argument
+     * is less than, equal to, or greater than the second
+     */
     private int compareRight(String a, String b) {
         int bias = 0, ia = 0, ib = 0;
 
@@ -82,6 +136,23 @@ public class NaturalOrderComparator implements Comparator<Object> {
         }
     }
 
+    /**
+     * Compares two objects in natural order by converting them to strings.
+     * <p>
+     * The comparison algorithm:
+     * <ol>
+     *   <li>Skips leading whitespace and zeros (while tracking zero count)</li>
+     *   <li>Compares numeric sequences numerically (longer sequences are greater)</li>
+     *   <li>Compares non-numeric characters lexicographically</li>
+     *   <li>Uses leading zero count and string length as final tiebreakers</li>
+     * </ol>
+     *
+     * @param o1 the first object to compare
+     * @param o2 the second object to compare
+     *
+     * @return a negative integer, zero, or a positive integer as the first argument
+     * is less than, equal to, or greater than the second in natural order
+     */
     @Override
     public int compare(Object o1, Object o2) {
         String a = o1.toString();

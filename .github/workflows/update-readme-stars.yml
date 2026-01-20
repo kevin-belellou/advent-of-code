@@ -1,3 +1,8 @@
+# This workflow automatically updates the README.md file with Advent of Code progress.
+# It fetches the latest star counts for years 2015-2018 and updates both:
+# - Star count badges (e.g., "⭐ in 2015 - X / 50")
+# - Progress tables showing completed days with links to solutions
+# Changes are committed and signed using a GPG key, and the camo cache is purged.
 name: Update README ⭐
 
 on:
@@ -23,7 +28,7 @@ jobs:
         uses: actions/checkout@v6.0.1
 
       - name: "Update 2015 stars badges in README.md"
-        uses: J0B10/aoc-badges-action@75cd611df531bd9aa0675cae13be418d73cbdf76
+        uses: J0B10/aoc-badges-action@75cd611df531bd9aa0675cae13be418d73cbdf76 # v3.0.0
         with:
           userid: ${{ env.ADVENT_USER_ID }}
           session: ${{ secrets.ADVENT_OF_CODE_SESSION }}
@@ -31,7 +36,7 @@ jobs:
           starsRegex: '(?<=https:\/\/img\.shields\.io\/badge\/%E2%AD%90_in_2015-)[0-9]+(?=_%2F_50-yellow)'
 
       - name: "Update 2016 stars badges in README.md"
-        uses: J0B10/aoc-badges-action@75cd611df531bd9aa0675cae13be418d73cbdf76
+        uses: J0B10/aoc-badges-action@75cd611df531bd9aa0675cae13be418d73cbdf76 # v3.0.0
         with:
           userid: ${{ env.ADVENT_USER_ID }}
           session: ${{ secrets.ADVENT_OF_CODE_SESSION }}
@@ -39,7 +44,7 @@ jobs:
           starsRegex: '(?<=https:\/\/img\.shields\.io\/badge\/%E2%AD%90_in_2016-)[0-9]+(?=_%2F_50-yellow)'
 
       - name: "Update 2017 stars badges in README.md"
-        uses: J0B10/aoc-badges-action@75cd611df531bd9aa0675cae13be418d73cbdf76
+        uses: J0B10/aoc-badges-action@75cd611df531bd9aa0675cae13be418d73cbdf76 # v3.0.0
         with:
           userid: ${{ env.ADVENT_USER_ID }}
           session: ${{ secrets.ADVENT_OF_CODE_SESSION }}
@@ -47,7 +52,7 @@ jobs:
           starsRegex: '(?<=https:\/\/img\.shields\.io\/badge\/%E2%AD%90_in_2017-)[0-9]+(?=_%2F_50-yellow)'
 
       - name: "Update 2018 stars badges in README.md"
-        uses: J0B10/aoc-badges-action@75cd611df531bd9aa0675cae13be418d73cbdf76
+        uses: J0B10/aoc-badges-action@75cd611df531bd9aa0675cae13be418d73cbdf76 # v3.0.0
         with:
           userid: ${{ env.ADVENT_USER_ID }}
           session: ${{ secrets.ADVENT_OF_CODE_SESSION }}
@@ -55,7 +60,7 @@ jobs:
           starsRegex: '(?<=https:\/\/img\.shields\.io\/badge\/%E2%AD%90_in_2018-)[0-9]+(?=_%2F_50-yellow)'
 
       - name: "Update 2015 stars array in README.md"
-        uses: kevin-belellou/fork-k2bd-advent-readme-stars@df1a0e14eae7581456ff518c67316f9a74bfd37a
+        uses: kevin-belellou/fork-k2bd-advent-readme-stars@df1a0e14eae7581456ff518c67316f9a74bfd37a # v1.0
         with:
           userId: ${{ env.ADVENT_USER_ID }}
           sessionCookie: ${{ secrets.ADVENT_OF_CODE_SESSION }}
@@ -66,7 +71,7 @@ jobs:
           headerPrefix: '###'
 
       - name: "Update 2016 stars array in README.md"
-        uses: kevin-belellou/fork-k2bd-advent-readme-stars@df1a0e14eae7581456ff518c67316f9a74bfd37a
+        uses: kevin-belellou/fork-k2bd-advent-readme-stars@df1a0e14eae7581456ff518c67316f9a74bfd37a # v1.0
         with:
           userId: ${{ env.ADVENT_USER_ID }}
           sessionCookie: ${{ secrets.ADVENT_OF_CODE_SESSION }}
@@ -77,7 +82,7 @@ jobs:
           headerPrefix: '###'
 
       - name: "Update 2017 stars array in README.md"
-        uses: kevin-belellou/fork-k2bd-advent-readme-stars@df1a0e14eae7581456ff518c67316f9a74bfd37a
+        uses: kevin-belellou/fork-k2bd-advent-readme-stars@df1a0e14eae7581456ff518c67316f9a74bfd37a # v1.0
         with:
           userId: ${{ env.ADVENT_USER_ID }}
           sessionCookie: ${{ secrets.ADVENT_OF_CODE_SESSION }}
@@ -88,7 +93,7 @@ jobs:
           headerPrefix: '###'
 
       - name: "Update 2018 stars array in README.md"
-        uses: kevin-belellou/fork-k2bd-advent-readme-stars@df1a0e14eae7581456ff518c67316f9a74bfd37a
+        uses: kevin-belellou/fork-k2bd-advent-readme-stars@df1a0e14eae7581456ff518c67316f9a74bfd37a # v1.0
         with:
           userId: ${{ env.ADVENT_USER_ID }}
           sessionCookie: ${{ secrets.ADVENT_OF_CODE_SESSION }}
@@ -108,7 +113,7 @@ jobs:
           git_commit_gpgsign: true
 
       - name: "Commit modifications if any"
-        uses: stefanzweifel/git-auto-commit-action@04702edda442b2e678b25b537cec683a1493fcb9
+        uses: stefanzweifel/git-auto-commit-action@04702edda442b2e678b25b537cec683a1493fcb9 # v7.1.0
         id: auto-commit-action
         with:
           commit_message: Update README with latest stars
@@ -120,5 +125,5 @@ jobs:
         if: steps.auto-commit-action.outputs.changes_detected == 'true'
         run: echo "📝 Modifications committed with sha ${{ steps.auto-commit-action.outputs.commit_hash }}" >> $GITHUB_STEP_SUMMARY
 
-      - name: "Purge camo cache"
-        uses: kevincobain2000/action-camo-purge@4c6f4dfa9a09be940f04c311bc0dbdc5ec4753b1
+      - name: "Purge camo cache to refresh badges"
+        uses: kevincobain2000/action-camo-purge@0b70f4d64c9828aace7bbbf1931a646957734ef3 # v1

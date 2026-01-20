@@ -1,3 +1,5 @@
+# This workflow runs Qodana code quality analysis on the repository.
+# The workflow performs static code analysis using JetBrains Qodana and reports findings.
 name: Qodana
 
 on:
@@ -23,7 +25,7 @@ jobs:
           fetch-depth: 0  # a full history is required for pull request analysis
 
       - name: "Qodana Scan"
-        uses: JetBrains/qodana-action@42dad391966aca8ca344ca2340a7f43a5507e9b2
+        uses: JetBrains/qodana-action@42dad391966aca8ca344ca2340a7f43a5507e9b2 # v2025.3.1
         with:
           args: --fail-threshold=1
           pr-mode: false

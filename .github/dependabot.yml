@@ -1,3 +1,6 @@
+# Dependabot configuration for automated dependency updates
+# - Maven dependencies are checked daily with "[Maven] " commit prefix
+# - GitHub Actions are checked daily with "[Actions] " commit prefix
 version: 2
 updates:
   - package-ecosystem: maven
