@@ -35,7 +35,7 @@ jobs:
         run: mvn verify --batch-mode --no-transfer-progress
 
       - name: "Check for uncommitted changes"
-        uses: CatChen/check-git-status-action@bde80484b437cece974f79da735a5cd1dfdc9b0b # v1.4.4
+        uses: CatChen/check-git-status-action@71eaa1f289f75f251fa35b5f16ff9ef78beb4ff3 # v2.0.0
         with:
           fail-if-not-clean: true
           request-changes-if-not-clean: false
