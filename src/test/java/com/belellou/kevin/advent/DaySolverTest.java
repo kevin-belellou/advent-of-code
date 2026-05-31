@@ -2,6 +2,7 @@ package com.belellou.kevin.advent;
 
 import java.lang.reflect.InvocationTargetException;
 import java.util.List;
+import java.util.Objects;
 import java.util.Set;
 import java.util.function.Consumer;
 import java.util.function.Predicate;
@@ -139,6 +140,7 @@ public class DaySolverTest {
 
         return components.stream()
                          .map(BeanDefinition::getBeanClassName)
+                         .filter(Objects::nonNull)
                          .map(ThrowingFunction.unchecked(Class::forName))
                          .filter(getYearFilter())
                          .filter(getDayFilter())
