@@ -64,13 +64,13 @@
 
     <dependencies>
         <dependency>
-            <!-- Message digest (like md5) -->
+            <!-- Message digest (like MD5) -->
             <groupId>commons-codec</groupId>
             <artifactId>commons-codec</artifactId>
             <version>${commons-codec.version}</version>
         </dependency>
         <dependency>
-            <!-- Json parsing -->
+            <!-- JSON parsing -->
             <groupId>com.google.code.gson</groupId>
             <artifactId>gson</artifactId>
             <version>${gson.version}</version>
