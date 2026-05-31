@@ -25,7 +25,7 @@ public class Day14 extends AbstractDaySolver<Integer, Integer> {
                         .map(collect -> IntStream.range(0, collect.length())
                                                  .map(i -> Integer.parseInt(collect, i, i + 1, 16))
                                                  .mapToObj(Integer::toBinaryString)
-                                                 .map(s -> String.format("%4s", s).replace(' ', '0'))
+                                                 .map(s -> "%4s".formatted(s).replace(' ', '0'))
                                                  .collect(Collectors.joining()))
                         .toList();
     }

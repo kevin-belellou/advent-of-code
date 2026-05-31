@@ -49,7 +49,7 @@ public abstract class AbstractDaySolver<FirstSolutionType, SecondSolutionType>
         this.year = Year.getYear(getNumberFrom(getClass().getPackageName()));
         this.day = Day.getDay(getNumberFrom(getClass().getSimpleName()));
 
-        inputPath = Path.of(INPUT_FOLDER, year.toString(), String.format(INPUT_FILE_NAME, day.toString()));
+        inputPath = Path.of(INPUT_FOLDER, year.toString(), INPUT_FILE_NAME.formatted(day.toString()));
     }
 
     /**
