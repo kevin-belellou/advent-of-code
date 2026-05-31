@@ -1,6 +1,7 @@
 package com.belellou.kevin.advent.generic;
 
 import java.lang.reflect.Constructor;
+import java.util.Objects;
 import java.util.Set;
 import java.util.stream.Collectors;
 
@@ -38,6 +39,7 @@ public class GraphUtil<V, E> {
         //noinspection unchecked
         implementations = components.stream()
                                     .map(BeanDefinition::getBeanClassName)
+                                    .filter(Objects::nonNull)
                                     .map(ThrowingFunction.unchecked(Class::forName))
                                     .map(clazz -> (Class<? extends HamiltonianCycleAlgorithm<V, E>>) clazz.asSubclass(
                                             HamiltonianCycleAlgorithm.class))
