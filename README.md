@@ -172,6 +172,7 @@ Skipped tests (annotated with `@DisableTest`) are challenges that have not yet b
 | [Day 8](https://adventofcode.com/2018/day/8) | [Day8.java](src/main/java/com/belellou/kevin/advent/year2018/Day8.java) | ⭐ | ⭐ |
 | [Day 9](https://adventofcode.com/2018/day/9) | [Day9.java](src/main/java/com/belellou/kevin/advent/year2018/Day9.java) | ⭐ | ⭐ |
 | [Day 10](https://adventofcode.com/2018/day/10) | [Day10.java](src/main/java/com/belellou/kevin/advent/year2018/Day10.java) | ⭐ | ⭐ |
+| [Day 11](https://adventofcode.com/2018/day/11) | [Day11.java](src/main/java/com/belellou/kevin/advent/year2018/Day11.java) | ⭐ | ⭐ |
 <!--- advent_readme_stars 2018 table --->
 
 [adventofcode]: https://adventofcode.com/
@@ -195,6 +196,6 @@ Skipped tests (annotated with `@DisableTest`) are challenges that have not yet b
 [badge_stars_2015]: https://img.shields.io/badge/%E2%AD%90_in_2015-41_%2F_50-yellow
 [badge_stars_2016]: https://img.shields.io/badge/%E2%AD%90_in_2016-36_%2F_50-yellow
 [badge_stars_2017]: https://img.shields.io/badge/%E2%AD%90_in_2017-40_%2F_50-yellow
-[badge_stars_2018]: https://img.shields.io/badge/%E2%AD%90_in_2018-20_%2F_50-yellow
+[badge_stars_2018]: https://img.shields.io/badge/%E2%AD%90_in_2018-22_%2F_50-yellow
 
 [//]: # (@formatter:on)
