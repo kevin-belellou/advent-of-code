@@ -64,6 +64,7 @@ Skipped tests (annotated with `@DisableTest`) are challenges that have not yet b
 ![2016 stars][badge_stars_2016]
 ![2017 stars][badge_stars_2017]
 ![2018 stars][badge_stars_2018]
+![2019 stars][badge_stars_2019]
 
 ## Results by year
 
@@ -175,6 +176,9 @@ Skipped tests (annotated with `@DisableTest`) are challenges that have not yet b
 | [Day 11](https://adventofcode.com/2018/day/11) | [Day11.java](src/main/java/com/belellou/kevin/advent/year2018/Day11.java) | ⭐ | ⭐ |
 <!--- advent_readme_stars 2018 table --->
 
+<!--- advent_readme_stars 2019 table --->
+<!--- advent_readme_stars 2019 table --->
+
 [adventofcode]: https://adventofcode.com/
 
 [file_license]: https://github.com/kevin-belellou/advent-of-code/blob/main/LICENSE
@@ -197,5 +201,6 @@ Skipped tests (annotated with `@DisableTest`) are challenges that have not yet b
 [badge_stars_2016]: https://img.shields.io/badge/%E2%AD%90_in_2016-36_%2F_50-yellow
 [badge_stars_2017]: https://img.shields.io/badge/%E2%AD%90_in_2017-40_%2F_50-yellow
 [badge_stars_2018]: https://img.shields.io/badge/%E2%AD%90_in_2018-22_%2F_50-yellow
+[badge_stars_2019]: https://img.shields.io/badge/%E2%AD%90_in_2019-0_%2F_50-yellow
 
 [//]: # (@formatter:on)
