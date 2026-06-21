@@ -3,7 +3,6 @@ package com.belellou.kevin.advent.year2018;
 import java.io.BufferedReader;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Optional;
 import java.util.stream.Gatherers;
 
 import com.belellou.kevin.advent.generic.AbstractDaySolver;
@@ -109,19 +108,20 @@ public class Day13 extends AbstractDaySolver<String, Integer> {
                      }
                  });
 
-            Optional<List<Cart>> first = carts.stream()
-                                              .sorted()
-                                              .gather(Gatherers.windowFixed(2))
-                                              .filter(pair -> {
-                                                  if (pair.size() < 2) {
-                                                      return false;
-                                                  }
-                                                  return pair.getFirst().compareTo(pair.getLast()) == 0;
-                                              })
-                                              .findFirst();
+            List<Cart> first = carts.stream()
+                                    .sorted()
+                                    .gather(Gatherers.windowFixed(2))
+                                    .filter(pair -> {
+                                        if (pair.size() < 2) {
+                                            return false;
+                                        }
+                                        return pair.getFirst().compareTo(pair.getLast()) == 0;
+                                    })
+                                    .findFirst()
+                                    .orElse(List.of());
 
-            if (first.isPresent()) {
-                Cart firstCollision = first.get().getFirst();
+            if (!first.isEmpty()) {
+                Cart firstCollision = first.getFirst();
                 return firstCollision.x + "," + firstCollision.y;
             }
         }
@@ -215,7 +215,7 @@ public class Day13 extends AbstractDaySolver<String, Integer> {
 
         @Override
         public String toString() {
-            return String.format("Cart at (%d, %d) with piece %s", x, y, piece);
+            return "Cart at (%d, %d) with piece %s".formatted(x, y, piece);
         }
     }
 }
