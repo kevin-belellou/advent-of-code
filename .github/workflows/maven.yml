@@ -51,7 +51,7 @@ jobs:
 
       - name: "JaCoCo code coverage report"
         id: jacoco_reporter
-        uses: PavanMudigonda/jacoco-reporter@e8b54bfea6a667d1a68624dae8a06ba31670667d # v5.1
+        uses: PavanMudigonda/jacoco-reporter@112997f0c32da82d8bfa4a972b4afe67a15529fe # v5.2.1
         if: ${{ !cancelled() }}
         with:
           coverage_results_path: target/site/jacoco/jacoco.xml
