@@ -154,7 +154,7 @@ public class Day18 extends AbstractDaySolver<Long, Integer> {
 
             return new Instruction(type, operand1.getLeft(), operand1.getRight(),
                                    operand2 != null ? operand2.getLeft() : 0,
-                                   operand2 != null ? operand2.getRight() : false);
+                                   operand2 != null && operand2.getRight());
         }
 
         private static Pair<Integer, Boolean> extractOperand(String string) {
