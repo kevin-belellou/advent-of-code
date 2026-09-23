@@ -8,6 +8,8 @@
 Personal repository to develop
 and store my answers to the incredible puzzles from [adventofcode.com][adventofcode] 🎄 🎅.
 
+This code is almost completely AI-free, the few exceptions are clearly marked in comments.
+
 ## GitHub jobs status
 
 [![Build][badge_actions_build]][actions_build]
