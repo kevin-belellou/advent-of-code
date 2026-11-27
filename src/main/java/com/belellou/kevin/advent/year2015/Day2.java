@@ -68,7 +68,7 @@ public class Day2 extends AbstractDaySolver<Integer, Integer> {
     private record Dimensions(int length, int width, int height) {
 
         Integer[] sorted() {
-            return Stream.of(length, width, height).sorted().toList().toArray(new Integer[0]);
+            return Stream.of(length, width, height).sorted().toArray(new Integer[0]);
         }
     }
 }
